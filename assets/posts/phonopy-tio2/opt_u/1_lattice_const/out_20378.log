@@ -1,0 +1,10 @@
+============================================================
+Job ID: sub_vasp_cell_constr
+Job name: sub_vasp_cell_constr
+Number of nodes: 1
+Number of processors: 48
+Task is running on the following nodes:
+h4
+OMP_NUM_THREADS = 1
+============================================================
+

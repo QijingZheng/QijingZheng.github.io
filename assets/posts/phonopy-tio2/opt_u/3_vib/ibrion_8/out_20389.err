@@ -1,0 +1,8 @@
+Currently Loaded Modulefiles:
+ 1) tbb/2021.2.0           5) compiler/2021.2.0   9) vasp/vtstscripts  
+ 2) compiler-rt/2021.2.0   6) mkl/2021.2.0       10) vasp/5.4.4        
+ 3) debugger/latest <aL>   7) mpi/2021.2.0       
+ 4) dpl/latest <aL>        8) anaconda3          
+
+Key:
+<module-tag>  <aL>=auto-loaded  

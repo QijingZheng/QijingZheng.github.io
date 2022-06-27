@@ -1,0 +1,99 @@
+#!/bin/bash
+#SBATCH --partition       h3c
+#SBATCH --time            12:00:00
+#SBATCH --nodes           1
+#SBATCH --ntasks-per-node 48
+#SBATCH --cpus-per-task   1
+#SBATCH --error           out_%j.err
+#SBATCH --output          out_%j.log
+
+ulimit -s unlimited
+
+module load vasp/5.4.4
+#module load vasp/5.4.4_soc
+# module load vasp/6.1.0
+#module load vasp/6.1.0_omp
+
+echo "============================================================"
+echo "Job ID: $SLURM_JOB_NAME"
+echo "Job name: $SLURM_JOB_NAME"
+echo "Number of nodes: $SLURM_JOB_NUM_NODES"
+echo "Number of processors: $SLURM_NTASKS"
+echo "Task is running on the following nodes:"
+echo $SLURM_JOB_NODELIST
+echo "OMP_NUM_THREADS = $SLURM_CPUS_PER_TASK"
+echo "============================================================"
+echo
+ 
+python << EOF
+import os
+import numpy as np
+from ase.io import read, write
+from ase.calculators.vasp import Vasp
+from ase.constraints import UnitCellFilter
+from ase.optimize import BFGS as QuasiNewton
+
+os.environ['VASP_COMMAND'] = "srun -n ${SLURM_NPROCS} vasp_std"
+os.environ['VASP_PP_PATH'] = "/public/apps/vasp/pp/"
+
+# the starting configuration
+geo  = read('init.vasp', format='vasp')
+# setting the c-axis parameter
+# geo.cell[-1,-1] = 25
+
+calc = Vasp(
+        ###############################
+        # General
+        ###############################
+        system = 'vaspCalc',
+        prec   = 'Accurate',
+        encut  = 500,
+        ispin  = 1,
+        istart = 0,
+        icharg = 1,
+        ###############################
+        # Electronic relaxation
+        ###############################
+        # isym   = 0,
+        algo   = 'Fast',
+        nelmin = 4,
+        nelm   = 120,
+        xc     = 'pbe',
+        ediff  = 1E-8,
+        ismear = 0,
+        sigma  = 0.04,
+        npar   = 4,
+        ###############################
+        # k-points grid
+        ###############################
+        kpts   = (15, 15, 23),
+        gamma  = True,
+        ###############################
+        # Writing Flat
+        ###############################
+        nwrite = 1,
+        lwave  = False,
+        lcharg = False,
+        ###############################
+        # Vdw Correction
+        ###############################
+        # ivdw   = 10,
+        ###############################
+        # dipole correction
+        ###############################
+        # ldipol = True,
+        # idipol = 3,
+        # dipol  = [0.5, 0.5, 0.5]
+       )
+geo.set_calculator(calc)
+
+# stress mask [XX, YY, ZZ, YZ, XZ, XY]
+# 0 if fixed else 1
+unf = UnitCellFilter(geo, mask=[1,1,1,1,1,1])
+# unf = UnitCellFilter(geo, mask=[1,1,0,0,0,1])
+dyn = QuasiNewton(unf, logfile='opt.log', trajectory='opt.traj')
+
+dyn.run(fmax=0.001)
+
+write('final.vasp', geo, vasp5=True, direct=True)
+EOF

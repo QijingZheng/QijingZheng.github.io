@@ -1,0 +1,63 @@
+\documentclass[border=10pt]{standalone}
+\usepackage{braket}
+\usepackage{mathtools}
+\usepackage{tikz}
+\usetikzlibrary{
+  arrows,
+  arrows.meta
+}
+
+\begin{document}
+
+\resizebox{0.50\textwidth}{!}{
+  \begin{tikzpicture}
+    \begin{scope}
+      \draw[-{Stealth[length=10pt, open]}, thick] (-4.5, 0) -- (4.8, 0) node
+      [below=3pt, pos=1.0] {\Large $k$};
+      \draw[-{Stealth[length=10pt, open]}, thick] (0, 0) -- (0, 9.0) node
+      [right=3pt, pos=1.0] {\large $E$};
+      \foreach \i in {-3,...,3} {
+        \draw[thick] (\i, 0) -- ++(0, 3pt);
+      }
+
+      \node [below = 3pt] at (-4, 0) {\Large $\mbox{-}{\pi\over a}$};
+      \node [below = 3pt] at ( 4, 0) {\Large $ {\pi\over a}$};
+      \node [below = 3pt] at ( 0, 0) {\Large 0};
+
+      \draw[help lines] (-4, 0) -- ++(0, 8.0);
+      \draw[help lines] ( 4, 0) -- ++(0, 8.0);
+
+      \draw[line width=1pt, blue] plot [domain=-4:4, samples=300] (
+        \x, {0.5 * \x * \x}
+      );
+    \end{scope}
+
+    \begin{scope}
+      [shift={(10, 0)}]
+      \draw[-{Stealth[length=10pt, open]}, thick] (-1.5, 0) -- (1.8, 0) node
+      [below=3pt, pos=1.0] {\Large $k$};
+      \draw[-{Stealth[length=10pt, open]}, thick] (0, 0) -- (0, 9.0) node
+      [right=3pt, pos=1.0] {\large $E$};
+      \draw[help lines] (-1, 0) -- ++(0, 8.0);
+      \draw[help lines] ( 1, 0) -- ++(0, 8.0);
+
+      \node [below = 3pt] at (-1, 0) {\Large $\mbox{-}{\pi\over 4a}$};
+      \node [below = 3pt] at ( 1, 0) {\Large $ {\pi\over 4a}$};
+      \node [below = 3pt] at ( 0, 0) {\Large 0};
+
+      \foreach \i in {-2, 0, 2}{
+        \draw[line width=1pt, red] plot [domain=-1:1, samples=300] (
+            \x, {0.5 * (\x + \i) * (\x + \i)}
+        );
+      }
+      \draw[line width=1pt, red] plot [domain=-1:0, samples=300] (
+          \x, {0.5 * (\x + 4) * (\x + 4)}
+      );
+      \draw[line width=1pt, red] plot [domain=0:1, samples=300] (
+          \x, {0.5 * (\x - 4) * (\x - 4)}
+      );
+    \end{scope}
+  \end{tikzpicture}
+  }
+
+\end{document}

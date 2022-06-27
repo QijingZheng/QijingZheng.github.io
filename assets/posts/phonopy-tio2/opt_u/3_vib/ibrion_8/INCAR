@@ -1,0 +1,27 @@
+General
+  SYSTEM = VaspCalc
+    PREC = Accurate
+   ENCUT = 500 eV
+   ISPIN = 1
+  ISTART = 1
+  ICHARG = 1
+
+Ionic Relaxation
+  IBRION = 8
+
+Electronic relaxation
+    ALGO = Fast
+  NELMIN = 4
+    NELM = 100
+   EDIFF = 1E-8
+  ISMEAR = 0
+   SIGMA = 0.04
+  LORBIT = 11
+   LREAL = .FALSE.
+ ADDGRID = .TRUE.
+
+Writing Flag
+  NWRITE = 1
+   LWAVE = .FALSE.
+  LCHARG = .FALSE.
+LEPSILON = .TRUE.
