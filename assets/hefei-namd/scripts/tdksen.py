@@ -84,8 +84,8 @@ whichK  = 0
 # which atoms, index starting from 0
 whichA  = np.arange(54) + 54
 # whichB  = range(54)
-Alabel  = r'MoS$_2$'
-Blabel  = r'WS$_2$'
+Alabel  = r'WS$_2$'
+Blabel  = r'MoS$_2$'
 
 if os.path.isfile('all_wht.npy'):
     Wht = np.load('all_wht.npy')
@@ -140,7 +140,7 @@ ax_cbar = divider.append_axes('right', size='5%', pad=0.02)
 cbar = plt.colorbar(img, cax=ax_cbar,
                     orientation='vertical')
 cbar.set_ticks([Wht.min(), Wht.max()])
-cbar.set_ticklabels([Alabel, Blabel])
+cbar.set_ticklabels([Blabel, Alabel])
 
 ############################################################
 # METHOD 3.
