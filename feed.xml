@@ -1,33 +1,33 @@
 
 
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>http://staff.ustc.edu.cn/~zqj/</id>
+  <id>https://qijingzheng.github.io/</id>
   <title>Qijing Zheng</title>
   <subtitle>A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.</subtitle>
-  <updated>2022-08-08T13:00:08+08:00</updated>
+  <updated>2022-08-08T13:15:32+08:00</updated>
   <author>
     <name>Qijing Zheng</name>
-    <uri>http://staff.ustc.edu.cn/~zqj/</uri>
+    <uri>https://qijingzheng.github.io/</uri>
   </author>
-  <link rel="self" type="application/atom+xml" href="http://staff.ustc.edu.cn/~zqj/feed.xml"/>
+  <link rel="self" type="application/atom+xml" href="https://qijingzheng.github.io/feed.xml"/>
   <link rel="alternate" type="text/html" hreflang="en-US"
-    href="http://staff.ustc.edu.cn/~zqj/"/>
+    href="https://qijingzheng.github.io/"/>
   <generator uri="https://jekyllrb.com/" version="4.2.0">Jekyll</generator>
   <rights> © 2022 Qijing Zheng </rights>
-  <icon>/~zqj/assets/img/favicons/favicon.ico</icon>
-  <logo>/~zqj/assets/img/favicons/favicon-96x96.png</logo>
+  <icon>/assets/img/favicons/favicon.ico</icon>
+  <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
 
   
   <entry>
     <title>General Wigner Crystal in Moiré Superlattice</title>
-    <link href="http://staff.ustc.edu.cn/~zqj/posts/GeneralWignerCrystal/" rel="alternate" type="text/html" title="General Wigner Crystal in Moiré Superlattice" />
+    <link href="https://qijingzheng.github.io/posts/GeneralWignerCrystal/" rel="alternate" type="text/html" title="General Wigner Crystal in Moiré Superlattice" />
     <published>2022-06-08T09:23:00+08:00</published>
   
     <updated>2022-06-08T09:23:00+08:00</updated>
   
-    <id>http://staff.ustc.edu.cn/~zqj/posts/GeneralWignerCrystal/</id>
-    <content src="http://staff.ustc.edu.cn/~zqj/posts/GeneralWignerCrystal/" />
+    <id>https://qijingzheng.github.io/posts/GeneralWignerCrystal/</id>
+    <content src="https://qijingzheng.github.io/posts/GeneralWignerCrystal/" />
     <author>
       <name>Qijing Zheng</name>
     </author>
@@ -66,13 +66,13 @@ $K$, known as $\gamma_s$, can be written as 1
   
   <entry>
     <title>Numerical Solutions to the Time-dependent Schrödinger Equation</title>
-    <link href="http://staff.ustc.edu.cn/~zqj/posts/Numerical_TDSE/" rel="alternate" type="text/html" title="Numerical Solutions to the Time-dependent Schrödinger Equation" />
+    <link href="https://qijingzheng.github.io/posts/Numerical_TDSE/" rel="alternate" type="text/html" title="Numerical Solutions to the Time-dependent Schrödinger Equation" />
     <published>2022-05-20T09:00:00+08:00</published>
   
     <updated>2022-05-20T09:00:00+08:00</updated>
   
-    <id>http://staff.ustc.edu.cn/~zqj/posts/Numerical_TDSE/</id>
-    <content src="http://staff.ustc.edu.cn/~zqj/posts/Numerical_TDSE/" />
+    <id>https://qijingzheng.github.io/posts/Numerical_TDSE/</id>
+    <content src="https://qijingzheng.github.io/posts/Numerical_TDSE/" />
     <author>
       <name>Qijing Zheng</name>
     </author>
@@ -112,13 +112,13 @@ i\hbar \frac{\partial}{\partial t} \psi(\mathbf{r}, t) &amp;amp;= {\cal H}(\math
   
   <entry>
     <title>Bravais Lattice</title>
-    <link href="http://staff.ustc.edu.cn/~zqj/posts/BravaisLattice3D/" rel="alternate" type="text/html" title="Bravais Lattice" />
+    <link href="https://qijingzheng.github.io/posts/BravaisLattice3D/" rel="alternate" type="text/html" title="Bravais Lattice" />
     <published>2022-05-16T13:50:00+08:00</published>
   
     <updated>2022-05-16T13:50:00+08:00</updated>
   
-    <id>http://staff.ustc.edu.cn/~zqj/posts/BravaisLattice3D/</id>
-    <content src="http://staff.ustc.edu.cn/~zqj/posts/BravaisLattice3D/" />
+    <id>https://qijingzheng.github.io/posts/BravaisLattice3D/</id>
+    <content src="https://qijingzheng.github.io/posts/BravaisLattice3D/" />
     <author>
       <name>Qijing Zheng</name>
     </author>
@@ -160,13 +160,13 @@ i\hbar \frac{\partial}{\partial t} \psi(\mathbf{r}, t) &amp;amp;= {\cal H}(\math
   
   <entry>
     <title>Brillouin Zone Integration: Linear Tetrahedron Method</title>
-    <link href="http://staff.ustc.edu.cn/~zqj/posts/LinearTetrahedronMethod/" rel="alternate" type="text/html" title="Brillouin Zone Integration: Linear Tetrahedron Method" />
+    <link href="https://qijingzheng.github.io/posts/LinearTetrahedronMethod/" rel="alternate" type="text/html" title="Brillouin Zone Integration: Linear Tetrahedron Method" />
     <published>2022-05-04T14:30:00+08:00</published>
   
     <updated>2022-05-04T14:30:00+08:00</updated>
   
-    <id>http://staff.ustc.edu.cn/~zqj/posts/LinearTetrahedronMethod/</id>
-    <content src="http://staff.ustc.edu.cn/~zqj/posts/LinearTetrahedronMethod/" />
+    <id>https://qijingzheng.github.io/posts/LinearTetrahedronMethod/</id>
+    <content src="https://qijingzheng.github.io/posts/LinearTetrahedronMethod/" />
     <author>
       <name>Qijing Zheng</name>
     </author>
@@ -205,13 +205,13 @@ Zone (BZ). The integrations are generally of the form
   
   <entry>
     <title>Phonopy: Rutile TiO<sub>2</sub></title>
-    <link href="http://staff.ustc.edu.cn/~zqj/posts/Phonopy-Rutile-TiO2/" rel="alternate" type="text/html" title="Phonopy: Rutile TiO<sub>2</sub>" />
+    <link href="https://qijingzheng.github.io/posts/Phonopy-Rutile-TiO2/" rel="alternate" type="text/html" title="Phonopy: Rutile TiO<sub>2</sub>" />
     <published>2022-04-25T09:30:00+08:00</published>
   
     <updated>2022-04-25T09:30:00+08:00</updated>
   
-    <id>http://staff.ustc.edu.cn/~zqj/posts/Phonopy-Rutile-TiO2/</id>
-    <content src="http://staff.ustc.edu.cn/~zqj/posts/Phonopy-Rutile-TiO2/" />
+    <id>https://qijingzheng.github.io/posts/Phonopy-Rutile-TiO2/</id>
+    <content src="https://qijingzheng.github.io/posts/Phonopy-Rutile-TiO2/" />
     <author>
       <name>Qijing Zheng</name>
     </author>
