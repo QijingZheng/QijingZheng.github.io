@@ -620,7 +620,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="272 words">1 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="390 words">2 min</span>
 
 
           <!-- page views -->
@@ -682,12 +682,68 @@ harmonics</p>
 
 <ul>
   <li>$j_l(kr)$ is the spherical Bessel function, <sup id="fnref:sph_bessel" role="doc-noteref"><a href="#fn:sph_bessel" class="footnote">2</a></sup></li>
-  <li>$Y_l^m(\theta, \phi)$ is the complex spherical harmonics, <sup id="fnref:complex_sph" role="doc-noteref"><a href="#fn:complex_sph" class="footnote">3</a></sup></li>
+  <li>$Y_l^m(\theta, \phi)$ is the <em>complex</em> spherical harmonics, <sup id="fnref:complex_sph" role="doc-noteref"><a href="#fn:complex_sph" class="footnote">3</a></sup></li>
   <li>The superscript * denotes complex conjugation,</li>
   <li>The hat ^ denotes unit vector,</li>
   <li>$Y_l^{m*}(\theta, \phi) = (-1)^m Y_l^{-m}(\theta, \phi)$ is used from
 Eq.\eqref{eq:pw_sph_expan} to Eq.\eqref{eq:pw_sph_expan_2}.</li>
 </ul>
+
+<h3 id="real-spherical-harmoics">Real spherical harmoics</h3>
+
+<p>As shown in the
+<a href="/~zqj/posts/FourierTransform-Radial-Function/">previous post</a>, <em>complex</em> and
+<em>real</em> spherical harmonics can be inter-transformed by a unitary matrix $U^l$,
+i.e.</p>
+
+\[\begin{equation}
+\label{eq:c2r_umatrix}
+Y_l^m(\theta, \phi) = \sum_{m'=-l}^l U^l_{mm'} \,Y_{l,m'}(\theta, \phi)
+\end{equation}\]
+
+<p>Inserting Eq.\eqref{eq:c2r_umatrix} into Eq.\eqref{eq:pw_sph_expan_2}, one get</p>
+
+\[\begin{align}
+    e^{i \mathbf{k} \cdot \mathbf{r}}
+    &amp;=
+    4\pi \sum_{l=0}^\infty \sum_{m=-l}^l
+    i^l \, j_l(kr)
+    \,
+    \sum_{m_1=-l}^l
+    U_{mm_1}^{l*}
+    Y_{lm_1}(\hat{\mathbf{k}})
+    \,
+    \sum_{m_2=-l}^l
+    U_{mm_2}^{l}
+    Y_{lm_2}(\hat{\mathbf{r}}) \\
+    &amp;=
+    4\pi \sum_{l=0}^\infty
+    \sum_{m_1=-l}^l
+    \sum_{m_2=-l}^l
+    i^l \, j_l(kr)
+    \,
+    Y_{lm_1}(\hat{\mathbf{k}})
+    Y_{lm_2}(\hat{\mathbf{r}})
+    \sum_{m=-l}^l
+    \,
+    U_{mm_1}^{l*}
+    U_{mm_2}^{l} \\
+    &amp;=
+    4\pi \sum_{l=0}^\infty \sum_{m=-l}^l
+    i^l \, j_l(kr)
+    \, Y_{lm}(\hat{\mathbf{k}})
+    \, Y_{lm}(\hat{\mathbf{r}})
+    \label{eq:pw_real-sph_expan}
+\end{align}\]
+
+<p>where we have utilized the fact that $U$ is a <em>unitary matrix</em> in the last line,
+i.e.</p>
+
+\[\begin{equation}
+U^{\dagger}\cdot U = \mathbb{1}
+\qquad\Longleftrightarrow\qquad
+\sum_{m} U_{mj}^*\cdot U_{mk} = \delta_{jk}
+\end{equation}\]
 
 <h2 id="final-results">Final results</h2>
 
