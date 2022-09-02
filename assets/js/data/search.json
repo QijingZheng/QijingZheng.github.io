@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Evaluating Overlap Integral in Momentum Space",
+    "url": "/posts/Overlap-Integral-in-Momentum-Space/",
+    "categories": "Blogging, Tutorial",
+    "tags": "OverlapIntegral, SphericalHarmonics, SphericalBesselTransform, Gaunt",
+    "date": "2022-09-02 14:20:00 +0800",
+    
+
+
+
+
+
+    "snippet": "IntroductionSuppose $\\chi_{l,m}(\\mathbf{r})$ is a molecular orbital of the form:\\[\\begin{equation}    \\chi_{l,m}(\\mathbf{r}) = f_{l}(r)\\cdot Y_l^m(\\hat{\\mathbf{r}})  \\end{equation}\\]where $f_l(r)$ is the radial part and $Y_l^m$ is the complex sphericalharmonics. 1  The Fourier transform of $\\chi_..."
+  },
+  
+  {
     "title": "General Wigner Crystal in Moiré Superlattice",
     "url": "/posts/GeneralWignerCrystal/",
     "categories": "Blogging, Tutorial",

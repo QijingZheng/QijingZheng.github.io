@@ -4,7 +4,7 @@
   <id>https://qijingzheng.github.io/</id>
   <title>Qijing Zheng</title>
   <subtitle>A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.</subtitle>
-  <updated>2022-09-01T13:29:23+08:00</updated>
+  <updated>2022-09-02T16:33:53+08:00</updated>
   <author>
     <name>Qijing Zheng</name>
     <uri>https://qijingzheng.github.io/</uri>
@@ -17,6 +17,56 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>Evaluating Overlap Integral in Momentum Space</title>
+    <link href="https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/" rel="alternate" type="text/html" title="Evaluating Overlap Integral in Momentum Space" />
+    <published>2022-09-02T14:20:00+08:00</published>
+  
+    <updated>2022-09-02T14:20:00+08:00</updated>
+  
+    <id>https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/</id>
+    <content src="https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/" />
+    <author>
+      <name>Qijing Zheng</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+Introduction
+
+Suppose $\chi_{l,m}(\mathbf{r})$ is a molecular orbital of the form:
+
+\[\begin{equation}
+    \chi_{l,m}(\mathbf{r}) = f_{l}(r)\cdot Y_l^m(\hat{\mathbf{r}})
+  \end{equation}\]
+
+where $f_l(r)$ is the radial part and $Y_l^m$ is the complex spherical
+harmonics. 1  The Fourier transform of $\chi_{l,m}(\mathbf{r})$ is a
+function of the same form, i.e. 2
+
+\[\begin{equation}
+    \tilde\c...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -197,63 +247,6 @@ Zone (BZ). The integrations are generally of the form
 \[\begin{equation}
     \label{eq:bz_int}
     \frac{1}{\Omega_{BZ}}\int_{BZ} \,M_{\mathbf{k}}\c...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Phonopy: Rutile TiO<sub>2</sub></title>
-    <link href="https://qijingzheng.github.io/posts/Phonopy-Rutile-TiO2/" rel="alternate" type="text/html" title="Phonopy: Rutile TiO<sub>2</sub>" />
-    <published>2022-04-25T09:30:00+08:00</published>
-  
-    <updated>2022-04-25T09:30:00+08:00</updated>
-  
-    <id>https://qijingzheng.github.io/posts/Phonopy-Rutile-TiO2/</id>
-    <content src="https://qijingzheng.github.io/posts/Phonopy-Rutile-TiO2/" />
-    <author>
-      <name>Qijing Zheng</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Phonon Dispersion of Rutile TiO$_2$
-
-This is a summary of my using Phonopy to
-calculate phonon spectrum of rutile TiO$_2$. 1
-
-Computational Details
-
-Below is a list of used packages and computational details
-
-
-  
-    Phonopy
-  
-  
-    DFT code: VASP version 5.4.4
-  
-  
-    PAW method, GGA (PBE).  Click
-here to download
-the POTCAR I used, where normal Ti POTCAR (4 valence electrons) was used.
-
- ...
     </summary>
   
 
