@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="Evaluating Overlap Integral in Momentum Space" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/","headline":"Evaluating Overlap Integral in Momentum Space","dateModified":"2022-09-02T14:20:00+08:00","datePublished":"2022-09-02T14:20:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/","headline":"Evaluating Overlap Integral in Momentum Space","dateModified":"2022-09-05T16:54:39+08:00","datePublished":"2022-09-02T14:20:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -648,6 +648,36 @@ University of Science &amp; Technology of China
         <div>
           <!-- lastmod -->
           
+          <span>
+            Updated
+            <!--
+  Date format snippet
+-->
+
+
+
+
+
+<span class="timeago lastmod"
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Mon, Sep  5, 2022,  4:54 PM +0800"
+  >
+
+  
+  
+
+  
+    Sep  5
+  
+
+  <i class="unloaded">2022-09-05T16:54:39+08:00</i>
+
+</span>
+
+          </span>
+          
 
           <!-- read time -->
           <!--
@@ -664,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1181 words">6 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1250 words">6 min</span>
 
 
           <!-- page views -->
@@ -866,7 +896,7 @@ Wigner-$3j$ symbol by <sup id="fnref:gaunt_wigner3j" role="doc-noteref"><a href=
     \end{pmatrix}
   \end{equation}\]
 
-<p>The obey the following symmetry rules</p>
+<p>They obey the following symmetry rules</p>
 
 <ul>
   <li>
@@ -925,10 +955,16 @@ coefficients.<sup id="fnref:clebsch-gordan" role="doc-noteref"><a href="#fn:cleb
 <h3 id="real-spherical-harmonics">Real spherical harmonics</h3>
 
 <p>As is well known, <em>complex</em> and <em>real</em> spherical harmonics (SPH) can be
-inter-transformed by a <em>unitary</em> matrix $U^l$, i.e.</p>
+inter-transformed by a <em>unitary</em> matrix $U^l$, i.e.<sup id="fnref:real_sph_harm" role="doc-noteref"><a href="#fn:real_sph_harm" class="footnote">5</a></sup></p>
 
 \[\begin{equation}
     Y_{l,m}(\theta, \phi) = \sum_{n=0}^{2l+1} U^l_{m,n}Y_{l}^{n-l}(\theta, \phi)
+    =
+    \begin{cases}
+      \frac{i}{\sqrt{2}}(Y_l^m - (-1)^m Y_l^{-m}) &amp; \text{if } m &lt; 0 \\
+      Y_l^0 &amp; \text{if } m = 0 \\
+      \frac{1}{\sqrt{2}}(Y_l^{-|m|} + (-1)^m Y_l^m) &amp; \text{if } m &gt; 0
+    \end{cases}
   \end{equation}\]
 
 <p>Therefore, the Gaunt coefficients defined in Eq.\eqref{eq:gaunt_real_sph} can
@@ -964,6 +1000,9 @@ then be written as</p>
 \in \mathbb{N}$</li>
   <li>non-zero for $l_1, l_2, l_3$ fulfilling the triangle relation, i.e. $|l_1 - l_2|
   \le l \le l_1 + l_2$.</li>
+  <li>zero for $m_1 &lt; 0$, $m_2 &lt; 0$ and $m_3 &lt;0$</li>
+  <li>if $m_1 &gt; 0$, $m_2 &gt; 0$ and $m_3 &gt;0$, then non-zero for $m_1 + m_2 + m_3 = 2n$
+for $n\in\mathbb{N}$</li>
 </ul>
 
 <h3 id="gaunt-coefficients-table">Gaunt coefficients table</h3>
@@ -971,7 +1010,7 @@ then be written as</p>
 <p>As can be clearly seen, the Gaunt coefficients, be it defined by complex or real
 SPH, only depends on the three pairs of quantum numbers $(l,m)$. Therefore, one
 can calculated the coefficients in advance and look up the table when necessary,
-which can save some computation time. <sup id="fnref:pySBT" role="doc-noteref"><a href="#fn:pySBT" class="footnote">5</a></sup></p>
+which can save some computation time. <sup id="fnref:pySBT" role="doc-noteref"><a href="#fn:pySBT" class="footnote">6</a></sup></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1115,6 +1154,7 @@ and analytic solution.</p>
 </figure>
 
 <h2 id="reference">Reference</h2>
+
 <div class="footnotes" role="doc-endnotes">
   <ol>
     <li id="fn:sph_harm" role="doc-endnote">
@@ -1128,6 +1168,9 @@ and analytic solution.</p>
     </li>
     <li id="fn:clebsch-gordan" role="doc-endnote">
       <p><a href="https://en.wikipedia.org/wiki/Clebsch%E2%80%93Gordan_coefficients" target="_blank">Clebsch–Gordan coefficients</a> <a href="#fnref:clebsch-gordan" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:real_sph_harm" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Spherical_harmonics#Real_form" target="_blank">Spherical harmonics: Real form</a> <a href="#fnref:real_sph_harm" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:pySBT" role="doc-endnote">
       <p><a href="https://github.com/QijingZheng/pySBT" target="_blank">pySBT: A python implementation of spherical Bessel transform (SBT) in O(Nlog(N)) time.</a> <a href="#fnref:pySBT" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -1259,6 +1302,11 @@ and analytic solution.</p>
       <span>Recent Update</span>
       <ul class="post-content pl-0 pb-1 ml-1 mt-2">
 
+      
+        
+        
+        
+        <li><a href="/posts/Overlap-Integral-in-Momentum-Space/">Evaluating Overlap Integral in Momentum Space</a></li>
       
         
         
