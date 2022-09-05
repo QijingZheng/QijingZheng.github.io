@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1250 words">6 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1500 words">8 min</span>
 
 
           <!-- page views -->
@@ -900,7 +900,7 @@ Wigner-$3j$ symbol by <sup id="fnref:gaunt_wigner3j" role="doc-noteref"><a href=
 
 <ul>
   <li>
-    <p>invariant under space reflection, i.e.</p>
+    <p>Invariant under space reflection, i.e.</p>
 
 \[\begin{equation}
     {\cal G}(l_1, l_2, l_3, m_1, m_2, m_3)
@@ -909,7 +909,7 @@ Wigner-$3j$ symbol by <sup id="fnref:gaunt_wigner3j" role="doc-noteref"><a href=
   \end{equation}\]
   </li>
   <li>
-    <p>invariant under any permutation of the columns, i.e.</p>
+    <p>Invariant under any permutation of the columns, i.e.</p>
 
 \[\begin{equation}
     \begin{split}
@@ -922,14 +922,14 @@ Wigner-$3j$ symbol by <sup id="fnref:gaunt_wigner3j" role="doc-noteref"><a href=
   \end{equation}\]
   </li>
   <li>
-    <p>non-zero only for <em>even</em> sum of the $l_i$, i.e. $l_1 + l_2 + l_3 = 2n$ for $n
-\in \mathbb{N}$</p>
+    <p>Non-zero only for <em>even</em> sum of the $l_i$, i.e. $l_1 + l_2 + l_3 = 2n$ for $n
+\in \mathbb{N}$.</p>
   </li>
   <li>
-    <p>non-zero for $l_1, l_2, l_3$ fulfilling the triangle relation, i.e. $|l_1 - l_2| \le l \le l_1 + l_2$</p>
+    <p>Non-zero for $l_1, l_2, l_3$ fulfilling the triangle relation, i.e. $|l_1 - l_2| \le l \le l_1 + l_2$.</p>
   </li>
   <li>
-    <p>non-zero for $m_1 + m_2 + m_3 = 0$</p>
+    <p>Non-zero for $m_1 + m_2 + m_3 = 0$.</p>
   </li>
 </ul>
 
@@ -958,6 +958,7 @@ coefficients.<sup id="fnref:clebsch-gordan" role="doc-noteref"><a href="#fn:cleb
 inter-transformed by a <em>unitary</em> matrix $U^l$, i.e.<sup id="fnref:real_sph_harm" role="doc-noteref"><a href="#fn:real_sph_harm" class="footnote">5</a></sup></p>
 
 \[\begin{equation}
+  \label{eq:u_c2r}
     Y_{l,m}(\theta, \phi) = \sum_{n=0}^{2l+1} U^l_{m,n}Y_{l}^{n-l}(\theta, \phi)
     =
     \begin{cases}
@@ -989,20 +990,61 @@ then be written as</p>
       U_{m_3,n_3}^{l_3}
       \,\,
       {\cal G}(l_1, l_2, l_3, n_1\mbox{-}l_1, n_2\mbox{-}l_2, n_3\mbox{-}l_3)
+      \label{eq:real_gaunt_exp}
   \end{align}\]
 
 <p>The Gaunt coefficients ${\cal G}’$ also obey the following rules</p>
 
 <ul>
-  <li><strong>not</strong> invariant under space reflection</li>
-  <li>invariant under any permutation of the columns</li>
-  <li>non-zero only for even sum of the $l_i$, i.e. $l_1 + l_2 + l_3 = 2n$ for $n
-\in \mathbb{N}$</li>
-  <li>non-zero for $l_1, l_2, l_3$ fulfilling the triangle relation, i.e. $|l_1 - l_2|
+  <li>Invariant under any permutation of the columns.</li>
+  <li>Non-zero only for even sum of the $l_i$, i.e. $l_1 + l_2 + l_3 = 2n$ for $n
+\in \mathbb{N}$.</li>
+  <li>Non-zero for $l_1, l_2, l_3$ fulfilling the triangle relation, i.e. $|l_1 - l_2|
   \le l \le l_1 + l_2$.</li>
-  <li>zero for $m_1 &lt; 0$, $m_2 &lt; 0$ and $m_3 &lt;0$</li>
-  <li>if $m_1 &gt; 0$, $m_2 &gt; 0$ and $m_3 &gt;0$, then non-zero for $m_1 + m_2 + m_3 = 2n$
-for $n\in\mathbb{N}$</li>
+  <li>
+    <p>Zero for $m_1 &lt; 0$, $m_2 &lt; 0$ and $m_3 &lt;0$.  To see this, by combining
+Eq.\eqref{eq:u_c2r} and Eq.\eqref{eq:real_gaunt_exp}, we have</p>
+
+\[\begin{align}
+{\cal G}'(l_1, l_2, l_3, m_1, m_2, m_3)
+&amp;= \frac{-i}{2\sqrt{2}}\Bigl[\,{\cal G}(l_1, l_2, l_3, m_1, m_2, m_3) \\[3pt]
+&amp;\quad- (-1)^{m_1+m_2+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad+ (-1)^{m_2+m_3}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad- (-1)^{m_1}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, {m_3}) \\[6pt]
+&amp;\quad+ (-1)^{m_1+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad- (-1)^{m_2}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, {m_3}) \\[6pt]
+&amp;\quad+ (-1)^{m_1+m_2}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, {m_3}) \\[6pt]
+&amp;\quad- (-1)^{m_3}{\cal G}(l_1, l_2, l_3, {m_1}, {m_2}, \overline{m_3})\Bigr]
+\end{align}\]
+
+    <p>where we have used $\overline{m} = -m$ for abbreviation.</p>
+
+    <ul>
+      <li>
+        <p>The first two terms are apparently <em>zero</em> since all $m_i &lt; 0$ and as a
+result the sum of $m_i$ could not be zero.</p>
+      </li>
+      <li>
+        <p>For the 3-rd and 4-th terms, let’s first assume that $m_1 = m_2 +m_3$ so
+that the Gaunt coefficients in the 3-rd and 4-th terms are not zero.
+Moreover, Due to the space reflection symmetry, the Gaunt coefficients in
+these two terms are the same.  Apparently, the Gaunt coefficients in the
+rest terms are zero (we could not have $m_1 = m_2 + m_3$, $m_2 = m_1 + m_3$
+and $m_3 = m_1 + m_2$ at the same time).  Now the sign before the 3-rd and
+4-th terms can be written as</p>
+
+\[\begin{equation}
+(-1)^{m_2 + m_3} - (-1)^{m_1} = (-1)^{m_1}[(-1)^{m_1 + m_2 + m_3} - 1]
+\end{equation}\]
+
+        <p>which is zero for $m_1 = m_2 +m_3$.  The same applies to the 5/6 and 7/8
+terms.</p>
+      </li>
+    </ul>
+  </li>
+  <li>If $m_1 &gt; 0$, $m_2 &gt; 0$ and $m_3 &gt;0$, then non-zero for $m_1 + m_2 + m_3 = 2n$
+for $n\in\mathbb{N}$.</li>
+  <li>Apparently, <strong>not</strong> invariant under space reflection.</li>
 </ul>
 
 <h3 id="gaunt-coefficients-table">Gaunt coefficients table</h3>
