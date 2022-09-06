@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="Evaluating Overlap Integral in Momentum Space" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/","headline":"Evaluating Overlap Integral in Momentum Space","dateModified":"2022-09-05T16:54:39+08:00","datePublished":"2022-09-02T14:20:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/","headline":"Evaluating Overlap Integral in Momentum Space","dateModified":"2022-09-06T10:16:29+08:00","datePublished":"2022-09-02T14:20:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -662,17 +662,17 @@ University of Science &amp; Technology of China
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Mon, Sep  5, 2022,  4:54 PM +0800"
+    title="Tue, Sep  6, 2022, 10:16 AM +0800"
   >
 
   
   
 
   
-    Sep  5
+    Sep  6
   
 
-  <i class="unloaded">2022-09-05T16:54:39+08:00</i>
+  <i class="unloaded">2022-09-06T10:16:29+08:00</i>
 
 </span>
 
@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1500 words">8 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1699 words">9 min</span>
 
 
           <!-- page views -->
@@ -764,7 +764,7 @@ distance $\mathbf{R}$</p>
   \end{equation}\]
 
 <p>where the phase $e^{-i\mathbf{k}\cdot\mathbf{R}}$ in Eq.\eqref{eq:s_def_k} is
-due to the shifting property of the Fourier trasnform.</p>
+due to the shifting property of Fourier trasnform.</p>
 
 <h2 id="overlap-integral-in-momentum-space">Overlap integral in momentum space</h2>
 
@@ -1005,45 +1005,83 @@ then be written as</p>
     <p>Zero for $m_1 &lt; 0$, $m_2 &lt; 0$ and $m_3 &lt;0$.  To see this, by combining
 Eq.\eqref{eq:u_c2r} and Eq.\eqref{eq:real_gaunt_exp}, we have</p>
 
-\[\begin{align}
+\[\begin{align*}
 {\cal G}'(l_1, l_2, l_3, m_1, m_2, m_3)
 &amp;= \frac{-i}{2\sqrt{2}}\Bigl[\,{\cal G}(l_1, l_2, l_3, m_1, m_2, m_3) \\[3pt]
-&amp;\quad- (-1)^{m_1+m_2+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
-&amp;\quad+ (-1)^{m_2+m_3}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
-&amp;\quad- (-1)^{m_1}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, {m_3}) \\[6pt]
-&amp;\quad+ (-1)^{m_1+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, \overline{m_3}) \\[6pt]
-&amp;\quad- (-1)^{m_2}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, {m_3}) \\[6pt]
-&amp;\quad+ (-1)^{m_1+m_2}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, {m_3}) \\[6pt]
-&amp;\quad- (-1)^{m_3}{\cal G}(l_1, l_2, l_3, {m_1}, {m_2}, \overline{m_3})\Bigr]
-\end{align}\]
+&amp;\quad{}-{} (-1)^{m_1+m_2+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_2+m_3}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad{}-{} (-1)^{m_1}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, {m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_1+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad{}-{} (-1)^{m_2}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, {m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_1+m_2}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, {m_3}) \\[6pt]
+&amp;\quad{}-{} (-1)^{m_3}{\cal G}(l_1, l_2, l_3, {m_1}, {m_2}, \overline{m_3})\Bigr]
+\end{align*}\]
 
     <p>where we have used $\overline{m} = -m$ for abbreviation.</p>
 
     <ul>
       <li>
-        <p>The first two terms are apparently <em>zero</em> since all $m_i &lt; 0$ and as a
-result the sum of $m_i$ could not be zero.</p>
+        <p>The Gaunt coefficients in the first two terms are apparently <em>zero</em> since
+all $m_i &lt; 0$ and as a result the sum of $m_i$ could not possibly be
+zero.</p>
       </li>
       <li>
-        <p>For the 3-rd and 4-th terms, let’s first assume that $m_1 = m_2 +m_3$ so
-that the Gaunt coefficients in the 3-rd and 4-th terms are not zero.
-Moreover, Due to the space reflection symmetry, the Gaunt coefficients in
-these two terms are the same.  Apparently, the Gaunt coefficients in the
-rest terms are zero (we could not have $m_1 = m_2 + m_3$, $m_2 = m_1 + m_3$
-and $m_3 = m_1 + m_2$ at the same time).  Now the sign before the 3-rd and
-4-th terms can be written as</p>
+        <p>For the Gaunt coefficients in the rest terms to be non-zero, one of the
+following conditions must be fulfilled:</p>
+
+\[\begin{equation}
+\label{eq:non-zero_cond}
+m_1 = m_2 + m_3;\quad   
+m_2 = m_1 + m_3;\quad
+m_3 = m_1 + m_2
+\end{equation}\]
+
+        <p>Let’s first assume that $m_1 = m_2 +m_3$ so that the Gaunt coefficients in
+the 3-rd and 4-th terms are not zero.  Moreover, Due to the space reflection
+symmetry, the Gaunt coefficients in these two terms equal to each other.
+Apparently, the Gaunt coefficients in the rest terms are zero (we could not
+have $m_1 = m_2 + m_3$, $m_2 = m_1 + m_3$ and $m_3 = m_1 + m_2$ at the same
+time).  Now the sign before the 3-rd and 4-th terms can be written as</p>
 
 \[\begin{equation}
 (-1)^{m_2 + m_3} - (-1)^{m_1} = (-1)^{m_1}[(-1)^{m_1 + m_2 + m_3} - 1]
 \end{equation}\]
 
-        <p>which is zero for $m_1 = m_2 +m_3$.  The same applies to the 5/6 and 7/8
-terms.</p>
+        <p>which is zero for $m_1 = m_2 +m_3$.  The same reasoning applies to the 5/6
+and 7/8 terms.</p>
       </li>
     </ul>
   </li>
-  <li>If $m_1 &gt; 0$, $m_2 &gt; 0$ and $m_3 &gt;0$, then non-zero for $m_1 + m_2 + m_3 = 2n$
-for $n\in\mathbb{N}$.</li>
+  <li>
+    <p>If $m_1 &gt; 0$, $m_2 &gt; 0$ and $m_3 &gt;0$, then non-zero for $m_1 + m_2 + m_3 = 2n$
+for $n\in\mathbb{N}$.</p>
+
+    <p>In this case, Eq.\eqref{eq:real_gaunt_exp} expands to</p>
+
+\[\begin{align*}
+{\cal G}'(l_1, l_2, l_3, m_1, m_2, m_3)
+&amp;= \frac{1}{2\sqrt{2}}\Bigl[\,{\cal G}(l_1, l_2, l_3, m_1, m_2, m_3) \\[3pt]
+&amp;\quad{}+{} (-1)^{m_1+m_2+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_2+m_3}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_1}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, {m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_1+m_3}{\cal G}(l_1, l_2, l_3, \overline{m_1}, {m_2}, \overline{m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_2}{\cal G}(l_1, l_2, l_3, {m_1}, \overline{m_2}, {m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_1+m_2}{\cal G}(l_1, l_2, l_3, \overline{m_1}, \overline{m_2}, {m_3}) \\[6pt]
+&amp;\quad{}+{} (-1)^{m_3}{\cal G}(l_1, l_2, l_3, {m_1}, {m_2}, \overline{m_3})\Bigr]
+\end{align*}\]
+
+    <p>which is again non-zero <em>only</em> when one of the conditions in
+Eq.\eqref{eq:non-zero_cond} is fulfilled. Assuming that $m_1 = m_2 + m_3$,
+then the only non-zero terms are the <em>third</em> and <em>fourth</em> ones, where the Gaunt
+coefficients equal to each other, which leaves us the sign factor</p>
+
+\[\begin{equation}
+(-1)^{m_2 + m_3} + (-1)^{m_1} = (-1)^{m_1}[(-1)^{m_1 + m_2 + m_3} + 1]
+\end{equation}\]
+
+    <p>Obviously, it is non-zero only when $m_1 + m_2 + m_3 = 2n$ for
+$n\in\mathbb{N}$.</p>
+  </li>
   <li>Apparently, <strong>not</strong> invariant under space reflection.</li>
 </ul>
 
