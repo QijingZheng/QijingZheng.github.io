@@ -4,7 +4,7 @@
   <id>https://qijingzheng.github.io/</id>
   <title>Qijing Zheng</title>
   <subtitle>A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.</subtitle>
-  <updated>2022-09-06T10:21:36+08:00</updated>
+  <updated>2022-09-08T10:58:08+08:00</updated>
   <author>
     <name>Qijing Zheng</name>
     <uri>https://qijingzheng.github.io/</uri>
@@ -24,7 +24,7 @@
     <link href="https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/" rel="alternate" type="text/html" title="Evaluating Overlap Integral in Momentum Space" />
     <published>2022-09-02T14:20:00+08:00</published>
   
-    <updated>2022-09-06T10:16:29+08:00</updated>
+    <updated>2022-09-08T10:51:44+08:00</updated>
   
     <id>https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/</id>
     <content src="https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/" />
@@ -51,18 +51,18 @@
       
 Introduction
 
-Suppose $\chi_{l,m}(\mathbf{r})$ is a molecular orbital of the form:
+Suppose $\chi_{l,m}(\mathbf{r})$ is a atomic orbital of the form:
 
 \[\begin{equation}
     \chi_{l,m}(\mathbf{r}) = f_{l}(r)\cdot Y_l^m(\hat{\mathbf{r}})
   \end{equation}\]
 
 where $f_l(r)$ is the radial part and $Y_l^m$ is the complex spherical
-harmonics. 1  The Fourier transform of $\chi_{l,m}(\mathbf{r})$ is a
-function of the same form, i.e. 2
+harmonics. 1 Two types of functions are often used as atomic orbitals,
+i.e. Slater-type orbital (STO) 2
 
 \[\begin{equation}
-    \tilde\c...
+f_{n,l}^{\text...
     </summary>
   
 

@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="Evaluating Overlap Integral in Momentum Space" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/","headline":"Evaluating Overlap Integral in Momentum Space","dateModified":"2022-09-06T10:16:29+08:00","datePublished":"2022-09-02T14:20:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/","headline":"Evaluating Overlap Integral in Momentum Space","dateModified":"2022-09-08T10:51:44+08:00","datePublished":"2022-09-02T14:20:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -662,17 +662,17 @@ University of Science &amp; Technology of China
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Sep  6, 2022, 10:16 AM +0800"
+    title="Thu, Sep  8, 2022, 10:51 AM +0800"
   >
 
   
   
 
   
-    Sep  6
+    Sep  8
   
 
-  <i class="unloaded">2022-09-06T10:16:29+08:00</i>
+  <i class="unloaded">2022-09-08T10:51:44+08:00</i>
 
 </span>
 
@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1699 words">9 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1738 words">9 min</span>
 
 
           <!-- page views -->
@@ -711,15 +711,28 @@ University of Science &amp; Technology of China
         
 <h2 id="introduction">Introduction</h2>
 
-<p>Suppose $\chi_{l,m}(\mathbf{r})$ is a molecular orbital of the form:</p>
+<p>Suppose $\chi_{l,m}(\mathbf{r})$ is a atomic orbital of the form:</p>
 
 \[\begin{equation}
     \chi_{l,m}(\mathbf{r}) = f_{l}(r)\cdot Y_l^m(\hat{\mathbf{r}})
   \end{equation}\]
 
 <p>where $f_l(r)$ is the radial part and $Y_l^m$ is the <em>complex</em> spherical
-harmonics. <sup id="fnref:sph_harm" role="doc-noteref"><a href="#fn:sph_harm" class="footnote">1</a></sup>  The Fourier transform of $\chi_{l,m}(\mathbf{r})$ is a
-function of the same form, i.e. <sup id="fnref:radial_func_ft" role="doc-noteref"><a href="#fn:radial_func_ft" class="footnote">2</a></sup></p>
+harmonics. <sup id="fnref:sph_harm" role="doc-noteref"><a href="#fn:sph_harm" class="footnote">1</a></sup> Two types of functions are often used as atomic orbitals,
+i.e. <em>Slater-type orbital</em> (STO) <sup id="fnref:sto_wiki" role="doc-noteref"><a href="#fn:sto_wiki" class="footnote">2</a></sup></p>
+
+\[\begin{equation}
+f_{n,l}^{\text{STO}}(r) = (2\zeta)^{n+\frac{1}{2}}[(2n)!]^{-\frac{1}{2}}\, r^{n-1}e^{-\zeta r}
+\end{equation}\]
+
+<p>and <em>Gaussian-type orbital</em> (GTO): <sup id="fnref:gto_wiki" role="doc-noteref"><a href="#fn:gto_wiki" class="footnote">3</a></sup></p>
+
+\[\begin{equation}
+f_{n,l}^{\text{GTO}}(r) = B(l,\alpha)\, r^l e^{-\alpha r^2}
+\end{equation}\]
+
+<p>The Fourier transform of $\chi_{l,m}(\mathbf{r})$ is a
+function of the same form, i.e. <sup id="fnref:radial_func_ft" role="doc-noteref"><a href="#fn:radial_func_ft" class="footnote">4</a></sup></p>
 
 \[\begin{equation}
     \tilde\chi_{l,m}(\mathbf{k})
@@ -735,7 +748,7 @@ function of the same form, i.e. <sup id="fnref:radial_func_ft" role="doc-noteref
     g_l(k) = \sqrt{\frac{2}{\pi}} \int_0^\infty j_l(kr)f_l(r)r^2 \mathrm{d} r
   \end{equation}\]
 
-<p>Let us consider first the overlap integral (or $S$-matrix) of two molecular orbitals with a
+<p>Let us consider first the overlap integral (or $S$-matrix) of two atomic orbitals with a
 distance $\mathbf{R}$</p>
 
 \[\begin{equation}
@@ -769,7 +782,7 @@ due to the shifting property of Fourier trasnform.</p>
 <h2 id="overlap-integral-in-momentum-space">Overlap integral in momentum space</h2>
 
 <p>Starting with Eq.\eqref{eq:s_def_k} and remember that the plane-wave can be
-expanded by spherical waves, i.e. <sup id="fnref:radial_func_ft:1" role="doc-noteref"><a href="#fn:radial_func_ft" class="footnote">2</a></sup></p>
+expanded by spherical waves, i.e. <sup id="fnref:radial_func_ft:1" role="doc-noteref"><a href="#fn:radial_func_ft" class="footnote">4</a></sup></p>
 
 \[\begin{equation}
     \label{eq:pw_exp}
@@ -879,7 +892,7 @@ Gaunt coefficients should be modified accordingly.</p>
 <h3 id="complex-spherical-harmonics">Complex spherical harmonics</h3>
 
 <p>They Gaunt coefficients defined as Eq.\eqref{eq:gaunt_complex_sph} are related to
-Wigner-$3j$ symbol by <sup id="fnref:gaunt_wigner3j" role="doc-noteref"><a href="#fn:gaunt_wigner3j" class="footnote">3</a></sup></p>
+Wigner-$3j$ symbol by <sup id="fnref:gaunt_wigner3j" role="doc-noteref"><a href="#fn:gaunt_wigner3j" class="footnote">5</a></sup></p>
 
 \[\begin{equation}
     \label{eq:gaunt_wigner3j}
@@ -940,7 +953,7 @@ Wigner-$3j$ symbol by <sup id="fnref:gaunt_wigner3j" role="doc-noteref"><a href=
   \sum_{l=|l_1-l_2|}^{l_1 + l_2} \sum_{m=-l}^l \delta_{m,m_2-m_1}$.</p>
 
 <p>The Gaunt coefficients can be obtained by recursion from Clebsch–Gordan
-coefficients.<sup id="fnref:clebsch-gordan" role="doc-noteref"><a href="#fn:clebsch-gordan" class="footnote">4</a></sup> In <code class="language-plaintext highlighter-rouge">sympy</code>, one can get</p>
+coefficients.<sup id="fnref:clebsch-gordan" role="doc-noteref"><a href="#fn:clebsch-gordan" class="footnote">6</a></sup> In <code class="language-plaintext highlighter-rouge">sympy</code>, one can get</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -955,7 +968,7 @@ coefficients.<sup id="fnref:clebsch-gordan" role="doc-noteref"><a href="#fn:cleb
 <h3 id="real-spherical-harmonics">Real spherical harmonics</h3>
 
 <p>As is well known, <em>complex</em> and <em>real</em> spherical harmonics (SPH) can be
-inter-transformed by a <em>unitary</em> matrix $U^l$, i.e.<sup id="fnref:real_sph_harm" role="doc-noteref"><a href="#fn:real_sph_harm" class="footnote">5</a></sup></p>
+inter-transformed by a <em>unitary</em> matrix $U^l$, i.e.<sup id="fnref:real_sph_harm" role="doc-noteref"><a href="#fn:real_sph_harm" class="footnote">7</a></sup></p>
 
 \[\begin{equation}
   \label{eq:u_c2r}
@@ -1090,7 +1103,7 @@ $n\in\mathbb{N}$.</p>
 <p>As can be clearly seen, the Gaunt coefficients, be it defined by complex or real
 SPH, only depends on the three pairs of quantum numbers $(l,m)$. Therefore, one
 can calculated the coefficients in advance and look up the table when necessary,
-which can save some computation time. <sup id="fnref:pySBT" role="doc-noteref"><a href="#fn:pySBT" class="footnote">6</a></sup></p>
+which can save some computation time. <sup id="fnref:pySBT" role="doc-noteref"><a href="#fn:pySBT" class="footnote">8</a></sup></p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1239,6 +1252,12 @@ and analytic solution.</p>
   <ol>
     <li id="fn:sph_harm" role="doc-endnote">
       <p><a href="https://en.wikipedia.org/wiki/Table_of_spherical_harmonics" target="_blank">Spherical Harmonics</a> <a href="#fnref:sph_harm" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:sto_wiki" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Slater-type_orbital" target="_blank">Slater-type Orbital</a> <a href="#fnref:sto_wiki" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:gto_wiki" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Gaussian_orbital" target="_blank">Gaussian-type Orbital</a> <a href="#fnref:gto_wiki" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:radial_func_ft" role="doc-endnote">
       <p><a href="../FourierTransform-Radial-Function/" target="_blank">Fourier Transform of Radial Functions</a> <a href="#fnref:radial_func_ft" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:radial_func_ft:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
