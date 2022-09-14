@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="NAC Calculation for 1D Model Hamiltonian" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/NAC-Calculation-for-1D-Model-Hamiltonian/","headline":"NAC Calculation for 1D Model Hamiltonian","dateModified":"2022-09-13T21:13:00+08:00","datePublished":"2022-09-13T21:13:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/NAC-Calculation-for-1D-Model-Hamiltonian/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/NAC-Calculation-for-1D-Model-Hamiltonian/","headline":"NAC Calculation for 1D Model Hamiltonian","dateModified":"2022-09-14T19:15:53+08:00","datePublished":"2022-09-13T21:13:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/NAC-Calculation-for-1D-Model-Hamiltonian/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -648,6 +648,36 @@ University of Science &amp; Technology of China
         <div>
           <!-- lastmod -->
           
+          <span>
+            Updated
+            <!--
+  Date format snippet
+-->
+
+
+
+
+
+<span class="timeago lastmod"
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Wed, Sep 14, 2022,  7:15 PM +0800"
+  >
+
+  
+  
+
+  
+    Sep 14
+  
+
+  <i class="unloaded">2022-09-14T19:15:53+08:00</i>
+
+</span>
+
+          </span>
+          
 
           <!-- read time -->
           <!--
@@ -664,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1065 words">5 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1211 words">6 min</span>
 
 
           <!-- page views -->
@@ -811,7 +841,32 @@ written as</p>
   }
 \end{align}\]
 
-<p>Below, we show an example result of the model Hamiltonian:</p>
+<p>In practice, the derivative of the Hamiltonian with respect to $r$ is hard to
+get and we often evaluate another quantity $D_{ij} = d_{ij}\cdot\dot{r}$, which
+is also referred to as nonadiabatic coupling.</p>
+
+\[\begin{align}
+D_{ij} &amp;
+        = \frac{
+            \langle \psi_i |\nabla_r H(r)|\psi_j \rangle
+        }{
+            \varepsilon_j^a -\varepsilon_i^a
+        }\cdot\dot r
+        = \langle \psi_i | \frac{\partial}{\partial t} | \psi_j \rangle
+        \\[9pt]
+       &amp;\approx \dfrac{
+             \langle \psi_i(t) |\psi_j(t+\Delta t)\rangle
+             -
+             \langle \psi_i(t+\Delta t) |\psi_j(t)\rangle
+           }{
+             2\Delta t
+           }
+\end{align}\]
+
+<p>where the finite difference approximation in the second line was proposed by
+Hammes-Schiffer and Tully (HST).<sup id="fnref:hst" role="doc-noteref"><a href="#fn:hst" class="footnote">1</a></sup></p>
+
+<p>Below, we show an example results of the model Hamiltonian:</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -865,11 +920,9 @@ written as</p>
 50
 51
 52
-53
 </pre></td><td class="rouge-code"><pre><span class="c1">#!/usr/bin/env python
 </span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-
 
 <span class="n">rmax</span> <span class="o">=</span> <span class="mf">0.75</span>
 <span class="n">nr</span>   <span class="o">=</span> <span class="mi">501</span>
@@ -972,11 +1025,38 @@ d_{12}(r=0)
 \end{equation}\]
 
     <p>i.e. the NAC is <em>inversely propotional to</em> the energy gap at $r = 0$, which is
-consistent with the <em>adiabatic theorem</em>.<sup id="fnref:adiabatic_theorem" role="doc-noteref"><a href="#fn:adiabatic_theorem" class="footnote">1</a></sup></p>
+consistent with the <em>adiabatic theorem</em>.<sup id="fnref:adiabatic_theorem" role="doc-noteref"><a href="#fn:adiabatic_theorem" class="footnote">2</a></sup></p>
 
     <blockquote>
       <p>One should not confuse the external perturbation $\lambda$ with NAC.</p>
     </blockquote>
+  </li>
+  <li>
+    <p>Comparison of $D_{ij}$ from two methods.  Suppose that the parameter $r$
+follows the motion of a harmonic oscillator, i.e.</p>
+
+\[\begin{align}
+r      &amp;= -r_0 \cdot\cos(\omega t) \\[6pt]
+\dot r &amp;= \omega\,r_0\cdot\sin(\omega t)
+\end{align}\]
+
+    <figure>
+  <div align="center">
+    <a href="/assets/posts/nac_1d_model_hamil/nac_comp.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/nac_1d_model_hamil/nac_comp.png" width="95%" />
+    </a>
+  </div>
+  
+  <figcaption style="text-align: justify; padding: 10px">
+      
+    <b> Figure 2. </b>
+    Comparison of the nonadiabatic coupling from two different methods. 
+    The figure is plotted by
+    <a href="/assets/posts/nac_1d_model_hamil/7_nac_num.py" target="_blank">
+      this script.
+    </a>
+  </figcaption>
+</figure>
   </li>
 </ul>
 
@@ -1017,7 +1097,7 @@ ordering.</p>
   
   <figcaption style="text-align: justify; padding: 10px">
       
-    <b> Figure 2. </b>
+    <b> Figure 3. </b>
     One can clearly see a band crossing near $r=0$ in the upper panel, whereas
     in the lower panel the coefficients $|c|^2$ are not smooth (a kink) at the
     same place.  However, the NAC only differ by a sign factor to the correct
@@ -1071,7 +1151,7 @@ ordering.</p>
   
   <figcaption style="text-align: justify; padding: 10px">
       
-    <b> Figure 3. </b>
+    <b> Figure 4. </b>
     With band re-ordering, the artificial band crossing is now gone and the
     coefficients are correct, too. Howover, the NAC change signs near $r=0$.
     The figure is plotted by
@@ -1131,7 +1211,7 @@ ordering.</p>
   
   <figcaption style="text-align: justify; padding: 10px">
       
-    <b> Figure 4. </b>
+    <b> Figure 5. </b>
     With band re-ordering and phase correction, the results are in consistent
     with Fig.1
     The figure is generated by
@@ -1145,6 +1225,9 @@ ordering.</p>
 </ul>
 <div class="footnotes" role="doc-endnotes">
   <ol>
+    <li id="fn:hst" role="doc-endnote">
+      <p><a href="https://aip.scitation.org/doi/10.1063/1.467455" target="_blank">NAC from finite difference (Hammes-Schiffer and Tully Approach)</a> <a href="#fnref:hst" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
     <li id="fn:adiabatic_theorem" role="doc-endnote">
       <p><a href="https://en.wikipedia.org/wiki/Adiabatic_theorem" target="_blank">Adiabatic theorem</a> <a href="#fnref:adiabatic_theorem" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
@@ -1275,6 +1358,11 @@ ordering.</p>
       <span>Recent Update</span>
       <ul class="post-content pl-0 pb-1 ml-1 mt-2">
 
+      
+        
+        
+        
+        <li><a href="/posts/NAC-Calculation-for-1D-Model-Hamiltonian/">NAC Calculation for 1D Model Hamiltonian</a></li>
       
         
         
