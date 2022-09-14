@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "NAC Calculation for 1D Model Hamiltonian",
+    "url": "/posts/NAC-Calculation-for-1D-Model-Hamiltonian/",
+    "categories": "Blogging, Tutorial",
+    "tags": "NAC, DFT, Python, Matplotlib",
+    "date": "2022-09-13 21:13:00 +0800",
+    
+
+
+
+
+
+    "snippet": "IntroductionLet’s start with a parametric 1D Hamiltonian $H(r)$\\[\\begin{equation}H(r) =\\begin{pmatrix}\\varepsilon_1^d(r) &amp;amp; \\lambda(r) \\\\[6pt]\\lambda(r) &amp;amp; \\varepsilon_2^d(r)\\end{pmatrix}\\end{equation}\\]where the dependence of the the matrix elements on the parameter $r$ are assumed..."
+  },
+  
+  {
     "title": "Evaluating Overlap Integral in Momentum Space",
     "url": "/posts/Overlap-Integral-in-Momentum-Space/",
     "categories": "Blogging, Tutorial",

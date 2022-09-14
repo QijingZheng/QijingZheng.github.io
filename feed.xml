@@ -4,7 +4,7 @@
   <id>https://qijingzheng.github.io/</id>
   <title>Qijing Zheng</title>
   <subtitle>A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.</subtitle>
-  <updated>2022-09-12T11:25:34+08:00</updated>
+  <updated>2022-09-14T12:19:49+08:00</updated>
   <author>
     <name>Qijing Zheng</name>
     <uri>https://qijingzheng.github.io/</uri>
@@ -17,6 +17,60 @@
   <icon>/assets/img/favicons/favicon.ico</icon>
   <logo>/assets/img/favicons/favicon-96x96.png</logo>
 
+
+  
+  <entry>
+    <title>NAC Calculation for 1D Model Hamiltonian</title>
+    <link href="https://qijingzheng.github.io/posts/NAC-Calculation-for-1D-Model-Hamiltonian/" rel="alternate" type="text/html" title="NAC Calculation for 1D Model Hamiltonian" />
+    <published>2022-09-13T21:13:00+08:00</published>
+  
+    <updated>2022-09-13T21:13:00+08:00</updated>
+  
+    <id>https://qijingzheng.github.io/posts/NAC-Calculation-for-1D-Model-Hamiltonian/</id>
+    <content src="https://qijingzheng.github.io/posts/NAC-Calculation-for-1D-Model-Hamiltonian/" />
+    <author>
+      <name>Qijing Zheng</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+Introduction
+
+Let’s start with a parametric 1D Hamiltonian $H(r)$
+
+\[\begin{equation}
+H(r) =
+\begin{pmatrix}
+\varepsilon_1^d(r) &amp;amp; \lambda(r) \\[6pt]
+\lambda(r) &amp;amp; \varepsilon_2^d(r)
+\end{pmatrix}
+\end{equation}\]
+
+where the dependence of the the matrix elements on the parameter $r$ are assumed
+to be
+
+\[\begin{align}
+\varepsilon_1^d(r) &amp;amp;= \phantom{-}\alpha\cdot r \\[6pt]
+\varepsilon_...
+    </summary>
+  
+
+  </entry>
 
   
   <entry>
@@ -202,51 +256,6 @@ i\hbar \frac{\partial}{\partial t} \psi(\mathbf{r}, t) &amp;amp;= {\cal H}(\math
     
 
 
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Brillouin Zone Integration: Linear Tetrahedron Method</title>
-    <link href="https://qijingzheng.github.io/posts/LinearTetrahedronMethod/" rel="alternate" type="text/html" title="Brillouin Zone Integration: Linear Tetrahedron Method" />
-    <published>2022-05-04T14:30:00+08:00</published>
-  
-    <updated>2022-05-04T14:30:00+08:00</updated>
-  
-    <id>https://qijingzheng.github.io/posts/LinearTetrahedronMethod/</id>
-    <content src="https://qijingzheng.github.io/posts/LinearTetrahedronMethod/" />
-    <author>
-      <name>Qijing Zheng</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      Introduction
-
-The translational symmetry of solids resulits in a quantum number, i.e.  the
-crystal momentum $\mathbf{k}$.  Consequently many quantities of the crystal,
-e.g. total energy and density of states, require integration over the Brillouin
-Zone (BZ). The integrations are generally of the form
-
-\[\begin{equation}
-    \label{eq:bz_int}
-    \frac{1}{\Omega_{BZ}}\int_{BZ} \,M_{\mathbf{k}}\c...
     </summary>
   
 
