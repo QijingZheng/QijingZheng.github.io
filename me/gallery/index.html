@@ -30,6 +30,8 @@
 
     <style>
       .splide {
+        width: 50vh;
+        max-width: 300px;
         margin: auto;
       }
 
@@ -41,8 +43,8 @@
       }
 
       .thumbnail {
-        width: 120px;
-        height: 120px;
+        width: 100px;
+        height: 100px;
         overflow: hidden;
         list-style: none;
         margin: 0 0.2rem;
@@ -70,7 +72,7 @@
         <li class="splide__slide">
           <div class="splide__slide__container">
             <a href="/assets/img/me/gallery/202009271028.jpg" data-lightbox="roadtrip">
-              <img src="/assets/img/me/gallery/202009271028.jpg" alt="My Photo" width="600px" />
+              <img src="/assets/img/me/gallery/202009271028.jpg" alt="My Photo" width="100%" />
             </a>
           </div>
           <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
@@ -81,7 +83,7 @@
         <li class="splide__slide">
           <div class="splide__slide__container">
             <a href="/assets/img/me/gallery/202108262130.jpg" data-lightbox="roadtrip">
-              <img src="/assets/img/me/gallery/202108262130.jpg" alt="My Photo" width="600px" />
+              <img src="/assets/img/me/gallery/202108262130.jpg" alt="My Photo" width="100%" />
             </a>
           </div>
           <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
@@ -92,7 +94,7 @@
         <li class="splide__slide">
           <div class="splide__slide__container">
             <a href="/assets/img/me/gallery/202201261309.jpg" data-lightbox="roadtrip">
-              <img src="/assets/img/me/gallery/202201261309.jpg" alt="My Photo" width="600px" />
+              <img src="/assets/img/me/gallery/202201261309.jpg" alt="My Photo" width="100%" />
             </a>
           </div>
           <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
@@ -103,7 +105,7 @@
         <li class="splide__slide">
           <div class="splide__slide__container">
             <a href="/assets/img/me/gallery/202206181850.jpg" data-lightbox="roadtrip">
-              <img src="/assets/img/me/gallery/202206181850.jpg" alt="My Photo" width="600px" />
+              <img src="/assets/img/me/gallery/202206181850.jpg" alt="My Photo" width="100%" />
             </a>
           </div>
           <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
@@ -141,8 +143,8 @@
 
   <script>
     var splide = new Splide("#image-slider", {
-      width: 600,
-      height: 800,
+      width: "100%",
+      heightRatio: 1.33,
       type: 'loop',
       perPage: 1,
       rewind:  true,
