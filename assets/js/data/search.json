@@ -2,7 +2,7 @@
   
   {
     "title": "NAC Calculation for 1D Model Hamiltonian",
-    "url": "/posts/NAC-Calculation-for-1D-Model-Hamiltonian/",
+    "url": "/~zqj/posts/NAC-Calculation-for-1D-Model-Hamiltonian/",
     "categories": "Blogging, Tutorial",
     "tags": "NAC, DFT, Python, Matplotlib",
     "date": "2022-09-13 21:13:00 +0800",
@@ -17,7 +17,7 @@
   
   {
     "title": "Evaluating Overlap Integral in Momentum Space",
-    "url": "/posts/Overlap-Integral-in-Momentum-Space/",
+    "url": "/~zqj/posts/Overlap-Integral-in-Momentum-Space/",
     "categories": "Blogging, Tutorial",
     "tags": "OverlapIntegral, SphericalHarmonics, SphericalBesselTransform, Gaunt",
     "date": "2022-09-02 14:20:00 +0800",
@@ -32,7 +32,7 @@
   
   {
     "title": "General Wigner Crystal in Moiré Superlattice",
-    "url": "/posts/GeneralWignerCrystal/",
+    "url": "/~zqj/posts/GeneralWignerCrystal/",
     "categories": "Blogging, Tutorial",
     "tags": "WignerCrystal",
     "date": "2022-06-08 09:23:00 +0800",
@@ -47,7 +47,7 @@
   
   {
     "title": "Numerical Solutions to the Time-dependent Schrödinger Equation",
-    "url": "/posts/Numerical_TDSE/",
+    "url": "/~zqj/posts/Numerical_TDSE/",
     "categories": "Blogging, Tutorial",
     "tags": "SchrodingerEquation, QuantumMechanics, Scipy, Python",
     "date": "2022-05-20 09:00:00 +0800",
@@ -62,7 +62,7 @@
   
   {
     "title": "Bravais Lattice",
-    "url": "/posts/BravaisLattice3D/",
+    "url": "/~zqj/posts/BravaisLattice3D/",
     "categories": "Blogging, Tutorial",
     "tags": "Plotly, Python, Bravais",
     "date": "2022-05-16 13:50:00 +0800",
@@ -77,7 +77,7 @@
   
   {
     "title": "Brillouin Zone Integration: Linear Tetrahedron Method",
-    "url": "/posts/LinearTetrahedronMethod/",
+    "url": "/~zqj/posts/LinearTetrahedronMethod/",
     "categories": "Blogging, Tutorial",
     "tags": "Plotly, Python, LinearTetrahedron, BrillouinZone",
     "date": "2022-05-04 14:30:00 +0800",
@@ -92,7 +92,7 @@
   
   {
     "title": "Phonopy: Rutile TiO&lt;sub&gt;2&lt;/sub&gt;",
-    "url": "/posts/Phonopy-Rutile-TiO2/",
+    "url": "/~zqj/posts/Phonopy-Rutile-TiO2/",
     "categories": "Blogging, Tutorial",
     "tags": "Phonopy, Phonon, Rutile, TiO2, Python, Matplotlib",
     "date": "2022-04-25 09:30:00 +0800",
@@ -107,7 +107,7 @@
   
   {
     "title": "Matplotlib: 1D Chain ARPES Signal",
-    "url": "/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/",
+    "url": "/~zqj/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/",
     "categories": "Blogging, Tutorial",
     "tags": "Python, Matplotlib, ARPES, Tight-binding",
     "date": "2022-04-19 13:05:00 +0800",
@@ -122,7 +122,7 @@
   
   {
     "title": "Peierls Transition",
-    "url": "/posts/Peierls-Transition/",
+    "url": "/~zqj/posts/Peierls-Transition/",
     "categories": "Blogging, Tutorial",
     "tags": "PeierlsTransition, CDW, TikZ",
     "date": "2022-04-08 11:35:00 +0800",
@@ -137,7 +137,7 @@
   
   {
     "title": "Matplotlib: Hydrogen Wave Function",
-    "url": "/posts/Hydrogen-Wavefunction/",
+    "url": "/~zqj/posts/Hydrogen-Wavefunction/",
     "categories": "Blogging, Tutorial",
     "tags": "Hydrogen, Wavefunction, Matplotlib, Python",
     "date": "2022-02-22 17:45:00 +0800",
@@ -152,7 +152,7 @@
   
   {
     "title": "Matplotlib: Plot within a hexagon",
-    "url": "/posts/matplotlib-plot-within-hexagonal/",
+    "url": "/~zqj/posts/matplotlib-plot-within-hexagonal/",
     "categories": "Blogging, Tutorial",
     "tags": "Python, Matplotlib",
     "date": "2022-01-14 21:00:00 +0800",
@@ -167,7 +167,7 @@
   
   {
     "title": "Fourier Transform of Radial Functions",
-    "url": "/posts/FourierTransform-Radial-Function/",
+    "url": "/~zqj/posts/FourierTransform-Radial-Function/",
     "categories": "Blogging, Tutorial",
     "tags": "FourierTransform, SphericalHarmonics",
     "date": "2021-11-28 20:35:00 +0800",
@@ -182,7 +182,7 @@
   
   {
     "title": "Molecular Dynamics at Constant Temperature",
-    "url": "/posts/NVT-MD/",
+    "url": "/~zqj/posts/NVT-MD/",
     "categories": "Blogging, Tutorial",
     "tags": "MolecularDynamics, NVT, VASP, TODO",
     "date": "2021-05-20 22:10:00 +0800",
@@ -197,7 +197,7 @@
   
   {
     "title": "Numerov Algorithm",
-    "url": "/posts/Numerov-Algorithm/",
+    "url": "/~zqj/posts/Numerov-Algorithm/",
     "categories": "Blogging, Tutorial",
     "tags": "SchrodingerEquation, QuantumMechanics, Numerov, Scipy, Python, TODO",
     "date": "2021-05-07 11:30:00 +0800",
@@ -212,7 +212,7 @@
   
   {
     "title": "Plotly: Spherical Harmonics",
-    "url": "/posts/Plotly-Spherical-Harmonics/",
+    "url": "/~zqj/posts/Plotly-Spherical-Harmonics/",
     "categories": "Blogging, Tutorial",
     "tags": "Plotly, Python, Matplotlib, SphericalHarmonics",
     "date": "2021-04-29 22:30:00 +0800",
@@ -227,7 +227,7 @@
   
   {
     "title": "Hefei-NAMD Training",
-    "url": "/posts/Hefei-NAMD-Training/",
+    "url": "/~zqj/posts/Hefei-NAMD-Training/",
     "categories": "Blogging, Tutorial",
     "tags": "Hefei-NAMD, VASP, Python",
     "date": "2021-04-22 14:35:00 +0800",
@@ -242,7 +242,7 @@
   
   {
     "title": "Plotly: Tight-binding Model for Graphene",
-    "url": "/posts/Plotly-TB-Graphene/",
+    "url": "/~zqj/posts/Plotly-TB-Graphene/",
     "categories": "Blogging, Tutorial",
     "tags": "Plotly, Python, TikZ, Graphene, Tight-binding",
     "date": "2021-04-12 10:30:00 +0800",
@@ -257,7 +257,7 @@
   
   {
     "title": "Plotly: 1D Diatomic Chain Dispersion",
-    "url": "/posts/Plotly-1D-Diatomic-Chain-Dispersion/",
+    "url": "/~zqj/posts/Plotly-1D-Diatomic-Chain-Dispersion/",
     "categories": "Blogging, Tutorial",
     "tags": "Plotly, Python, Phonon",
     "date": "2021-04-11 22:20:00 +0800",
@@ -272,7 +272,7 @@
   
   {
     "title": "Transforming Between Supercell and Primitive Cell",
-    "url": "/posts/Transforming-between-supercell-and-primitive-cell/",
+    "url": "/~zqj/posts/Transforming-between-supercell-and-primitive-cell/",
     "categories": "Blogging, Tutorial",
     "tags": "ASE, Python, Phonopy",
     "date": "2021-04-02 09:00:00 +0800",
@@ -287,7 +287,7 @@
   
   {
     "title": "VASP: Stacking-dependent Potential Energy Surface of Bilayer MoS&lt;sub&gt;2&lt;/sub&gt;",
-    "url": "/posts/VASP-stacking-dependent-energy-of-MoS2-bilayer/",
+    "url": "/~zqj/posts/VASP-stacking-dependent-energy-of-MoS2-bilayer/",
     "categories": "Blogging, Tutorial",
     "tags": "VASP, Python, Matplotlib",
     "date": "2021-03-31 08:40:00 +0800",
@@ -302,7 +302,7 @@
   
   {
     "title": "TikZ: Visible Light Spectrum",
-    "url": "/posts/TikZ-visible-light-spectrum/",
+    "url": "/~zqj/posts/TikZ-visible-light-spectrum/",
     "categories": "Blogging, Tutorial",
     "tags": "Plotting, TikZ, Spectrum",
     "date": "2021-03-24 08:40:00 +0800",
@@ -317,7 +317,7 @@
   
   {
     "title": "Band Unfolding Tutorial",
-    "url": "/posts/Band-unfolding-tutorial/",
+    "url": "/~zqj/posts/Band-unfolding-tutorial/",
     "categories": "Blogging, Tutorial",
     "tags": "VASP, DFT, BandUnfolding, Python",
     "date": "2021-03-18 14:56:00 +0800",
@@ -332,7 +332,7 @@
   
   {
     "title": "TikZ: Schematics of &lt;i&gt;e-ph&lt;/i&gt; Matrix in Wannier Representation",
-    "url": "/posts/TikZ-eph-matrix-Wannier-Representation/",
+    "url": "/~zqj/posts/TikZ-eph-matrix-Wannier-Representation/",
     "categories": "Blogging, Tutorial",
     "tags": "Plotting, TikZ, LaTeX, Wannier",
     "date": "2021-03-16 17:50:30 +0800",
@@ -347,7 +347,7 @@
   
   {
     "title": "How to Plot the First Brillouin Zone",
-    "url": "/posts/howto-plot-brillouin-zone/",
+    "url": "/~zqj/posts/howto-plot-brillouin-zone/",
     "categories": "Blogging, Tutorial",
     "tags": "BrillouinZone, Python, Mayavi, Matplotlib",
     "date": "2021-03-10 21:02:26 +0800",
@@ -362,7 +362,7 @@
   
   {
     "title": "Plotting Laser Pulses",
-    "url": "/posts/plotting-laser-pulses/",
+    "url": "/~zqj/posts/plotting-laser-pulses/",
     "categories": "Blogging, Tutorial",
     "tags": "TikZ, Mayavi, Plotting, LaTeX",
     "date": "2021-03-09 09:55:52 +0800",
