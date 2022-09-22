@@ -2,4 +2,4 @@ User-agent: *
 
 Disallow: /norobots/
 
-Sitemap: http://staff.ustc.edu.cn/~zqj/sitemap.xml
+Sitemap: https://qijingzheng.github.io/sitemap.xml
