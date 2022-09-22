@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link rel="stylesheet" href='/assets/css/bootstrap.min.css'>
+    <script defer
+      src='/assets/js/dist/bootstrap.min.js'></script>
+
+    <script src='/assets/js/dist/jquery.min.js'></script>
+
+    <link rel="stylesheet"
+      href="/assets/lightbox2/css/lightbox2.css" />
+    <script src="/assets/lightbox2/js/lightbox.min.js" ></script>
+    <script type="text/javascript">
+        lightbox.option({
+            'alwaysShowNavOnTouchDevices' : true,
+            'resizeDuration': 200,
+            'wrapAround': true
+        })
+    </script>
+
+    <link rel="stylesheet"
+      href="/assets/splide/css/splide-skyblue.min.css" />
+    <script src="/assets/splide/js/splide.min.js"></script>
+
+    <title>Qijing Zheng</title>
+
+    <style>
+      .splide {
+        margin: auto;
+      }
+
+      .thumbnails {
+        display: flex;
+        margin: 1rem auto 0;
+        padding: 0;
+        justify-content: center;
+      }
+
+      .thumbnail {
+        width: 120px;
+        height: 120px;
+        overflow: hidden;
+        list-style: none;
+        margin: 0 0.2rem;
+        cursor: pointer;
+        opacity: 0.3;
+      }
+
+      .thumbnail.is-active {
+        opacity: 1;
+      }
+
+      .thumbnail img {
+        width: 100px;
+        height: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+
+    <div id="image-slider" class="splide">
+  <div class="splide__track">
+    <ul class="splide__list">
+      
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <a href="/assets/img/me/gallery/202009271028.jpg" data-lightbox="roadtrip">
+              <img src="/assets/img/me/gallery/202009271028.jpg" alt="My Photo" width="600px" />
+            </a>
+          </div>
+          <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
+            <span style="font-size: 120%; color: #666">Sep. 27, 2020</span>
+          </div>
+        </li>
+      
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <a href="/assets/img/me/gallery/202108262130.jpg" data-lightbox="roadtrip">
+              <img src="/assets/img/me/gallery/202108262130.jpg" alt="My Photo" width="600px" />
+            </a>
+          </div>
+          <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
+            <span style="font-size: 120%; color: #666">Aug. 26, 2021</span>
+          </div>
+        </li>
+      
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <a href="/assets/img/me/gallery/202201261309.jpg" data-lightbox="roadtrip">
+              <img src="/assets/img/me/gallery/202201261309.jpg" alt="My Photo" width="600px" />
+            </a>
+          </div>
+          <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
+            <span style="font-size: 120%; color: #666">Jan. 26, 2022</span>
+          </div>
+        </li>
+      
+        <li class="splide__slide">
+          <div class="splide__slide__container">
+            <a href="/assets/img/me/gallery/202206181850.jpg" data-lightbox="roadtrip">
+              <img src="/assets/img/me/gallery/202206181850.jpg" alt="My Photo" width="600px" />
+            </a>
+          </div>
+          <div style="width: 100%; margin-top: 20px; margin-bottom: 40px; border: 0px solid #000; " align="center">
+            <span style="font-size: 120%; color: #666">Jun. 18, 2022</span>
+          </div>
+        </li>
+      
+    </ul>
+  </div>
+</div>
+
+<ul id="thumbnails" class="thumbnails">
+  
+    <li class="thumbnail">
+      <img src="/assets/img/me/gallery/202009271028.jpg" alt="My Photo" />
+    </li>
+  
+    <li class="thumbnail">
+      <img src="/assets/img/me/gallery/202108262130.jpg" alt="My Photo" />
+    </li>
+  
+    <li class="thumbnail">
+      <img src="/assets/img/me/gallery/202201261309.jpg" alt="My Photo" />
+    </li>
+  
+    <li class="thumbnail">
+      <img src="/assets/img/me/gallery/202206181850.jpg" alt="My Photo" />
+    </li>
+  
+</ul>
+
+
+
+  </body>
+
+  <script>
+    var splide = new Splide("#image-slider", {
+      width: 600,
+      height: 800,
+      type: 'loop',
+      perPage: 1,
+      rewind:  true,
+      autoplay: true,
+    });
+
+    var thumbnails = document.getElementsByClassName("thumbnail");
+    var current;
+
+    for (var i = 0; i < thumbnails.length; i++) {
+      initThumbnail(thumbnails[i], i);
+    }
+
+    function initThumbnail(thumbnail, index) {
+      thumbnail.addEventListener("click", function () {
+        splide.go(index);
+      });
+    }
+
+    splide.on("mounted move", function () {
+      var thumbnail = thumbnails[splide.index];
+
+      if (thumbnail) {
+        if (current) {
+          current.classList.remove("is-active");
+        }
+
+        thumbnail.classList.add("is-active");
+        current = thumbnail;
+      }
+    });
+
+    splide.mount();
+  </script>
+</html>
