@@ -14,10 +14,20 @@ fig = go.Figure()
 ############################################################
 fig.add_trace(
     go.Scatter(
-	x=df['Date'], y=df['Hits'],
+	x=df['Date'], y=df['Hits_Staff'],
+        name='staff',
 	mode='lines+markers',
         line=dict(color='red', width=1.0,),
 	marker=dict(color='blue', size=6, symbol='circle-open'),
+    )
+)
+fig.add_trace(
+    go.Scatter(
+	x=df['Date'], y=df['Hits_Home'],
+        name='home',
+	mode='lines+markers',
+        line=dict(color='blue', width=1.0,),
+	marker=dict(color='green', size=6, symbol='circle-open'),
     )
 )
 
