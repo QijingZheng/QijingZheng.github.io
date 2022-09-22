@@ -1,13 +1,18 @@
-function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
-
-function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
-
 /*!
  * Splide.js
  * Version  : 4.1.2
  * License  : MIT
  * Copyright: 2022 Naotoshi Fujita
  */
+'use strict';
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+
+Object.defineProperty(exports, '__esModule', {
+  value: true
+});
 var MEDIA_PREFERS_REDUCED_MOTION = "(prefers-reduced-motion: reduce)";
 var CREATED = 1;
 var MOUNTED = 2;
@@ -3669,4 +3674,79 @@ var SplideRenderer = /*#__PURE__*/function () {
   return SplideRenderer;
 }();
 
-export { CLASSES, CLASS_ACTIVE, CLASS_ARROW, CLASS_ARROWS, CLASS_ARROW_NEXT, CLASS_ARROW_PREV, CLASS_CLONE, CLASS_CONTAINER, CLASS_FOCUS_IN, CLASS_INITIALIZED, CLASS_LIST, CLASS_LOADING, CLASS_NEXT, CLASS_OVERFLOW, CLASS_PAGINATION, CLASS_PAGINATION_PAGE, CLASS_PREV, CLASS_PROGRESS, CLASS_PROGRESS_BAR, CLASS_ROOT, CLASS_SLIDE, CLASS_SPINNER, CLASS_SR, CLASS_TOGGLE, CLASS_TOGGLE_PAUSE, CLASS_TOGGLE_PLAY, CLASS_TRACK, CLASS_VISIBLE, DEFAULTS, EVENT_ACTIVE, EVENT_ARROWS_MOUNTED, EVENT_ARROWS_UPDATED, EVENT_AUTOPLAY_PAUSE, EVENT_AUTOPLAY_PLAY, EVENT_AUTOPLAY_PLAYING, EVENT_CLICK, EVENT_DESTROY, EVENT_DRAG, EVENT_DRAGGED, EVENT_DRAGGING, EVENT_END_INDEX_CHANGED, EVENT_HIDDEN, EVENT_INACTIVE, EVENT_LAZYLOAD_LOADED, EVENT_MOUNTED, EVENT_MOVE, EVENT_MOVED, EVENT_NAVIGATION_MOUNTED, EVENT_OVERFLOW, EVENT_PAGINATION_MOUNTED, EVENT_PAGINATION_UPDATED, EVENT_READY, EVENT_REFRESH, EVENT_RESIZE, EVENT_RESIZED, EVENT_SCROLL, EVENT_SCROLLED, EVENT_SHIFTED, EVENT_SLIDE_KEYDOWN, EVENT_UPDATED, EVENT_VISIBLE, EventBinder, EventInterface, FADE, LOOP, LTR, RTL, RequestInterval, SLIDE, STATUS_CLASSES, Splide, SplideRenderer, State, TTB, Throttle, Splide as default };
+exports.CLASSES = CLASSES;
+exports.CLASS_ACTIVE = CLASS_ACTIVE;
+exports.CLASS_ARROW = CLASS_ARROW;
+exports.CLASS_ARROWS = CLASS_ARROWS;
+exports.CLASS_ARROW_NEXT = CLASS_ARROW_NEXT;
+exports.CLASS_ARROW_PREV = CLASS_ARROW_PREV;
+exports.CLASS_CLONE = CLASS_CLONE;
+exports.CLASS_CONTAINER = CLASS_CONTAINER;
+exports.CLASS_FOCUS_IN = CLASS_FOCUS_IN;
+exports.CLASS_INITIALIZED = CLASS_INITIALIZED;
+exports.CLASS_LIST = CLASS_LIST;
+exports.CLASS_LOADING = CLASS_LOADING;
+exports.CLASS_NEXT = CLASS_NEXT;
+exports.CLASS_OVERFLOW = CLASS_OVERFLOW;
+exports.CLASS_PAGINATION = CLASS_PAGINATION;
+exports.CLASS_PAGINATION_PAGE = CLASS_PAGINATION_PAGE;
+exports.CLASS_PREV = CLASS_PREV;
+exports.CLASS_PROGRESS = CLASS_PROGRESS;
+exports.CLASS_PROGRESS_BAR = CLASS_PROGRESS_BAR;
+exports.CLASS_ROOT = CLASS_ROOT;
+exports.CLASS_SLIDE = CLASS_SLIDE;
+exports.CLASS_SPINNER = CLASS_SPINNER;
+exports.CLASS_SR = CLASS_SR;
+exports.CLASS_TOGGLE = CLASS_TOGGLE;
+exports.CLASS_TOGGLE_PAUSE = CLASS_TOGGLE_PAUSE;
+exports.CLASS_TOGGLE_PLAY = CLASS_TOGGLE_PLAY;
+exports.CLASS_TRACK = CLASS_TRACK;
+exports.CLASS_VISIBLE = CLASS_VISIBLE;
+exports.DEFAULTS = DEFAULTS;
+exports.EVENT_ACTIVE = EVENT_ACTIVE;
+exports.EVENT_ARROWS_MOUNTED = EVENT_ARROWS_MOUNTED;
+exports.EVENT_ARROWS_UPDATED = EVENT_ARROWS_UPDATED;
+exports.EVENT_AUTOPLAY_PAUSE = EVENT_AUTOPLAY_PAUSE;
+exports.EVENT_AUTOPLAY_PLAY = EVENT_AUTOPLAY_PLAY;
+exports.EVENT_AUTOPLAY_PLAYING = EVENT_AUTOPLAY_PLAYING;
+exports.EVENT_CLICK = EVENT_CLICK;
+exports.EVENT_DESTROY = EVENT_DESTROY;
+exports.EVENT_DRAG = EVENT_DRAG;
+exports.EVENT_DRAGGED = EVENT_DRAGGED;
+exports.EVENT_DRAGGING = EVENT_DRAGGING;
+exports.EVENT_END_INDEX_CHANGED = EVENT_END_INDEX_CHANGED;
+exports.EVENT_HIDDEN = EVENT_HIDDEN;
+exports.EVENT_INACTIVE = EVENT_INACTIVE;
+exports.EVENT_LAZYLOAD_LOADED = EVENT_LAZYLOAD_LOADED;
+exports.EVENT_MOUNTED = EVENT_MOUNTED;
+exports.EVENT_MOVE = EVENT_MOVE;
+exports.EVENT_MOVED = EVENT_MOVED;
+exports.EVENT_NAVIGATION_MOUNTED = EVENT_NAVIGATION_MOUNTED;
+exports.EVENT_OVERFLOW = EVENT_OVERFLOW;
+exports.EVENT_PAGINATION_MOUNTED = EVENT_PAGINATION_MOUNTED;
+exports.EVENT_PAGINATION_UPDATED = EVENT_PAGINATION_UPDATED;
+exports.EVENT_READY = EVENT_READY;
+exports.EVENT_REFRESH = EVENT_REFRESH;
+exports.EVENT_RESIZE = EVENT_RESIZE;
+exports.EVENT_RESIZED = EVENT_RESIZED;
+exports.EVENT_SCROLL = EVENT_SCROLL;
+exports.EVENT_SCROLLED = EVENT_SCROLLED;
+exports.EVENT_SHIFTED = EVENT_SHIFTED;
+exports.EVENT_SLIDE_KEYDOWN = EVENT_SLIDE_KEYDOWN;
+exports.EVENT_UPDATED = EVENT_UPDATED;
+exports.EVENT_VISIBLE = EVENT_VISIBLE;
+exports.EventBinder = EventBinder;
+exports.EventInterface = EventInterface;
+exports.FADE = FADE;
+exports.LOOP = LOOP;
+exports.LTR = LTR;
+exports.RTL = RTL;
+exports.RequestInterval = RequestInterval;
+exports.SLIDE = SLIDE;
+exports.STATUS_CLASSES = STATUS_CLASSES;
+exports.Splide = Splide;
+exports.SplideRenderer = SplideRenderer;
+exports.State = State;
+exports.TTB = TTB;
+exports.Throttle = Throttle;
+exports["default"] = Splide;
