@@ -34,7 +34,7 @@ fig.add_trace(
 fig.update_layout(
     width=720, height=400,
     title=dict(
-        text="https://staff.ustc.edu.cn/~zqj visit count in <span style='color: red'>{}</span> Days".format(NoDays),
+        text="My homepage visit count in <span style='color: red'>{}</span> Days".format(NoDays),
         x=0.5,
         font=dict(color='black'),
     ),
