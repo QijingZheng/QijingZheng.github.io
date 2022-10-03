@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "PAW All-Electron Wavefunction in VASP",
+    "url": "/posts/VASP-All-Electron-WFC/",
+    "categories": "Blogging, Tutorial",
+    "tags": "VASP, PAW, Python",
+    "date": "2022-10-02 21:34:00 +0800",
+    
+
+
+
+
+
+    "snippet": "IntroductionIn the PAW method, the all-electron (AE) wavefunction (AEWFC)$\\psi_{n\\mathbf{k}}$ is related to the pseudo-wavefucntion (PSWFC)$\\tilde\\psi_{n\\mathbf{k}}$ by means of a linear transformation 1\\[\\begin{equation}|\\psi_{n\\mathbf{k}}\\rangle=|\\tilde\\psi_{n\\mathbf{k}} \\rangle+ \\sum_j[  |\\phi..."
+  },
+  
+  {
     "title": "NAC Calculation for 1D Model Hamiltonian",
     "url": "/posts/NAC-Calculation-for-1D-Model-Hamiltonian/",
     "categories": "Blogging, Tutorial",
