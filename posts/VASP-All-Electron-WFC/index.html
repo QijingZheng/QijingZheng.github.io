@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="PAW All-Electron Wavefunction in VASP" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-10-02T21:34:00+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-10-06T15:32:05+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -648,6 +648,36 @@ University of Science &amp; Technology of China
         <div>
           <!-- lastmod -->
           
+          <span>
+            Updated
+            <!--
+  Date format snippet
+-->
+
+
+
+
+
+<span class="timeago lastmod"
+  
+    data-toggle="tooltip"
+    data-placement="bottom"
+    title="Thu, Oct  6, 2022,  3:32 PM +0800"
+  >
+
+  
+  
+
+  
+    Oct  6
+  
+
+  <i class="unloaded">2022-10-06T15:32:05+08:00</i>
+
+</span>
+
+          </span>
+          
 
           <!-- read time -->
           <!--
@@ -664,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="1165 words">6 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2023 words">11 min</span>
 
 
           <!-- page views -->
@@ -714,6 +744,19 @@ $\tilde\psi_{n\mathbf{k}}$ by means of a linear transformation <sup id="fnref:pa
   </figcaption>
 </figure>
 
+<p>Note that both AEWFC and PSWFC are defined on the <em>Born-von Kármán</em> (BvK)
+<em>supercell</em> rather than the <em>unit cell</em>, therefore, the index <em>j</em> in
+Eq.\eqref{eq:paw_wfc} depends not only on the atom index in the unit cell but
+also on the index of the unit cell, i.e.</p>
+
+\[\begin{equation}
+\sum_j \quad\Longrightarrow\quad \sum_{\mathbf{R}_L} \sum_{\boldsymbol\tau_\alpha} \sum_k
+\end{equation}\]
+
+<p>The forms of the projector function $\tilde{p}$, and the partial waves $\phi$
+and $\tilde\phi$, however, are only determined by the kind of the atom except
+that the centers depend on the cell and atom indices.</p>
+
 <h3 id="aewfc-and-pswfc">AEWFC and PSWFC</h3>
 
 <p>The AEWFC $\psi_{n\mathbf{k}}$ and the PSWFC $\tilde\psi_{n\mathbf{k}}$ both
@@ -746,7 +789,7 @@ e^{i\mathbf{G}\cdot\mathbf{r}}
 <p>where the plane-waves are limited within the sphere defined by</p>
 
 \[\begin{equation}
-\frac{|\mathbf{G} + \mathbf{k}|^2}{2} &lt; E_c
+\frac{\hbar^2|\mathbf{G} + \mathbf{k}|^2}{2m_e} &lt; E_c
 \label{eq:pw_encut}
 \end{equation}\]
 
@@ -756,24 +799,38 @@ easily realized utilizing the
 <a href="https://github.com/QijingZheng/VaspBandUnfolding" target="_blank">VaspBandUnfolding</a>
 package.</p>
 
-<p>The real-space representation of $u_{n\mathbf{k}}$ is not as readily
-obtainable, since it contains the on-site contributions that are defined on
-multiple radial logarithmic grids with different centers, which are not
-compatible with the equal-spaced grid used to represent
-$\tilde{u}_{n\mathbf{k}}$.</p>
+<p>The real-space representation of $u_{n\mathbf{k}}$ is not as readily obtainable,
+since it contains the on-site contributions that are defined on multiple radial
+logarithmic grids with different centers, which are not compatible with the
+uniform grid used to represent $\tilde{u}_{n\mathbf{k}}$.</p>
 
 <h3 id="projector-function">Projector Function</h3>
 
 <p>The projector functions $\tilde{p}_j$ depend on the distance from the center of
-the PAW sphere $\boldsymbol\tau_j$ on which they are localized,</p>
+the PAW sphere on which they are localized,</p>
 
 \[\begin{equation}
-\langle \mathbf{r} | \tilde{p}_j \rangle = \tilde{p}_j(\mathbf{r} - \boldsymbol{\tau}_j);
+\langle \mathbf{r} | \tilde{p}_j \rangle
+=
+\tilde{p}_j(\mathbf{r} - \mathbf{R}_L - \boldsymbol{\tau}_j);
 \qquad
-| \mathbf{r} - \boldsymbol{\tau}_j | &lt; r_j^c
+| \mathbf{r} - \mathbf{R}_L - \boldsymbol{\tau}_j | &lt; r_j^c
 \end{equation}\]
 
-<p>and is composed of a radial part and an angular part, i.e.</p>
+<p>where $r_j^c$ is the PAW sphere cutoff radius, $\mathbf{R}_L$ is the cell vector
+of the L-th unit cell and $\boldsymbol\tau_j$ is the atom position within the
+cell.</p>
+
+<blockquote>
+  <p>Note in passing that $r_j^c$ in <code class="language-plaintext highlighter-rouge">VASP</code> does not necessarily satisfy the
+<em>non-overlaping condition</em>. For examples, $r_O^c = 0.82 \,\mathring{A}$ and
+$r_H^c = 0.59 \,\mathring{A}$ while a typical O-H bond length is about $0.97
+\,\mathring{A}$.</p>
+</blockquote>
+
+<p>For simplicity, we only consider the projector functions located within the
+first unit cell, i.e. $\mathbf{R}_0 = (0,0,0)$.  The form of the projector function is
+composed of a radial part and an angular part, i.e.</p>
 
 \[\begin{equation}
   \tilde{p}_j(\mathbf{r} - \boldsymbol\tau)
@@ -860,20 +917,33 @@ harmonics $Y_{lm}$ in order to get the complete projector function.</p>
 
 <p>As a result, the inner product between the projector and PSWFC can be written as</p>
 
-\[\begin{equation}
-  \langle \tilde{p}_j | \tilde\psi_{n\mathbf{k}} \rangle
-  = 
+\[\begin{align}
+  \beta_{n\mathbf{k}}^j
+  &amp;=
+  \langle \tilde{p}_j | \tilde\psi_{n\mathbf{k}} \rangle \\[6pt]
+  &amp;= 
   e^{i\mathbf{k}\cdot\boldsymbol{\tau}_j}
   \cdot
-  \langle \tilde{p}_{j\mathbf{k}} | \tilde{u}_{n\mathbf{k}} \rangle
+  \langle \tilde{p}_{j\mathbf{k}} | \tilde{u}_{n\mathbf{k}} \rangle \\[6pt]
+  &amp;= 
+  e^{i\mathbf{k}\cdot\boldsymbol{\tau}_j}
+  \cdot
+  \beta_{n\mathbf{k}}^{j\mathbf{k}}
   \label{eq:kdep_proj_inner}
-  \end{equation}\]
+  \end{align}\]
 
 <blockquote>
   <p>Note that in practical implementation,<code class="language-plaintext highlighter-rouge">VASP</code> <em>DOES NOT</em> include the phase
 term $e^{i\mathbf{k}\cdot\boldsymbol{\tau}_j}$ in the actual calculation,
 since it does not change the occupation matrix or energy, as is explained in
 the <code class="language-plaintext highlighter-rouge">nonl.F</code> of <code class="language-plaintext highlighter-rouge">VASP</code> source file.</p>
+</blockquote>
+
+<blockquote>
+  <p>One can clearly see from Eq.\eqref{eq:kdep_proj_inner} that for the same
+projector function located at another unit cell $\mathbf{R}_L$, the inner
+product is simply right-hand-side of Eq.\eqref{eq:kdep_proj_inner} multiplied
+by $e^{i\mathbf{k}\cdot\mathbf{R}_L}$.</p>
 </blockquote>
 
 <p>With this definition, Eq.\eqref{eq:kdep_proj_inner} can be evaluated in two
@@ -997,19 +1067,24 @@ selected grid points.</p>
 <h3 id="partial-waves">Partial Waves</h3>
 
 <p>The AE/PS partial waves $\phi_j$ and $\tilde\phi_j$ are defined on the radial
-logarithmic grid with center at $\boldsymbol\tau_j$, i.e.</p>
+logarithmic grid with center at $\boldsymbol\tau_j$ (in the first unit cell),
+i.e.</p>
 
 \[\begin{align}
 \langle \mathbf{r} | \phi_j \rangle &amp;= \phi_j(\mathbf{r} - \boldsymbol{\tau}_j) \\[6pt]
 \langle \mathbf{r} | \tilde{\phi}_j \rangle &amp;= \tilde{\phi}_j(\mathbf{r} - \boldsymbol{\tau}_j)
 \end{align}\]
 
-<p>The radial logarithmic grid are defined as</p>
+<p>The radial logarithmic grid is defined as</p>
 
 \[r_{n} = r_0 \cdot e^{n\cdot H};\qquad n=0,1,2,\ldots,N-1\]
 
+<p>or equivalently</p>
+
+\[r_{n+1} = r_n \cdot e^{H};\qquad n=0,1,2,\ldots,N-1\]
+
 <p>where $r_0$ is the minimum value of $|\mathbf{r} - \boldsymbol\tau_j|$ and is
-by definition not zero.</p>
+by definition not zero, $N$ is the number of radial grid points.</p>
 
 <p>Note that $r_{N-1}$ is <em>not necessarily equal</em> to the PAW sphere cutoff radius
 $r_j^c$, as can be seen in Figure 2. However, $\phi_j$ and $\tilde\phi_j$ are
@@ -1036,6 +1111,257 @@ difference of the two zero in Eq.\eqref{eq:paw_wfc} beyond $r_j^c$.</p>
 
 <p><em>IT MUST BE STRESSED</em> that $R_j(r)$ and $\tilde{R}_j(r)$ are the ones stored in the
 <code class="language-plaintext highlighter-rouge">POTCAR</code> file and are also the ones shown in Figure 2.</p>
+
+<h2 id="constructing-aewfc">Constructing AEWFC</h2>
+
+<p>As has been stated, the AEWFC $\psi_{n\mathbf{k}}$ is a Bloch wave and is
+defined on the BvK supercell. As a result, one can only construct the AEWFC
+within <em>a few unit cells</em> if one wishes to get the real-space representation of
+the AEWFC.</p>
+
+<p>Alternatively, one can construct the cell-periodic part of the AEWFC
+$u_{n\mathbf{k}}(\mathbf{r})$</p>
+
+\[\begin{align}
+|u_{n\mathbf{k}}\rangle
+&amp;=
+|\tilde{u}_{n\mathbf{k}} \rangle
++
+e^{-i\mathbf{k}\cdot\mathbf{r}}
+\sum_j
+\left[
+  |\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+  -
+  |\tilde\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+\right]
+\cdot
+\langle
+  \tilde{p}_j(\mathbf{r} - \boldsymbol\tau_j) | \tilde\psi_{n\mathbf{k}}
+\rangle
+\nonumber \\[9pt]
+&amp;=
+|\tilde{u}_{n\mathbf{k}} \rangle
++
+\sum_j
+e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
+\left[
+  |\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+  -
+  |\tilde\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+\right]
+\cdot
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\label{eq:paw_periodic_wfc}
+\end{align}\]
+
+<p>Similar to the evaluation of Eq.\eqref{eq:kdep_proj_inner},
+Eq.\eqref{eq:paw_periodic_wfc} can also be performed in real- and
+momentum-space.</p>
+
+<blockquote>
+  <p>IT MUST BE STRESSED that although the all-electron quantities can be obtained
+in principle, they are <em>NEVER</em> handled directly in practical calculations. The
+essence of the PAW method lies in the fact that there are <em>NO CROSS TERMS</em>
+between quantities on the regular (coarse) uniform grid and the quantities on
+the radial (fine) grid, and as a result the two kinds of quantities can be
+treated separately.</p>
+</blockquote>
+
+<p>First of all, set the size of the new uniform grid that is used to represent
+$u_{n\mathbf{k}}$. This can be done by introducting a new energy cutoff
+$E_{\mathrm{ae}}$, which must be larger than the energy cutoff $E_c$ that
+determines the size of the uniform grid used to represent
+$\tilde{u}_{n\mathbf{k}}$. Obviously, the new and old grid size are related by</p>
+
+\[\begin{equation}
+\begin{pmatrix}
+n_x^{\mathrm{ae}},&amp; n_y^{\mathrm{ae}},&amp; n_z^{\mathrm{ae}}
+\end{pmatrix}
+= 
+\left\lceil
+\sqrt{\frac{E_{\mathrm{ae}}}{E_{\mathrm{c}}}}
+\cdot
+\begin{pmatrix}
+ n_x^{\mathrm{c}},&amp; n_y^{\mathrm{c}},&amp; n_z^{\mathrm{c}}
+\end{pmatrix}
+\right\rceil
+\end{equation}\]
+
+<p>where $\lceil\ldots\rceil$ denotes a integer ceiling operation.</p>
+
+<p>Secondly, Fourier transform the plane-wave ceofficients
+$C_{n\mathbf{k}}(\mathbf{G})$ to get $\tilde{u}_{n\mathbf{k}}$ on the new grid.</p>
+
+<p>The rest is to get the real-space representation of the on-site contribution
+(the summation term in Eq.\eqref{eq:paw_periodic_wfc}), which can be evaluated
+by two approaches.</p>
+
+<h3 id="real-space-approach">real-space approach</h3>
+
+<p>The one-site term in real space is simply</p>
+
+\[\begin{align}
+&amp;\phantom{={}}\sum_j 
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\cdot
+e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
+\cdot
+\left[
+  \phi_j(\mathbf{r} - \boldsymbol\tau_j)
+  -
+  \tilde\phi_j(\mathbf{r} - \boldsymbol\tau_j)
+\right]
+\nonumber \\[6pt]
+&amp;=\sum_j 
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\cdot
+e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
+\cdot
+\frac{
+  \left[
+    R_j(\mathbf{r} - \boldsymbol\tau_j)
+    -
+    \tilde{R}_j(\mathbf{r} - \boldsymbol\tau_j)
+  \right]
+}{
+  |\mathbf{r} - \boldsymbol\tau_j|
+}
+\cdot
+Y_{lm}(\widehat{\mathbf{r} - \boldsymbol\tau_j})
+\end{align}\]
+
+<p>This can be done similar to the the real-space evaluation of
+$\beta_{n\mathbf{k}}^{j\mathbf{k}}$.</p>
+
+<h3 id="momentum-space-approach">momentum-space approach</h3>
+
+<p>Let’s now inspect the plane-wave expansion of the on-site terms</p>
+
+\[\begin{align}
+S_j(\mathbf{G})
+&amp;= \beta_{n\mathbf{k}}^{j\mathbf{k}}
+\cdot
+\langle \mathbf{G} |
+e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
+\left[
+  |\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+  -
+  |\tilde\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+\right]
+\nonumber \\[9pt]
+&amp;=
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\,
+e^{i\mathbf{k}\cdot\boldsymbol\tau_j}
+\cdot
+\sum_{\mathbf{G}'}
+\langle \mathbf{G} |
+e^{-i\mathbf{k}\cdot\mathbf{r}}
+| \mathbf{G}' \rangle
+\langle \mathbf{G}' |
+\left[
+  |\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+  -
+  |\tilde\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+\right]
+\nonumber \\[6pt]
+&amp;=
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\,
+e^{i\mathbf{k}\cdot\boldsymbol\tau_j}
+\cdot
+\sum_{\mathbf{G}'}
+\delta_{\mathbf{G} + \mathbf{k}, \mathbf{G}'}
+\cdot
+\langle \mathbf{G}' |
+\left[
+  |\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+  -
+  |\tilde\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+\right]
+\nonumber \\[6pt]
+&amp;=
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\,
+e^{i\mathbf{k}\cdot\boldsymbol\tau_j}
+\cdot
+\langle \mathbf{G} + \mathbf{k} |
+\left[
+  |\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+  -
+  |\tilde\phi_j(\mathbf{r} - \boldsymbol\tau_j)\rangle
+\right]
+\nonumber \\[6pt]
+&amp;=
+\frac{i^{-l}}{\sqrt{V}}\,
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\,
+e^{i\mathbf{k}\cdot\boldsymbol\tau_j}
+\cdot
+\left[
+  {\cal G}_j(|\mathbf{G} + \mathbf{k}|)
+  -
+  \tilde{\cal G}_j(|\mathbf{G} + \mathbf{k}|)
+\right]
+\cdot
+Y_{lm}(\widehat{\mathbf{G} + \mathbf{k}})
+\cdot
+e^{-i(\mathbf{G}+\mathbf{k})\cdot\boldsymbol\tau_j}
+\nonumber \\[6pt]
+&amp;=
+\frac{i^{-l}}{\sqrt{V}}\,
+\beta_{n\mathbf{k}}^{j\mathbf{k}}
+\cdot
+\left[
+  {\cal G}_j(|\mathbf{G} + \mathbf{k}|)
+  -
+  \tilde{\cal G}_j(|\mathbf{G} + \mathbf{k}|)
+\right]
+\cdot
+Y_{lm}(\widehat{\mathbf{G} + \mathbf{k}})
+\cdot
+e^{-i\mathbf{G}\cdot\boldsymbol\tau_j}
+\end{align}\]
+
+<p>where $\cal G$ is the spherical Bessel transform of the partical waves</p>
+
+\[\begin{align}
+    {\cal G}_j(k) &amp;= 4\pi \int_0^\infty \frac{R_j(r)}{r} \,j_l(kr) r^2  \,\mathrm{d} r
+    \\[6pt]
+    \tilde{\cal G}_j(k) &amp;= 4\pi \int_0^\infty \frac{\tilde{R}_j(r)}{r} \,j_l(kr) r^2  \,\mathrm{d} r
+  \end{align}\]
+
+<p>Note that the plane-waves are now determined by</p>
+
+\[\begin{equation}
+\frac{\hbar^2|\mathbf{G} + \mathbf{k}|^2}{2m_e} &lt; E_{\mathrm{ae}}
+\label{eq:pw_encut_ae}
+\end{equation}\]
+
+<p>The real-space on-site term can be obtained by Fourier transform of $\sum_j
+S_j(\mathbf{G})$.</p>
+
+<h3 id="all-electron-wavefunction-for-co2-homo">All-electron Wavefunction for CO<sub>2</sub> HOMO</h3>
+
+<figure>
+  <div align="center">
+    <a href="/assets/posts/paw_aewfc/co2_homo_aeps_wfc.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/paw_aewfc/co2_homo_aeps_wfc.png" width="80%" />
+    </a>
+  </div>
+
+  <figcaption style="text-align: center; padding: 10px">
+    
+    <b> Figure 3. </b>
+    All-electron and pseudo-wavefunction of the CO<sub>2</sub> HOMO orbital
+    along the bond direction.
+    The related files can be found in
+    <a href="https://github.com/QijingZheng/VaspBandUnfolding/tree/master/examples/aewfc/co2" target="_blank">
+    examples
+    </a>
+    of the VaspBandUnfolding package.
+  </figcaption>
+</figure>
 
 <h2 id="reference">Reference</h2>
 <div class="footnotes" role="doc-endnotes">
@@ -1176,6 +1502,11 @@ difference of the two zero in Eq.\eqref{eq:paw_wfc} beyond $r_j^c$.</p>
       <span>Recent Update</span>
       <ul class="post-content pl-0 pb-1 ml-1 mt-2">
 
+      
+        
+        
+        
+        <li><a href="/posts/VASP-All-Electron-WFC/">PAW All-Electron Wavefunction in VASP</a></li>
       
         
         
