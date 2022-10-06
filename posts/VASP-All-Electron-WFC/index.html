@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="PAW All-Electron Wavefunction in VASP" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-10-06T15:32:05+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-10-06T20:18:17+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -662,7 +662,7 @@ University of Science &amp; Technology of China
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Oct  6, 2022,  3:32 PM +0800"
+    title="Thu, Oct  6, 2022,  8:18 PM +0800"
   >
 
   
@@ -672,7 +672,7 @@ University of Science &amp; Technology of China
     Oct  6
   
 
-  <i class="unloaded">2022-10-06T15:32:05+08:00</i>
+  <i class="unloaded">2022-10-06T20:18:17+08:00</i>
 
 </span>
 
@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2023 words">11 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2347 words">13 min</span>
 
 
           <!-- page views -->
@@ -1198,7 +1198,7 @@ by two approaches.</p>
 
 <h3 id="real-space-approach">real-space approach</h3>
 
-<p>The one-site term in real space is simply</p>
+<p>The on-site term in real space is simply</p>
 
 \[\begin{align}
 &amp;\phantom{={}}\sum_j 
@@ -1216,6 +1216,8 @@ e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
 \beta_{n\mathbf{k}}^{j\mathbf{k}}
 \cdot
 e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
+\cdot
+\sqrt{V}
 \cdot
 \frac{
   \left[
@@ -1341,7 +1343,104 @@ e^{-i\mathbf{G}\cdot\boldsymbol\tau_j}
 <p>The real-space on-site term can be obtained by Fourier transform of $\sum_j
 S_j(\mathbf{G})$.</p>
 
-<h3 id="all-electron-wavefunction-for-co2-homo">All-electron Wavefunction for CO<sub>2</sub> HOMO</h3>
+<h3 id="aewfc--pswfc-of-co2-orbital">AEWFC &amp; PSWFC of CO<sub>2</sub> Orbital</h3>
+
+<p>Here, we choose CO<sub>2</sub> as an example to investigate the AEWFC and PSWFC.</p>
+
+<p>In principle, the norm of AEWFC is unity and that of the PSWFC is smaller than
+one according to Eq.\eqref{eq:paw_wfc}.  Therefore, to best show the difference
+between the two wavefunctions, we first interate through the bands and find out
+the orbital with the maximum contribution from the PAW core region.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+<span class="kn">from</span> <span class="nn">vaspwfc</span> <span class="kn">import</span> <span class="n">vaspwfc</span>
+
+<span class="c1"># the pseudo-wavefunction
+</span><span class="n">ps_wfc</span> <span class="o">=</span> <span class="n">vaspwfc</span><span class="p">(</span><span class="s">'WAVECAR'</span><span class="p">,</span> <span class="n">lgamma</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+
+<span class="c1"># Find out the band that has the most core contributions
+</span><span class="k">for</span> <span class="n">iband</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">ps_wfc</span><span class="p">.</span><span class="n">_nbands</span><span class="p">):</span>
+    <span class="c1"># plane-wave coefficients of PSWFC
+</span>    <span class="n">cg</span> <span class="o">=</span> <span class="n">ps_wfc</span><span class="p">.</span><span class="n">readBandCoeff</span><span class="p">(</span><span class="n">iband</span><span class="o">=</span><span class="n">iband</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
+    <span class="c1"># norm of the PSWFC
+</span>    <span class="n">ps_norm</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">cg</span><span class="p">.</span><span class="n">conj</span><span class="p">()</span> <span class="o">*</span> <span class="n">cg</span><span class="p">).</span><span class="n">real</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"#band: </span><span class="si">{</span><span class="n">iband</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="n">d</span><span class="si">}</span><span class="s"> -&gt; </span><span class="si">{</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ps_norm</span><span class="p">:</span> <span class="mf">8.4</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>The output is shown below, where we can see that band 7 and 8 have the maximum
+contributions from PAW core region.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+</pre></td><td class="rouge-code"><pre><span class="c">#band:   1 -&gt;  -0.1033</span>
+<span class="c">#band:   2 -&gt;  -0.0744</span>
+<span class="c">#band:   3 -&gt;   0.0302</span>
+<span class="c">#band:   4 -&gt;   0.1362</span>
+<span class="c">#band:   5 -&gt;   0.1362</span>
+<span class="c">#band:   6 -&gt;   0.1391</span>
+<span class="c">#band:   7 -&gt;   0.1993</span>
+<span class="c">#band:   8 -&gt;   0.1993</span>
+<span class="c">#band:   9 -&gt;  -0.0010</span>
+<span class="c">#band:  10 -&gt;   0.1494</span>
+<span class="c">#band:  11 -&gt;   0.1494</span>
+<span class="c">#band:  12 -&gt;   0.0067</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>We will choose band 8, which is also the HOMO orbital, to proceed. Below,
+<code class="language-plaintext highlighter-rouge">aecut=-25</code> means that $E_\mathrm{ae} = 25\times E_\mathrm{c}$.</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">vaspwfc</span> <span class="kn">import</span> <span class="n">vaspwfc</span>
+<span class="kn">from</span> <span class="nn">aewfc</span> <span class="kn">import</span> <span class="n">vasp_ae_wfc</span>
+
+<span class="c1"># the pseudo-wavefunction
+</span><span class="n">ps_wfc</span> <span class="o">=</span> <span class="n">vaspwfc</span><span class="p">(</span><span class="s">'WAVECAR'</span><span class="p">,</span> <span class="n">lgamma</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="c1"># the all-electron wavefunction
+</span><span class="n">ae_wfc</span> <span class="o">=</span> <span class="n">vasp_ae_wfc</span><span class="p">(</span><span class="n">ps_wfc</span><span class="p">,</span> <span class="n">aecut</span><span class="o">=-</span><span class="mi">25</span><span class="p">)</span>
+
+<span class="n">which_band</span> <span class="o">=</span> <span class="mi">8</span>
+
+<span class="n">phi_ae</span> <span class="o">=</span> <span class="n">ae_wfc</span><span class="p">.</span><span class="n">get_ae_wfc</span><span class="p">(</span><span class="n">iband</span><span class="o">=</span><span class="n">which_band</span><span class="p">)</span>
+<span class="n">phi_ps</span> <span class="o">=</span> <span class="n">ps_wfc</span><span class="p">.</span><span class="n">get_ps_wfc</span><span class="p">(</span><span class="n">iband</span><span class="o">=</span><span class="n">which_band</span><span class="p">,</span>
+    <span class="n">norm</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ngrid</span><span class="o">=</span><span class="n">ae_wfc</span><span class="p">.</span><span class="n">_aegrid</span><span class="p">)</span>
+</pre></td></tr></tbody></table></code></div></div>
+
+<p>The results:</p>
 
 <figure>
   <div align="center">
@@ -1350,16 +1449,22 @@ S_j(\mathbf{G})$.</p>
     </a>
   </div>
 
-  <figcaption style="text-align: center; padding: 10px">
+  <figcaption style="text-align: justify; padding: 10px">
     
     <b> Figure 3. </b>
-    All-electron and pseudo-wavefunction of the CO<sub>2</sub> HOMO orbital
-    along the bond direction.
-    The related files can be found in
+    Comparison of all-electron (blue solid line) and pseudo-wavefunction (red
+    dashed line) of the CO<sub>2</sub> HOMO orbital, where $z$ is along the
+    CO<sub>2</sub> bond direction and $r$ is the direction perpendicular to the
+    CO<sub>2</sub> bond. The circles indicate the positions of the carbon and
+    oxygen atoms.
+    The related files used to generate this figure can be found in
     <a href="https://github.com/QijingZheng/VaspBandUnfolding/tree/master/examples/aewfc/co2" target="_blank">
     examples
     </a>
-    of the VaspBandUnfolding package.
+    of the
+    <a href="https://github.com/QijingZheng/VaspBandUnfolding" target="_blank">
+    VaspBandUnfolding package.
+    </a>
   </figcaption>
 </figure>
 
