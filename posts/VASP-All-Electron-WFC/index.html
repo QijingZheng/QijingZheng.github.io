@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2347 words">13 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2486 words">13 min</span>
 
 
           <!-- page views -->
@@ -1347,7 +1347,7 @@ S_j(\mathbf{G})$.</p>
 
 <p>Here, we choose CO<sub>2</sub> as an example to investigate the AEWFC and PSWFC.</p>
 
-<p>In principle, the norm of AEWFC is unity and that of the PSWFC is smaller than
+<p>In principle, the norm of AEWFC is unity and that of the PSWFC is different from
 one according to Eq.\eqref{eq:paw_wfc}.  Therefore, to best show the difference
 between the two wavefunctions, we first interate through the bands and find out
 the orbital with the maximum contribution from the PAW core region.</p>
@@ -1380,8 +1380,11 @@ the orbital with the maximum contribution from the PAW core region.</p>
     <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"#band: </span><span class="si">{</span><span class="n">iband</span><span class="o">+</span><span class="mi">1</span><span class="p">:</span><span class="mi">3</span><span class="n">d</span><span class="si">}</span><span class="s"> -&gt; </span><span class="si">{</span><span class="mi">1</span> <span class="o">-</span> <span class="n">ps_norm</span><span class="p">:</span> <span class="mf">8.4</span><span class="n">f</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>The output is shown below, where we can see that band 7 and 8 have the maximum
-contributions from PAW core region.</p>
+<p>The output is shown below, where one can see that band 7 and 8 possess the
+maximum contributions from the core region. One can also see that the
+contribution can be <em>both positive and negative</em>, which means that the norm of
+the PSWFC can be <em>smaller (positive output)</em> or <em>larger (negative output)</em> than
+unity.</p>
 
 <div class="language-bash highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -1440,23 +1443,28 @@ contributions from PAW core region.</p>
     <span class="n">norm</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ngrid</span><span class="o">=</span><span class="n">ae_wfc</span><span class="p">.</span><span class="n">_aegrid</span><span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<p>The results:</p>
+<p>Below, we show the difference between PSWFC and AEWFC of CO<sub>2</sub> HOMO.</p>
 
-<figure>
+<ul>
+  <li>
+    <p>PSWFC, AEWFC and differential WFC.</p>
+
+    <figure>
   <div align="center">
-    <a href="/assets/posts/paw_aewfc/co2_homo_aeps_wfc.png" data-lightbox="roadtrip">
-      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/paw_aewfc/co2_homo_aeps_wfc.png" width="80%" />
+    <a href="/assets/posts/paw_aewfc/orb_co2_homo.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/paw_aewfc/orb_co2_homo.png" width="95%" />
     </a>
   </div>
-
+  
   <figcaption style="text-align: justify; padding: 10px">
-    
+      
     <b> Figure 3. </b>
-    Comparison of all-electron (blue solid line) and pseudo-wavefunction (red
-    dashed line) of the CO<sub>2</sub> HOMO orbital, where $z$ is along the
-    CO<sub>2</sub> bond direction and $r$ is the direction perpendicular to the
-    CO<sub>2</sub> bond. The circles indicate the positions of the carbon and
-    oxygen atoms.
+    2D plot of PSWFC (left), AEWFC (right) and differential WFC (center) of
+    CO<sub>2</sub> HOMO orbital at x = 0 plane. The solid circles indicate the
+    positions of the carbon and oxygen atoms while the dashed circles show the
+    corresponding PAW sphere. The C-O bond length is 1.178$\,\mathring{A}$
+    while the PAW cutoff radius for C and O are 0.809$\,\mathring{A}$ and
+        0.822$\,\mathring{A}$, respectively.
     The related files used to generate this figure can be found in
     <a href="https://github.com/QijingZheng/VaspBandUnfolding/tree/master/examples/aewfc/co2" target="_blank">
     examples
@@ -1467,6 +1475,38 @@ contributions from PAW core region.</p>
     </a>
   </figcaption>
 </figure>
+  </li>
+  <li>
+    <p>Wavefunctions $\psi(r,z)$ along the bond direction $z$ at different vertical
+distances $r$.</p>
+
+    <figure>
+  <div align="center">
+    <a href="/assets/posts/paw_aewfc/co2_homo_aeps_wfc.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/paw_aewfc/co2_homo_aeps_wfc.png" width="80%" />
+    </a>
+  </div>
+  
+  <figcaption style="text-align: justify; padding: 10px">
+      
+    <b> Figure 4. </b>
+    Comparison of all-electron (blue solid line) and pseudo-wavefunction (red
+    dashed line) of the CO<sub>2</sub> HOMO orbital, where $z$ is along the
+    CO<sub>2</sub> bond direction and $r$ is the direction perpendicular to
+    the CO<sub>2</sub> bond. The circles indicate the positions of the carbon
+    and oxygen atoms.
+    The related files used to generate this figure can be found in
+    <a href="https://github.com/QijingZheng/VaspBandUnfolding/tree/master/examples/aewfc/co2" target="_blank">
+    examples
+    </a>
+    of the
+    <a href="https://github.com/QijingZheng/VaspBandUnfolding" target="_blank">
+    VaspBandUnfolding package.
+    </a>
+  </figcaption>
+</figure>
+  </li>
+</ul>
 
 <h2 id="reference">Reference</h2>
 <div class="footnotes" role="doc-endnotes">
