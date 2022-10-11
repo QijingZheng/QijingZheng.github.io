@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2486 words">13 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2490 words">13 min</span>
 
 
           <!-- page views -->
@@ -1428,6 +1428,10 @@ unity.</p>
 11
 12
 13
+14
+15
+16
+17
 </pre></td><td class="rouge-code"><pre><span class="kn">from</span> <span class="nn">vaspwfc</span> <span class="kn">import</span> <span class="n">vaspwfc</span>
 <span class="kn">from</span> <span class="nn">aewfc</span> <span class="kn">import</span> <span class="n">vasp_ae_wfc</span>
 
@@ -1438,33 +1442,36 @@ unity.</p>
 
 <span class="n">which_band</span> <span class="o">=</span> <span class="mi">8</span>
 
-<span class="n">phi_ae</span> <span class="o">=</span> <span class="n">ae_wfc</span><span class="p">.</span><span class="n">get_ae_wfc</span><span class="p">(</span><span class="n">iband</span><span class="o">=</span><span class="n">which_band</span><span class="p">)</span>
-<span class="n">phi_ps</span> <span class="o">=</span> <span class="n">ps_wfc</span><span class="p">.</span><span class="n">get_ps_wfc</span><span class="p">(</span><span class="n">iband</span><span class="o">=</span><span class="n">which_band</span><span class="p">,</span>
-    <span class="n">norm</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ngrid</span><span class="o">=</span><span class="n">ae_wfc</span><span class="p">.</span><span class="n">_aegrid</span><span class="p">)</span>
+<span class="n">phi_ae</span><span class="p">,</span> <span class="n">phi_core_ae</span><span class="p">,</span> <span class="n">phi_core_ps</span> <span class="o">=</span> <span class="n">ae_wfc</span><span class="p">.</span><span class="n">get_ae_wfc</span><span class="p">(</span>
+    <span class="n">iband</span><span class="o">=</span><span class="n">which_band</span><span class="p">,</span> <span class="n">lcore</span><span class="o">=</span><span class="bp">True</span>
+<span class="p">)</span>
+<span class="n">phi_ps</span> <span class="o">=</span> <span class="n">ps_wfc</span><span class="p">.</span><span class="n">get_ps_wfc</span><span class="p">(</span>
+    <span class="n">iband</span><span class="o">=</span><span class="n">which_band</span><span class="p">,</span>
+    <span class="n">norm</span><span class="o">=</span><span class="bp">False</span><span class="p">,</span> <span class="n">ngrid</span><span class="o">=</span><span class="n">ae_wfc</span><span class="p">.</span><span class="n">_aegrid</span>
+<span class="p">)</span>
 </pre></td></tr></tbody></table></code></div></div>
 
 <p>Below, we show the difference between PSWFC and AEWFC of CO<sub>2</sub> HOMO.</p>
 
 <ul>
   <li>
-    <p>PSWFC, AEWFC and differential WFC.</p>
+    <p>PSWFC, AEWFC and Core AE/PS Partial WFC</p>
 
     <figure>
   <div align="center">
-    <a href="/assets/posts/paw_aewfc/orb_co2_homo.png" data-lightbox="roadtrip">
-      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/paw_aewfc/orb_co2_homo.png" width="95%" />
+    <a href="/assets/posts/paw_aewfc/ae-ps-core_co2_homo_wfc.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/paw_aewfc/ae-ps-core_co2_homo_wfc.png" width="95%" />
     </a>
   </div>
   
   <figcaption style="text-align: justify; padding: 10px">
       
     <b> Figure 3. </b>
-    2D plot of PSWFC (left), AEWFC (right) and differential WFC (center) of
-    CO<sub>2</sub> HOMO orbital at x = 0 plane. The solid circles indicate the
-    positions of the carbon and oxygen atoms while the dashed circles show the
-    corresponding PAW sphere. The C-O bond length is 1.178$\,\mathring{A}$
-    while the PAW cutoff radius for C and O are 0.809$\,\mathring{A}$ and
-        0.822$\,\mathring{A}$, respectively.
+    2D plot of CO<sub>2</sub> HOMO orbital at x = 0 plane. The solid circles
+    indicate the positions of the carbon and oxygen atoms while the dashed
+    circles show the corresponding PAW sphere. The C-O bond length is
+    1.178$\,\mathring{A}$ while the PAW cutoff radius for C and O are
+    0.809$\,\mathring{A}$ and 0.822$\,\mathring{A}$, respectively.
     The related files used to generate this figure can be found in
     <a href="https://github.com/QijingZheng/VaspBandUnfolding/tree/master/examples/aewfc/co2" target="_blank">
     examples
