@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="PAW All-Electron Wavefunction in VASP" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-10-09T10:46:59+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-10-20T13:46:05+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -662,17 +662,17 @@ University of Science &amp; Technology of China
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Sun, Oct  9, 2022, 10:46 AM +0800"
+    title="Thu, Oct 20, 2022,  1:46 PM +0800"
   >
 
   
   
 
   
-    Oct  9
+    Oct 20
   
 
-  <i class="unloaded">2022-10-09T10:46:59+08:00</i>
+  <i class="unloaded">2022-10-20T13:46:05+08:00</i>
 
 </span>
 
@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2490 words">13 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2604 words">14 min</span>
 
 
           <!-- page views -->
@@ -774,24 +774,69 @@ take the form of a Bloch wave, i.e.</p>
 <p>where $u_{n\mathbf{k}}$ and $\tilde{u}_{n\mathbf{k}}$ are <em>cell-periodic</em>
 functions.</p>
 
-<p>In <code class="language-plaintext highlighter-rouge">VASP</code>, $\tilde{u}_{n\mathbf{k}}$ are the ones written in the <code class="language-plaintext highlighter-rouge">WAVECAR</code> file,
-only that the plane-waves coefficients $C_{n\mathbf{k}}$ are stored instead.</p>
+<p>In <code class="language-plaintext highlighter-rouge">VASP</code>, cell-periodic part of the PSWFCs, i.e.
+$|\tilde{u}_{n\mathbf{k}}\rangle$, are the ones included in the <code class="language-plaintext highlighter-rouge">WAVECAR</code> file,
+only that the plane-waves coefficients $C_{n\mathbf{k}}(\mathbf{G})$ are
+written instead.</p>
 
-\[\begin{equation}
-\tilde{u}_{n\mathbf{k}}(\mathbf{r})
-=
-\sqrt{\frac{1}{V}}
-\sum_{\mathbf{G}}
-C_{n\mathbf{k}}(\mathbf{G}) \cdot
-e^{i\mathbf{G}\cdot\mathbf{r}}
-\end{equation}\]
+\[\begin{align}
+C_{n\mathbf{k}}(\mathbf{G}_j)
+&amp;= 
+\int
+  \tilde{u}_{n\mathbf{k}}(\mathbf{r})
+  \cdot
+  \frac{1}{\sqrt{V}}
+  e^{-i\mathbf{G}\cdot\mathbf{r}}
+  \,\mathrm{d}\mathbf{r}
+\nonumber\\[3pt]
+&amp;=
+\sum_{k}
+  \tilde{u}_{n\mathbf{k}}(\mathbf{r}_k)
+  \cdot
+  \frac{1}{\sqrt{V}}
+  e^{-i\mathbf{G}_j\cdot\mathbf{r}_k}
+  \,\Delta V
+\nonumber\\[3pt]
+&amp;=
+\frac{V}{N_\mathrm{fft}}
+\sum_{k}
+  \tilde{u}_{n\mathbf{k}}(\mathbf{r}_k)
+  \cdot
+  \frac{1}{\sqrt{V}}
+  e^{-i\mathbf{G}_j\cdot\mathbf{r}_k}
+\\[6pt]
+\tilde{u}_{n\mathbf{k}}(\mathbf{r}_j)
+&amp;=
+\sum_{k}
+  C_{n\mathbf{k}}(\mathbf{G}_k)
+  \cdot
+  \frac{1}{\sqrt{V}}
+  e^{i\mathbf{G}_k\cdot\mathbf{r}_j}
+\end{align}\]
 
-<p>where the plane-waves are limited within the sphere defined by</p>
+<p>where $N_\mathrm{fft}$ is the number of FFT grid points, $V$ is the cell volume,
+and the plane-waves are limited within the sphere defined by</p>
 
 \[\begin{equation}
 \frac{\hbar^2|\mathbf{G} + \mathbf{k}|^2}{2m_e} &lt; E_c
 \label{eq:pw_encut}
 \end{equation}\]
+
+<p>The relation between the norm of  $\tilde{u}_{n\mathbf{k}}(\mathbf{r})$ and
+$C_{n\mathbf{k}}(\mathbf{G})$ are given by the following equation</p>
+
+\[\begin{equation}
+\sum_{\mathbf{G}}
+  |C_{n\mathbf{k}}(\mathbf{G})|^2
+=
+\frac{V}{N_\mathrm{fft}}
+\sum_{\mathbf{r}}
+  |\tilde{u}_{n\mathbf{k}}(\mathbf{r})|^2
+\approx 1
+\end{equation}\]
+
+<p>Note that the norm of the PSWFC <em>can be larger or smaller than one</em>, hence we
+use “$\approx$” instead of equal sign in the above equation.</p>
 
 <p>To obtain the real-space representation of $\tilde{u}_{n\mathbf{k}}$, one need
 to perform Fourier transform (FT) on the plane-wave coefficients, which can be
@@ -835,7 +880,6 @@ composed of a radial part and an angular part, i.e.</p>
 \[\begin{equation}
   \tilde{p}_j(\mathbf{r} - \boldsymbol\tau)
   =
-  {\sqrt{V}}\cdot
   f_j(|\mathbf{r} - \boldsymbol\tau|)
   \cdot
   Y_{lm}(\widehat{\mathbf{r} - \boldsymbol\tau})
@@ -849,7 +893,7 @@ $(l,m)$ quantum numbers, i.e.</p>
 
 \[\begin{align}
     {\cal F}[\tilde{p}_j(\mathbf{r} - \boldsymbol\tau)](\mathbf{k})
-    &amp;= \frac{1}{V} \int_V\,
+    &amp;= \frac{1}{\sqrt{V}} \int_V\,
     \tilde{p}_j(\mathbf{r} - \boldsymbol\tau)
     \,
     e^{-i\mathbf{k}\cdot\mathbf{r}}
@@ -1037,10 +1081,9 @@ coefficients.</p>
   <li>real-space method</li>
 </ul>
 
-\[\begin{equation}
+\[\begin{align}
   \langle \tilde{p}_{j\mathbf{k}} | \tilde{u}_{n\mathbf{k}} \rangle
-  =
-  \sqrt{V}\!\!\!\!
+  &amp;=
   \int\limits_{|\mathbf{r}-\boldsymbol\tau_j| &lt; r_j^c}
     e^{i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
     \cdot
@@ -1051,7 +1094,19 @@ coefficients.</p>
     \tilde{u}_{n\mathbf{k}}(\mathbf{r})
     \,
   \mathrm{d}\mathbf{r}
-  \end{equation}\]
+  \nonumber \\[6pt]
+  &amp;=
+  \sum_{|\mathbf{r}_k-\boldsymbol\tau_j| &lt; r_j^c}
+    e^{i\mathbf{k}_k\cdot(\mathbf{r} - \boldsymbol\tau_j)}
+    \cdot
+    f_j(|\mathbf{r}_k - \boldsymbol\tau_j|)
+    \cdot
+    Y_{lm}(\widehat{\mathbf{r}_k - \boldsymbol\tau}_j)
+    \cdot
+    \tilde{u}_{n\mathbf{k}}(\mathbf{r}_k)
+    \cdot
+    \frac{V}{N_\mathrm{fft}}
+  \end{align}\]
 
 <p>First, the grid points within the PAW sphere $|\mathbf{r} - \boldsymbol\tau_j| &lt;
 r_j^c$ are identified. Secondly, the values of $f_j$ on these grid points are
@@ -1216,8 +1271,6 @@ e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
 \beta_{n\mathbf{k}}^{j\mathbf{k}}
 \cdot
 e^{-i\mathbf{k}\cdot(\mathbf{r} - \boldsymbol\tau_j)}
-\cdot
-\sqrt{V}
 \cdot
 \frac{
   \left[
