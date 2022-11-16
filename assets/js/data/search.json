@@ -1,10 +1,25 @@
 [
   
   {
+    "title": "Light-Matter Interaction and Dipole Transition Matrix",
+    "url": "/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/",
+    "categories": "Blogging, Tutorial",
+    "tags": "VASP, PAW, Python, TDM, SphericalHarmonics",
+    "date": "2022-11-01 11:00:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Quantum theory of light-matter interactionLet us consider an atom in the presence of an external classicalelectromagnetic fields, the gauge invariant Schrödinger equation writes1\\[\\begin{equation}i\\hbar\\frac{\\partial\\psi(\\mathbf{r}, t)}{\\partial t} = \\hat{H}\\,\\psi(\\mathbf{r}, t)\\label{eq:gauge_in..."
+  },
+  
+  {
     "title": "PAW All-Electron Wavefunction in VASP",
     "url": "/posts/VASP-All-Electron-WFC/",
     "categories": "Blogging, Tutorial",
-    "tags": "VASP, PAW, Python",
+    "tags": "VASP, PAW, Python, SphericalHarmonics",
     "date": "2022-10-02 21:34:00 +0800",
     
 

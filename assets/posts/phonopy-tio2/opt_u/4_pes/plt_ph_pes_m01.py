@@ -17,6 +17,7 @@ from ase.io import read
 THzToCm = 33.3564095198152
 
 ############################################################
+Natoms = len(read('POSCAR'))
 mode = 1
 # Normal mode coordinate
 Qmode   = np.loadtxt('m_{:02d}/Q.dat'.format(mode))
@@ -50,11 +51,11 @@ fig = plt.figure(
 ax = plt.subplot()
 
 ############################################################
-ax.plot(Qmode, Emode*1000, ls='none',
+ax.plot(Qmode, Emode*1000/Natoms, ls='none',
         marker='o', ms=4, mew=1.0, mfc='w',
         color='b',
         label=r'$\omega={:.2f}\,cm^{{-1}}$'.format(Wmode))
-ax.plot(Qharm, Eharm, ls='--', lw=0.7, color='r', label=r'$Q\,\omega^2/\,2$')
+ax.plot(Qharm, Eharm/Natoms, ls='--', lw=0.7, color='r', label=r'$Q\,\omega^2/\,2$')
 
 # ax.grid('on', ls='-', lw=0.2, alpha=0.3)
 
@@ -63,10 +64,10 @@ ax.legend(loc='upper center', fontsize='x-small')
 ax.set_xlabel(r'Q [$\sqrt{\mathrm{amu}}\cdot\AA$]',
               labelpad=5, fontsize='small')
 
-ax.set_ylabel('Energy [meV]', labelpad=10, fontsize='small')
+ax.set_ylabel('Energy per atom [meV]', labelpad=5, fontsize='small')
 ############################################################
 
-plt.savefig('pes_{:02d}.png'.format(mode))
 
+plt.savefig('pes.png')
 from subprocess import call
-call('feh -xdF pes_{:02d}.png'.format(mode).split())
+call('feh -xdF pes.png'.split())

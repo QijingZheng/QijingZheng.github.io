@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="PAW All-Electron Wavefunction in VASP" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-10-20T13:46:05+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/","headline":"PAW All-Electron Wavefunction in VASP","dateModified":"2022-11-11T20:34:53+08:00","datePublished":"2022-10-02T21:34:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -662,17 +662,17 @@ University of Science &amp; Technology of China
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Thu, Oct 20, 2022,  1:46 PM +0800"
+    title="Fri, Nov 11, 2022,  8:34 PM +0800"
   >
 
   
   
 
   
-    Oct 20
+    Nov 11
   
 
-  <i class="unloaded">2022-10-20T13:46:05+08:00</i>
+  <i class="unloaded">2022-11-11T20:34:53+08:00</i>
 
 </span>
 
@@ -694,7 +694,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2604 words">14 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2808 words">15 min</span>
 
 
           <!-- page views -->
@@ -1167,6 +1167,40 @@ difference of the two zero in Eq.\eqref{eq:paw_wfc} beyond $r_j^c$.</p>
 <p><em>IT MUST BE STRESSED</em> that $R_j(r)$ and $\tilde{R}_j(r)$ are the ones stored in the
 <code class="language-plaintext highlighter-rouge">POTCAR</code> file and are also the ones shown in Figure 2.</p>
 
+<p>A few notes on the construction of AE/PS partial waves</p>
+
+<ul>
+  <li>
+    <p>The AE partial waves are chosen to be solution to Schrödinger equation for a
+fixed quantum number <em>l</em> and chosen reference energy. <sup id="fnref:vasp_prb_1999" role="doc-noteref"><a href="#fn:vasp_prb_1999" class="footnote">5</a></sup></p>
+  </li>
+  <li>
+    <p>The PS partial waves are, by definition, indential to the AE partial waves
+outside th augmentation sphere. Inside the sphere, the PS partial waves are
+chosen to be a smooth continuation of the AE ones. <code class="language-plaintext highlighter-rouge">VASP</code> expands the PS
+partial waves within the sphere in terms of a linear combination of spherical
+Bessel functions <sup id="fnref:vasp_prb_1999:1" role="doc-noteref"><a href="#fn:vasp_prb_1999" class="footnote">5</a></sup> <sup id="fnref:vasp_spf_note" role="doc-noteref"><a href="#fn:vasp_spf_note" class="footnote">6</a></sup></p>
+
+\[\begin{equation}
+\frac{\tilde{R}_j(r)}{r}
+=
+\begin{cases}
+\displaystyle
+\sum_{i=1}^2 \alpha_i j_l(q_k r),  &amp; r \lt r_c \\[6pt]
+\displaystyle
+\frac{R_j(r)}{r},  &amp; r \gt r_c 
+\end{cases}
+\end{equation}\]
+
+    <p>where the coefficients $\alpha_i$ and $q_i$ are determined so that the PS
+partial waves are two times continuously differentiable at $r_c$.</p>
+
+    <p>Alternatively, one can use polynomials of <em>r</em> with even powers
+<sup id="fnref:psp_even_powers" role="doc-noteref"><a href="#fn:psp_even_powers" class="footnote">7</a></sup> (Troullier-Martins pseudopotential <sup id="fnref:TM_psp" role="doc-noteref"><a href="#fn:TM_psp" class="footnote">8</a></sup>) or Gaussian
+in the expansion.</p>
+  </li>
+</ul>
+
 <h2 id="constructing-aewfc">Constructing AEWFC</h2>
 
 <p>As has been stated, the AEWFC $\psi_{n\mathbf{k}}$ is a Bloch wave and is
@@ -1583,6 +1617,18 @@ distances $r$.</p>
     <li id="fn:vasp_prb_2006" role="doc-endnote">
       <p><a href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.73.045112" target="_blank">Linear optical properties in the projector-augmented wave methodology</a> <a href="#fnref:vasp_prb_2006" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
+    <li id="fn:vasp_prb_1999" role="doc-endnote">
+      <p><a href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.59.1758" target="_blank">From ultrasoft pseudopotentials to the projector augmented-wave method</a> <a href="#fnref:vasp_prb_1999" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:vasp_prb_1999:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:vasp_spf_note" role="doc-endnote">
+      <p>In another <a href="https://www.vasp.at/vasp-workshop/pseudopp2.pdf">VASP lecture note</a>, 3-4 spherical Bessel functions are used in the expansion. <a href="#fnref:vasp_spf_note" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:psp_even_powers" role="doc-endnote">
+      <p>As odd powers in r results in a kink in the functions at the origin, i.e. that the first derivatives are not defined at this point. <a href="#fnref:psp_even_powers" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:TM_psp" role="doc-endnote">
+      <p><a href="https://journals.aps.org/prb/abstract/10.1103/PhysRevB.43.1993" target="_blank">Efficient pseudopotentials for plane-wave calculations</a> <a href="#fnref:TM_psp" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
   </ol>
 </div>
 
@@ -1614,6 +1660,9 @@ distances $r$.</p>
           
           <a href="/tags/python/"
             class="post-tag no-text-decoration" >Python</a>
+          
+          <a href="/tags/sphericalharmonics/"
+            class="post-tag no-text-decoration" >SphericalHarmonics</a>
           
           </div>
         
@@ -1711,7 +1760,17 @@ distances $r$.</p>
         
         
         
+        <li><a href="/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/">Light-Matter Interaction and Dipole Transition Matrix</a></li>
+      
+        
+        
+        
         <li><a href="/posts/VASP-All-Electron-WFC/">PAW All-Electron Wavefunction in VASP</a></li>
+      
+        
+        
+        
+        <li><a href="/posts/Plotly-Spherical-Harmonics/">Plotly: Spherical Harmonics</a></li>
       
         
         
@@ -1722,11 +1781,6 @@ distances $r$.</p>
         
         
         <li><a href="/posts/FourierTransform-Radial-Function/">Fourier Transform of Radial Functions</a></li>
-      
-        
-        
-        
-        <li><a href="/posts/NAC-Calculation-for-1D-Model-Hamiltonian/">NAC Calculation for 1D Model Hamiltonian</a></li>
       
 
       </ul>
@@ -2103,10 +2157,6 @@ distances $r$.</p>
     
     
     
-      
-        
-        
-
   
     
     
@@ -2126,118 +2176,6 @@ distances $r$.</p>
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -2298,219 +2236,6 @@ distances $r$.</p>
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
   
     
     
@@ -2775,12 +2500,349 @@ distances $r$.</p>
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -2984,19 +3046,19 @@ distances $r$.</p>
         <a class="post-tag" href="/tags/matplotlib/">Matplotlib</a>
       
         
+        <a class="post-tag" href="/tags/vasp/">VASP</a>
+      
+        
         <a class="post-tag" href="/tags/plotly/">Plotly</a>
+      
+        
+        <a class="post-tag" href="/tags/sphericalharmonics/">SphericalHarmonics</a>
       
         
         <a class="post-tag" href="/tags/tikz/">TikZ</a>
       
         
-        <a class="post-tag" href="/tags/vasp/">VASP</a>
-      
-        
         <a class="post-tag" href="/tags/plotting/">Plotting</a>
-      
-        
-        <a class="post-tag" href="/tags/sphericalharmonics/">SphericalHarmonics</a>
       
         
         <a class="post-tag" href="/tags/brillouinzone/">BrillouinZone</a>
@@ -3050,6 +3112,19 @@ distances $r$.</p>
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -3402,6 +3477,54 @@ distances $r$.</p>
       
       
       <div class="card">
+        <a href="/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/">
+          <div class="card-body">
+            <!--
+  Date format snippet
+-->
+
+
+
+
+
+<span class="timeago small"
+  >
+
+  
+  
+
+  
+    Nov  1
+  
+
+  <i class="unloaded">2022-11-01T11:00:00+08:00</i>
+
+</span>
+
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Light-Matter Interaction and Dipole Transition Matrix</h3>
+            <div class="text-muted small">
+              <p>
+                
+
+
+
+
+
+                {% assign figCounter = 0 %}
+
+Quantum theory of light-matter interaction
+
+Let us consider an atom in the presence of an external classical
+electromagnetic fields, the gauge invariant Schrödinger equ...
+              </p>
+            </div>
+          </div>
+        </a>
+      </div>
+    
+      
+      
+      <div class="card">
         <a href="/posts/Band-unfolding-tutorial/">
           <div class="card-body">
             <!--
@@ -3493,71 +3616,6 @@ below, by shifting one of the two layers relati...
         </a>
       </div>
     
-      
-      
-      <div class="card">
-        <a href="/posts/Hefei-NAMD-Training/">
-          <div class="card-body">
-            <!--
-  Date format snippet
--->
-
-
-
-
-
-<span class="timeago small"
-  >
-
-  
-  
-
-  
-    Apr 22, 2021
-  
-
-  <i class="unloaded">2021-04-22T14:35:00+08:00</i>
-
-</span>
-
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Hefei-NAMD Training</h3>
-            <div class="text-muted small">
-              <p>
-                
-
-
-
-
-
-                
-
-  
-
-
-
-
-
-
-
-In this training session, we will learn how to do an NAMD calculation using Hefei-NAMD.
-
-Outline of the session:
-
-
-  
-    A bit of theory
-  
-  
-    Installation of Hefei-NAMD
-  
-  
-    ...
-              </p>
-            </div>
-          </div>
-        </a>
-      </div>
-    
     </div> <!-- .card-deck -->
   </div> <!-- #related-posts -->
 
@@ -3576,10 +3634,10 @@ Outline of the session:
   
 
   
-  <span class="btn btn-outline-primary disabled"
+  <a href="/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>-</p>
-  </span>
+    <p>Light-Matter Interaction and Dipole Transition Matrix</p>
+  </a>
   
 
 </div>
@@ -4021,10 +4079,6 @@ Outline of the session:
     
     
     
-      
-        
-        
-
   
     
     
@@ -4044,118 +4098,6 @@ Outline of the session:
     
     
     
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
     
   
     
@@ -4216,219 +4158,6 @@ Outline of the session:
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
   
     
     
@@ -4693,12 +4422,349 @@ Outline of the session:
     
     
     
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
     
     
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -4897,19 +4963,19 @@ Outline of the session:
         <a class="post-tag" href="/tags/matplotlib/">Matplotlib</a>
       
         
+        <a class="post-tag" href="/tags/vasp/">VASP</a>
+      
+        
         <a class="post-tag" href="/tags/plotly/">Plotly</a>
+      
+        
+        <a class="post-tag" href="/tags/sphericalharmonics/">SphericalHarmonics</a>
       
         
         <a class="post-tag" href="/tags/tikz/">TikZ</a>
       
         
-        <a class="post-tag" href="/tags/vasp/">VASP</a>
-      
-        
         <a class="post-tag" href="/tags/plotting/">Plotting</a>
-      
-        
-        <a class="post-tag" href="/tags/sphericalharmonics/">SphericalHarmonics</a>
       
         
         <a class="post-tag" href="/tags/brillouinzone/">BrillouinZone</a>

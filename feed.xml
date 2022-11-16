@@ -4,7 +4,7 @@
   <id>https://qijingzheng.github.io/</id>
   <title>Qijing Zheng</title>
   <subtitle>A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.</subtitle>
-  <updated>2022-10-20T13:51:53+08:00</updated>
+  <updated>2022-11-16T15:15:12+08:00</updated>
   <author>
     <name>Qijing Zheng</name>
     <uri>https://qijingzheng.github.io/</uri>
@@ -20,11 +20,62 @@
 
   
   <entry>
+    <title>Light-Matter Interaction and Dipole Transition Matrix</title>
+    <link href="https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/" rel="alternate" type="text/html" title="Light-Matter Interaction and Dipole Transition Matrix" />
+    <published>2022-11-01T11:00:00+08:00</published>
+  
+    <updated>2022-11-16T15:02:14+08:00</updated>
+  
+    <id>https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/</id>
+    <content src="https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/" />
+    <author>
+      <name>Qijing Zheng</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+Quantum theory of light-matter interaction
+
+Let us consider an atom in the presence of an external classical
+electromagnetic fields, the gauge invariant Schrödinger equation writes
+1
+
+\[\begin{equation}
+i\hbar\frac{\partial\psi(\mathbf{r}, t)}{\partial t} = \hat{H}\,\psi(\mathbf{r}, t)
+\label{eq:gauge_inv_schro_eq}
+\end{equation}\]
+
+where the gauge invariant Hamiltonian
+
+\[\begin{align}
+\hat{H...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>PAW All-Electron Wavefunction in VASP</title>
     <link href="https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/" rel="alternate" type="text/html" title="PAW All-Electron Wavefunction in VASP" />
     <published>2022-10-02T21:34:00+08:00</published>
   
-    <updated>2022-10-20T13:46:05+08:00</updated>
+    <updated>2022-11-11T20:34:53+08:00</updated>
   
     <id>https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/</id>
     <content src="https://qijingzheng.github.io/posts/VASP-All-Electron-WFC/" />
@@ -131,7 +182,7 @@ to be
     <link href="https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/" rel="alternate" type="text/html" title="Evaluating Overlap Integral in Momentum Space" />
     <published>2022-09-02T14:20:00+08:00</published>
   
-    <updated>2022-10-03T22:01:42+08:00</updated>
+    <updated>2022-11-03T13:00:33+08:00</updated>
   
     <id>https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/</id>
     <content src="https://qijingzheng.github.io/posts/Overlap-Integral-in-Momentum-Space/" />
@@ -215,52 +266,6 @@ $K$, known as $\gamma_s$, can be written as 1
 \gamma_s &amp;amp;= \frac{U}{K} = \frac{g}{a_0} \, \frac{m^{\ast}}{\epsilon} \, \frac{1}{\sqrt{\pi n_e}} \\[9pt]
          &amp;amp;= \frac{g}{a_0} \, \frac{m^{\ast}}{\epsilon} \, \frac{\lambda_m}{\sqrt{2\pi\nu/\sqrt{3}}} \\
 \...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>Numerical Solutions to the Time-dependent Schrödinger Equation</title>
-    <link href="https://qijingzheng.github.io/posts/Numerical_TDSE/" rel="alternate" type="text/html" title="Numerical Solutions to the Time-dependent Schrödinger Equation" />
-    <published>2022-05-20T09:00:00+08:00</published>
-  
-    <updated>2022-05-20T09:00:00+08:00</updated>
-  
-    <id>https://qijingzheng.github.io/posts/Numerical_TDSE/</id>
-    <content src="https://qijingzheng.github.io/posts/Numerical_TDSE/" />
-    <author>
-      <name>Qijing Zheng</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-Time-dependent Schrödinger Equation
-
-The single-particle time-dependent Schrödinger equation of an electron under an
-external potential read
-
-\[\begin{align}
-i\hbar \frac{\partial}{\partial t} \psi(\mathbf{r}, t) &amp;amp;= {\cal H}(\mathbf{r};t)\,\psi(\mathbf{r}, t)
-                                                        = [\hat{T} + \hat{V}]\,\psi(\mathbf{r}, t) \\
-&amp;amp;=\left[
-    -\frac{\hbar^...
     </summary>
   
 
