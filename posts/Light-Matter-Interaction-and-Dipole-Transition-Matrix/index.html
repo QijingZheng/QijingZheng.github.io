@@ -78,7 +78,7 @@
 <meta property="twitter:title" content="Light-Matter Interaction and Dipole Transition Matrix" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/","headline":"Light-Matter Interaction and Dipole Transition Matrix","dateModified":"2022-11-16T15:02:14+08:00","datePublished":"2022-11-01T11:00:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/","headline":"Light-Matter Interaction and Dipole Transition Matrix","dateModified":"2022-12-06T18:14:39+08:00","datePublished":"2022-11-01T11:00:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
@@ -648,17 +648,17 @@ University of Science &amp; Technology of China
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Wed, Nov 16, 2022,  3:02 PM +0800"
+    title="Tue, Dec  6, 2022,  6:14 PM +0800"
   >
 
   
   
 
   
-    Nov 16
+    Dec  6
   
 
-  <i class="unloaded">2022-11-16T15:02:14+08:00</i>
+  <i class="unloaded">2022-12-06T18:14:39+08:00</i>
 
 </span>
 
@@ -680,7 +680,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="3627 words">20 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="3762 words">20 min</span>
 
 
           <!-- page views -->
@@ -904,7 +904,7 @@ Eq.\eqref{eq:gauge_inv_hamil}, one obtains the Hamiltonian in length gauge</p>
 
 <h3 id="velocity-gauge">Velocity Gauge</h3>
 
-<p>Again, we start with the <em>Coulomb gauge</em> and <em>EDA</em>. Howeve, this time we choose
+<p>Again, we start with the <em>Coulomb gauge</em> and <em>EDA</em>. However, this time we choose
 $\lambda$ as</p>
 
 \[\begin{equation}
@@ -1434,26 +1434,26 @@ by</p>
 \[\begin{align}
 \langle \psi_{c\mathbf{k}} | \mathbf{p} | \psi_{v\mathbf{k}} \rangle
 &amp;=
--\hbar
+\hbar
 \langle u_{c,\mathbf{k}}
-  | i\nabla - \mathbf{k} |
+  | \mathbf{k} - i\nabla |
 u_{v,\mathbf{k}} \rangle
 \\[9pt]
 \langle u_{c,\mathbf{k}}
-  | i\nabla - \mathbf{k} |
+  | \mathbf{k} - i\nabla |
 u_{v,\mathbf{k}} \rangle
 &amp;=
 \langle \tilde{u}_{c,\mathbf{k}}
-  | i\nabla - \mathbf{k} |
+  | \mathbf{k} - i\nabla |
 \tilde{u}_{v,\mathbf{k}} \rangle
-+
-\sum_{nm}
+-
+i \sum_{nm}
 \langle \tilde{u}_{c,\mathbf{k}} | \tilde{p}_{n,\mathbf{k}} \rangle
 \langle \tilde{p}_{m,\mathbf{k}} | \tilde{u}_{v,\mathbf{k}} \rangle
 \nonumber \\[6pt]
 &amp;\quad
 \times
-i \left[
+\left[
 \langle \phi_n
   | \nabla_\mathbf{r} |
 \phi_m \rangle
@@ -1466,9 +1466,28 @@ i \left[
 
 <p>where  $\tilde{p}_{n\mathbf{k}}$ is the <em>k</em>-dependent projector function as
 defined in a <a href="../VASP-All-Electron-WFC/" target="_blank">previous post</a>,
-$\phi$ and $\tilde\phi$ are the PAW AE and PS partial waves.  The imaginary part
-of the dielectric function in the transversal gauge are related by
-<sup id="fnref:vasp_prb_2006" role="doc-noteref"><a href="#fn:vasp_prb_2006" class="footnote">12</a></sup></p>
+$\phi$ and $\tilde\phi$ are the PAW AE and PS partial waves.</p>
+
+<p>Note that the imaginary part of the dielectric function in the longitudinal
+expression is given by <sup id="fnref:vasp_prb_2006" role="doc-noteref"><a href="#fn:vasp_prb_2006" class="footnote">12</a></sup></p>
+
+\[\begin{align}
+\epsilon''_{\alpha\beta}(\omega)
+&amp;=
+\frac{4\pi^2 e^2}{\Omega}
+\lim_{\mathbf{q}\to0}
+\frac{1}{q^2}
+\sum_{c,v,\mathbf{k}}
+2\mathrm{w}_\mathbf{k}
+\delta(\varepsilon_{c,\mathbf{k}} - \varepsilon_{v,\mathbf{k}} - \omega) 
+\nonumber\\[6pt]
+&amp;\qquad
+\times
+\langle u_{c,\mathbf{k}+q\mathbf{e}_\alpha} | u_{v,\mathbf{k}} \rangle
+\langle u_{c,\mathbf{k}} | u_{v,\mathbf{k}+q\mathbf{e}_\beta} \rangle^*
+\end{align}\]
+
+<p>and in the transversal expression by <sup id="fnref:vasp_prb_2006:1" role="doc-noteref"><a href="#fn:vasp_prb_2006" class="footnote">12</a></sup></p>
 
 \[\begin{align}
 \epsilon''_{\alpha\beta}(\omega)
@@ -1489,7 +1508,38 @@ u_{v,\mathbf{k}} \rangle
 u_{v,\mathbf{k}} \rangle^*
 \end{align}\]
 
-<h3 id="matrix-element-of-nabla-operator">Matrix element of nabla operator</h3>
+<blockquote>
+  <p>In principle, both longitudinal and transversal expression yield almost
+exactly indetical results <em>in the limit of a complete PAW one-center basis</em>.
+However, this limit is in practice not always reached, and hence the
+longitudinal expression should be preferred over the simpler transversal
+expression.</p>
+</blockquote>
+
+<h3 id="matrix-element-of-nabla-operator--pseudo-wavefunction">Matrix element of nabla operator — pseudo-wavefunction</h3>
+
+<p>The matrix elements of the nabla operator can be readily evaluated in reciprocal
+space</p>
+
+\[\begin{equation}
+\langle u_{c,\mathbf{k}}
+  | \mathbf{k} - i\nabla |
+u_{v,\mathbf{k}} \rangle
+=
+\sum_{\mathbf{G}}
+c_{c,\mathbf{k}}^*(\mathbf{G})
+\cdot
+  \left[
+  \mathbf{k} + \mathbf{G}
+  \right]
+\cdot
+c_{v,\mathbf{k}} (\mathbf{G})
+\end{equation}\]
+
+<p>where $c(\mathbf{G})$ is the plane-wave coefficients for
+$u_{n\mathbf{k}}(\mathbf{r})$.</p>
+
+<h3 id="matrix-element-of-nabla-operator--one-center-contribution">Matrix element of nabla operator — one-center contribution</h3>
 
 \[\begin{equation}
 \boldsymbol\tau_{nm}
@@ -1967,7 +2017,7 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
       <p><a href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.87.125301" target="_blank">Relation between the interband dipole and momentum matrix elements in semiconductors</a> <a href="#fnref:p-r_relation" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
     <li id="fn:vasp_prb_2006" role="doc-endnote">
-      <p><a href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.73.045112" target="_blank">Linear optical properties in the projector-augmented wave methodology</a> <a href="#fnref:vasp_prb_2006" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+      <p><a href="https://journals.aps.org/prb/pdf/10.1103/PhysRevB.73.045112" target="_blank">Linear optical properties in the projector-augmented wave methodology</a> <a href="#fnref:vasp_prb_2006" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:vasp_prb_2006:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
     </li>
     <li id="fn:paw_aeps" role="doc-endnote">
       <p><a href="../VASP-All-Electron-WFC" target="_blank">PAW All-Electron Wavefunction in VASP</a> <a href="#fnref:paw_aeps" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
@@ -2296,80 +2346,6 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -2459,135 +2435,90 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -2852,6 +2783,150 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -3033,6 +3108,58 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
     
     
     
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -3050,37 +3177,119 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -3226,10 +3435,7 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -3265,90 +3471,129 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -3410,16 +3655,16 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
         <a class="post-tag" href="/tags/tikz/">TikZ</a>
       
         
+        <a class="post-tag" href="/tags/phonon/">Phonon</a>
+      
+        
+        <a class="post-tag" href="/tags/phonopy/">Phonopy</a>
+      
+        
         <a class="post-tag" href="/tags/plotting/">Plotting</a>
       
         
         <a class="post-tag" href="/tags/brillouinzone/">BrillouinZone</a>
-      
-        
-        <a class="post-tag" href="/tags/dft/">DFT</a>
-      
-        
-        <a class="post-tag" href="/tags/latex/">LaTeX</a>
       
 
       </div>
@@ -3464,6 +3709,19 @@ tau_nm(z)  (0, 0, 0)  (1, 0, 0)  (2, 1,-1)  (2, 1, 0)  (2, 1, 1)  (3, 1,-1)  (3,
 
 
 
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
 
 
   
@@ -3986,10 +4244,10 @@ below, by shifting one of the two layers relati...
   
 
   
-  <span class="btn btn-outline-primary disabled"
+  <a href="/posts/Angular-Momentum-in-Solids/" class="btn btn-outline-primary"
     prompt="Newer">
-    <p>-</p>
-  </span>
+    <p>Angular Momentum in Solids</p>
+  </a>
   
 
 </div>
@@ -4205,80 +4463,6 @@ below, by shifting one of the two layers relati...
     
     
     
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
   
     
     
@@ -4368,135 +4552,90 @@ below, by shifting one of the two layers relati...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
         
         
 
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
   
     
     
@@ -4761,6 +4900,150 @@ below, by shifting one of the two layers relati...
     
     
     
+  
+    
+    
+    
+    
+      
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -4942,6 +5225,58 @@ below, by shifting one of the two layers relati...
     
     
     
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
     
   
@@ -4959,37 +5294,119 @@ below, by shifting one of the two layers relati...
     
     
     
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
       
+        
+        
+
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
     
   
     
@@ -5135,10 +5552,7 @@ below, by shifting one of the two layers relati...
     
     
     
-  
-    
-    
-    
+      
     
   
     
@@ -5174,90 +5588,129 @@ below, by shifting one of the two layers relati...
     
     
     
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+      
+    
+  
+    
+    
+    
+    
+  
+    
+    
+    
+    
       
         
         
 
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-        
-        
-
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
-  
-    
-    
-    
-    
-  
-    
-    
-    
-    
-      
-    
   
     
     
@@ -5314,16 +5767,16 @@ below, by shifting one of the two layers relati...
         <a class="post-tag" href="/tags/tikz/">TikZ</a>
       
         
+        <a class="post-tag" href="/tags/phonon/">Phonon</a>
+      
+        
+        <a class="post-tag" href="/tags/phonopy/">Phonopy</a>
+      
+        
         <a class="post-tag" href="/tags/plotting/">Plotting</a>
       
         
         <a class="post-tag" href="/tags/brillouinzone/">BrillouinZone</a>
-      
-        
-        <a class="post-tag" href="/tags/dft/">DFT</a>
-      
-        
-        <a class="post-tag" href="/tags/latex/">LaTeX</a>
       
 
     </div>

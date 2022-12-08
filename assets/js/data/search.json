@@ -1,6 +1,21 @@
 [
   
   {
+    "title": "Angular Momentum in Solids",
+    "url": "/posts/Angular-Momentum-in-Solids/",
+    "categories": "Blogging, Tutorial",
+    "tags": "Phonopy, Phonon, Python, AngularMomentum",
+    "date": "2022-11-26 14:11:00 +0800",
+    
+
+
+
+
+
+    "snippet": "Conservation of Crystal Total Angular MomentumEinstein-De Haas EffectThe Einstein–de Haas effect is a physical phenomenon in which a change in themagnetization causes mechanical rotation of the body. The effect is aconsequence of the conservation of total angular momentum.1        Barnett EffectT..."
+  },
+  
+  {
     "title": "Light-Matter Interaction and Dipole Transition Matrix",
     "url": "/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/",
     "categories": "Blogging, Tutorial",

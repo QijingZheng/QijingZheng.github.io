@@ -4,7 +4,7 @@
   <id>https://qijingzheng.github.io/</id>
   <title>Qijing Zheng</title>
   <subtitle>A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.</subtitle>
-  <updated>2022-11-16T15:15:12+08:00</updated>
+  <updated>2022-12-08T10:22:49+08:00</updated>
   <author>
     <name>Qijing Zheng</name>
     <uri>https://qijingzheng.github.io/</uri>
@@ -20,11 +20,66 @@
 
   
   <entry>
+    <title>Angular Momentum in Solids</title>
+    <link href="https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/" rel="alternate" type="text/html" title="Angular Momentum in Solids" />
+    <published>2022-11-26T14:11:00+08:00</published>
+  
+    <updated>2022-11-26T14:11:00+08:00</updated>
+  
+    <id>https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/</id>
+    <content src="https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/" />
+    <author>
+      <name>Qijing Zheng</name>
+    </author>
+
+  
+    
+    <category term="Blogging" />
+    
+    <category term="Tutorial" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      
+Conservation of Crystal Total Angular Momentum
+
+Einstein-De Haas Effect
+
+The Einstein–de Haas effect is a physical phenomenon in which a change in the
+magnetization causes mechanical rotation of the body. The effect is a
+consequence of the conservation of total angular momentum.
+1
+
+
+  
+    
+  
+
+
+Barnett Effect
+
+The opposite effect of Einstein-De Hass effect is the Barnett effect — a
+change in ...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
     <title>Light-Matter Interaction and Dipole Transition Matrix</title>
     <link href="https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/" rel="alternate" type="text/html" title="Light-Matter Interaction and Dipole Transition Matrix" />
     <published>2022-11-01T11:00:00+08:00</published>
   
-    <updated>2022-11-16T15:02:14+08:00</updated>
+    <updated>2022-12-06T18:14:39+08:00</updated>
   
     <id>https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/</id>
     <content src="https://qijingzheng.github.io/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/" />
@@ -221,51 +276,6 @@ i.e. Slater-type orbital (STO) 2
 
 \[\begin{equation}
 f_{n,l}^{\text...
-    </summary>
-  
-
-  </entry>
-
-  
-  <entry>
-    <title>General Wigner Crystal in Moiré Superlattice</title>
-    <link href="https://qijingzheng.github.io/posts/GeneralWignerCrystal/" rel="alternate" type="text/html" title="General Wigner Crystal in Moiré Superlattice" />
-    <published>2022-06-08T09:23:00+08:00</published>
-  
-    <updated>2022-06-08T09:23:00+08:00</updated>
-  
-    <id>https://qijingzheng.github.io/posts/GeneralWignerCrystal/</id>
-    <content src="https://qijingzheng.github.io/posts/GeneralWignerCrystal/" />
-    <author>
-      <name>Qijing Zheng</name>
-    </author>
-
-  
-    
-    <category term="Blogging" />
-    
-    <category term="Tutorial" />
-    
-  
-
-  
-    <summary>
-      
-
-
-
-
-
-      
-Ratio of Potential and Kinetic Energy
-
-The dimensionless ratio of the potential energy ($U$) and the kinetic energy
-$K$, known as $\gamma_s$, can be written as 1
-
-\[\begin{align}
-\gamma_s &amp;amp;= \frac{U}{K} = \frac{g}{a_0} \, \frac{m^{\ast}}{\epsilon} \, \frac{1}{\sqrt{\pi n_e}} \\[9pt]
-         &amp;amp;= \frac{g}{a_0} \, \frac{m^{\ast}}{\epsilon} \, \frac{\lambda_m}{\sqrt{2\pi\nu/\sqrt{3}}} \\
-\...
     </summary>
   
 

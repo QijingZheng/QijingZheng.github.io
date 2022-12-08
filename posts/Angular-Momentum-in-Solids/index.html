@@ -64,25 +64,25 @@
 
   <!-- Begin Jekyll SEO tag v2.7.1 -->
 <meta name="generator" content="Jekyll v4.2.0" />
-<meta property="og:title" content="Matplotlib: 1D Chain ARPES Signal" />
+<meta property="og:title" content="Angular Momentum in Solids" />
 <meta name="author" content="Qijing Zheng" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="ARPES Signal of 1D Chain within Tight-binding 1 An experimentalist’s guide to the matrix element in angle resolved photoemission. &#8617;" />
-<meta property="og:description" content="ARPES Signal of 1D Chain within Tight-binding 1 An experimentalist’s guide to the matrix element in angle resolved photoemission. &#8617;" />
-<link rel="canonical" href="https://qijingzheng.github.io/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/" />
-<meta property="og:url" content="https://qijingzheng.github.io/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/" />
+<meta name="description" content="A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation." />
+<meta property="og:description" content="A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation." />
+<link rel="canonical" href="https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/" />
+<meta property="og:url" content="https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/" />
 <meta property="og:site_name" content="Qijing Zheng" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2022-04-19T13:05:00+08:00" />
+<meta property="article:published_time" content="2022-11-26T14:11:00+08:00" />
 <meta name="twitter:card" content="summary" />
-<meta property="twitter:title" content="Matplotlib: 1D Chain ARPES Signal" />
+<meta property="twitter:title" content="Angular Momentum in Solids" />
 <meta name="google-site-verification" content="google_meta_tag_verification" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/","headline":"Matplotlib: 1D Chain ARPES Signal","dateModified":"2022-04-19T13:05:00+08:00","datePublished":"2022-04-19T13:05:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/"},"description":"ARPES Signal of 1D Chain within Tight-binding 1 An experimentalist’s guide to the matrix element in angle resolved photoemission. &#8617;","@context":"https://schema.org"}</script>
+{"@type":"BlogPosting","url":"https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/","headline":"Angular Momentum in Solids","dateModified":"2022-11-26T14:11:00+08:00","datePublished":"2022-11-26T14:11:00+08:00","author":{"@type":"Person","name":"Qijing Zheng"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/"},"description":"A minimal, portfolio, sidebar, bootstrap Jekyll theme with responsive web design and focuses on text presentation.","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
 
-  <title>Matplotlib: 1D Chain ARPES Signal | Qijing Zheng
+  <title>Angular Momentum in Solids | Qijing Zheng
   </title>
 
   <!--
@@ -531,7 +531,7 @@ University of Science &amp; Technology of China
       
 
         
-          <span>Matplotlib: 1D Chain ARPES Signal</span>
+          <span>Angular Momentum in Solids</span>
 
         
 
@@ -608,7 +608,7 @@ University of Science &amp; Technology of China
 
     <div class="post pl-1 pr-1 pl-sm-2 pr-sm-2 pl-md-4 pr-md-4">
 
-      <h1 data-toc-skip>Matplotlib: 1D Chain ARPES Signal</h1>
+      <h1 data-toc-skip>Angular Momentum in Solids</h1>
 
       <div class="post-meta text-muted d-flex flex-column">
         <!-- Published date and author -->
@@ -625,17 +625,17 @@ University of Science &amp; Technology of China
   
     data-toggle="tooltip"
     data-placement="bottom"
-    title="Tue, Apr 19, 2022,  1:05 PM +0800"
+    title="Sat, Nov 26, 2022,  2:11 PM +0800"
   >
 
   
   
 
   
-    Apr 19
+    Nov 26
   
 
-  <i class="unloaded">2022-04-19T13:05:00+08:00</i>
+  <i class="unloaded">2022-11-26T14:11:00+08:00</i>
 
 </span>
 
@@ -664,7 +664,7 @@ University of Science &amp; Technology of China
 
 
 <!-- return element -->
-<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="594 words">3 min</span>
+<span class="readtime" data-toggle="tooltip" data-placement="bottom" title="2316 words">12 min</span>
 
 
           <!-- page views -->
@@ -678,61 +678,223 @@ University of Science &amp; Technology of China
 
         
 
-        <h2 id="arpes-signal-of-1d-chain-within-tight-binding-">ARPES Signal of 1D Chain within Tight-binding <sup id="fnref:exp_guide" role="doc-noteref"><a href="#fn:exp_guide" class="footnote">1</a></sup></h2>
+        
+<h2 id="conservation-of-crystal-total-angular-momentum">Conservation of Crystal Total Angular Momentum</h2>
+
+<h3 id="einstein-de-haas-effect">Einstein-De Haas Effect</h3>
+
+<p>The Einstein–de Haas effect is a physical phenomenon in which a change in the
+<em>magnetization</em> causes <em>mechanical rotation</em> of the body. The effect is a
+consequence of the <em>conservation of total angular momentum</em>.
+<sup id="fnref:einstein_dehaas_effect_handwiki" role="doc-noteref"><a href="#fn:einstein_dehaas_effect_handwiki" class="footnote">1</a></sup></p>
+
+<div align="center">
+  <video controls="">
+    <source src="/assets/posts/phonon_angular_momentum/Einstein-De-Haas-Effect.mp4" />
+  </video>
+</div>
+
+<h3 id="barnett-effect">Barnett Effect</h3>
+
+<p>The opposite effect of Einstein-De Hass effect is the Barnett effect — a
+change in rotation causes a magnetization. <sup id="fnref:BarnettEffect" role="doc-noteref"><a href="#fn:BarnettEffect" class="footnote">2</a></sup></p>
+
+<h3 id="total-angular-momentum">Total Angular Momentum</h3>
+
+<p>In 2014, Niu et al.<sup id="fnref:niuq_prl_2014" role="doc-noteref"><a href="#fn:niuq_prl_2014" class="footnote">3</a></sup> proposed that the total angular momentum for
+a crystal with non-zero phonon angular momentum consists of the following parts:</p>
+
+\[\begin{equation}
+  {\cal L}^\mathrm{tot} = {\cal L}^\mathrm{lat}  
+                        + {\cal L}^\mathrm{spin}  
+                        + {\cal L}^\mathrm{orb}  
+                        + {\cal L}^\mathrm{ph}  
+\end{equation}\]
+
+<p>where</p>
 
 <ul>
   <li>
-    <p>The eigenvalues of 1D mono-atomic chain within the tight-binding model</p>
-
-\[\begin{equation*}
-  \varepsilon_\kappa = \varepsilon_0 - 2t\cos(\frac{\kappa}{N+1}\pi)\qquad \kappa=1,\ldots,N,
-\end{equation*}\]
+    <p>${\cal L}^\mathrm{lat}$ is the mechanical rotation of the whole crystal</p>
   </li>
   <li>
-    <p>The ARPES signal of the linear chain from Eq.(54) of Ref<sup id="fnref:exp_guide:1" role="doc-noteref"><a href="#fn:exp_guide" class="footnote">1</a></sup></p>
-
-\[\begin{equation*}
-  w_{fi} =
-  \sum_\kappa \bigl| \langle \mathbf{k}_f | \mathbf{R},\kappa \rangle \bigr|^2
-  \,
-  {\cal G}_\kappa(\omega - \varepsilon_\kappa)
-\end{equation*}\]
-
-    <p>where ${\cal G}_\kappa$ is a Gaussian broadening function and $\langle\mathbf{k}_f \vert\mathbf{R},\kappa\rangle$ is given by</p>
-
-\[\begin{equation*}
-  \langle \mathbf{k}_f | \mathbf{R},\kappa \rangle
-  \propto
-  \sum_j^N \sin\left(
-  \frac{j\kappa}{N+1}\pi
-  \right)
-  \,
-  e^{-\imath k_{fx}\cdot x_j}
-\end{equation*}\]
+    <p>${\cal L}^\mathrm{spin}$ is the <em>spin</em> angular momentum (SAM)</p>
+  </li>
+  <li>
+    <p>${\cal L}^\mathrm{orb}$ is the total <em>orbital</em> angular momentum (OAM)</p>
+  </li>
+  <li>
+    <p>${\cal L}^\mathrm{ph}$ is the total <em>phonon</em> angular momentum (PAM)</p>
   </li>
 </ul>
 
-<h2 id="code">Code</h2>
+<p>Traditionally, only the first three terms are considered in angular momentum
+conservation.</p>
 
-<p>Below is the code and figure that simulate the ARPES signals, similar to Fig. 9
-in Ref <sup id="fnref:exp_guide:2" role="doc-noteref"><a href="#fn:exp_guide" class="footnote">1</a></sup>.</p>
+<h2 id="phonon-angular-momentum">Phonon Angular Momentum</h2>
+
+<p>When the atoms of a crystal move along the path of a circularly polarized phonon
+mode, they form closed loops and therefore carry angular momentum.  Below, we
+show animations of two typical phonon modes of graphene that involves circular
+motions.</p>
 
 <figure>
-  <div align="center">
-    <a href="/assets/img/post/arpes_1d_tb.png" data-lightbox="roadtrip">
-      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/img/post/arpes_1d_tb.png" width="80%" />
-    </a>
+  <div class="d-flex justify-content-around w-100">
+    <div>
+      <a href="/assets/posts/phonon_angular_momentum/gr_acoustic_mode.gif" data-lightbox="roadtrip">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/phonon_angular_momentum/gr_acoustic_mode.gif" style="border: solid #aaa 2px" />
+      </a>
+    </div>
+    <div>
+      <a href="/assets/posts/phonon_angular_momentum/gr_optical_mode.gif" data-lightbox="roadtrip">
+        <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/phonon_angular_momentum/gr_optical_mode.gif" style="border: solid #aaa 2px" />
+      </a>
+    </div>
   </div>
 
-  <figcaption style="text-align: center; padding: 10px">
+  <figcaption style="text-align: justify; padding: 10px">
+    
     <b> Figure 1. </b>
-    ARPES signal of the 1D linear chain with different lengths. 
-    Figure generated by
-    <a href="/assets/codes/post/1d_tb-chain_photoemission.py" target="_blank">
-    Matplotlib.
+    Animations of the graphene phonon mode at <i>K</i>-point: acoustic mode with
+    frequency 1001.8 cm<sup>-1</sup> (left) and optical mode withe frequency
+    1312.4 cm<sup>-1</sup> (right). The animations were generated by the
+    <a href="http://henriquemiranda.github.io/phononwebsite/phonon.html" target="_blank">
+      phononwebsite.
     </a>
   </figcaption>
 </figure>
+
+<p>Phonon angular momentum therefore refers to orbital motion of an atom in a
+lattice about its <em>equilibrium position</em>, and it can be likened to an electron’s
+orbital about the atomic center. In 2014, Niu et al. in their paper
+<sup id="fnref:niuq_prl_2014:1" role="doc-noteref"><a href="#fn:niuq_prl_2014" class="footnote">3</a></sup> first proposed to define the PAM as</p>
+
+\[\begin{equation}
+{\cal L}^\mathrm{ph} = 
+\sum_P \sum_j
+  \mathbf{u}_j^P \times \dot{\mathbf{u}}_j^P
+\end{equation}\]
+
+<p>where $\mathbf{u}^l_j$ is the displacement vector of the <em>j</em>-th atom in the
+<em>P</em>-th unit cell, <em>multiplied by square root of mass</em> $m_j$.  After expressing
+the displacement vector in the <em>second quantization</em> form, they obtained the
+form of the total phonon angular momentum <em>per unit cell</em> if the system is <em>in
+equilibrium</em></p>
+
+\[\begin{equation}
+{\cal L}_\alpha^\mathrm{ph} =  
+  \sum_{\mathbf{q},\nu}
+    \left[
+      n_0(\omega_{\mathbf{q},\nu}) + \frac{1}{2}
+    \right]
+    l_{\mathbf{q},\nu}^\alpha
+    ,\qquad
+    \alpha = x, y, z
+    \label{eq:total_pam}
+\end{equation}\]
+
+<p>The summation (integration) is over all the phonon modes $\nu$ and phonon
+wavevectors $\mathbf{q}$ within the first Brillouin zone.  In
+Eq\eqref{eq:total_pam}, $n_0(\omega_{\mathbf{q}\nu})$ is the Bose distribution
+for the $\nu$-th phonon mode at wavevector $\mathbf{q}$ with frequency
+    $\omega_{\mathbf{q},\nu}$.</p>
+
+\[\begin{equation}
+n_0(\omega_{\mathbf{q},\nu}) = 
+\frac{1}{
+    e^{\hbar\omega_{\mathbf{q},\nu} / k_BT} - 1
+}
+\end{equation}\]
+
+<p>$l_{\mathbf{q},\nu}$ is the mode-decomposed phonon angular momentum</p>
+
+\[\begin{equation}
+l_{\mathbf{q},\nu}^\alpha = \hbar\,
+  \boldsymbol\epsilon_{\mathbf{q},\nu}^\dagger
+  M_\alpha
+  \boldsymbol\epsilon_{\mathbf{q},\nu}
+  \label{eq:mode_pam}
+\end{equation}\]
+
+<p>where the matrix $M_\alpha$ is the tensor product of the unit matrix and the
+generator of <em>SO</em>(3) rotation for a unit cell with <em>N</em> atoms <sup id="fnref:masato_prl_2018" role="doc-noteref"><a href="#fn:masato_prl_2018" class="footnote">4</a></sup></p>
+
+\[\begin{equation}
+M_\alpha = \mathbb{1}_{N\times N} \,\otimes\, 
+  \begin{pmatrix}
+  0 &amp; -i\,\varepsilon_{\alpha\beta\gamma} \\
+  -i\,\varepsilon_{\alpha\gamma\beta} &amp; 0\\
+  \end{pmatrix},
+  \qquad
+  \alpha, \beta, \gamma \in \{x, y, z\}
+\end{equation}\]
+
+<p>where $\varepsilon_{\alpha\beta\gamma}$ is the Levi-Civita epsilon tensor.
+<sup id="fnref:LeviCivita" role="doc-noteref"><a href="#fn:LeviCivita" class="footnote">5</a></sup></p>
+
+<ul>
+  <li>
+    <p>For system <em>with time-reversal symmetry</em> (no magnetic field, not ferromagnets
+or anti-ferromagnets et al.), it can be proved that (See Supporting
+Information of Ref <sup id="fnref:niuq_prl_2014:2" role="doc-noteref"><a href="#fn:niuq_prl_2014" class="footnote">3</a></sup>)</p>
+
+\[\begin{equation}
+l_{-\mathbf{q},\nu}^\alpha = - l_{\mathbf{q},\nu}^\alpha
+\label{eq:zero_pam_sym}
+\end{equation}\]
+
+    <p>As a result, the sum in Eq.\eqref{eq:total_pam} is zero, i.e. the total phonon
+angular momentum is zero <em>in equlibrium</em> if the time-reversal symmetry is
+preserved (<em>no spin-phonon interaction</em>).</p>
+
+    <blockquote>
+      <p>Nevertheless, Murakami et al.<sup id="fnref:masato_prl_2018:1" role="doc-noteref"><a href="#fn:masato_prl_2018" class="footnote">4</a></sup> showed that when a
+temperature gradient is applied and heat current flows in the crystal, the
+phonon distribution therefore becomes <em>off-equilibrium</em>, a finite angular
+momentum is then generated. There is also a report of temperature gradient
+induced transverse flow of PAM, the so-called phonon angular momentum Hall
+effect (PAMHE). <sup id="fnref:nanolett_2020" role="doc-noteref"><a href="#fn:nanolett_2020" class="footnote">6</a></sup></p>
+    </blockquote>
+  </li>
+  <li>
+    <p>At <em>zero temperature</em>, Eq.\eqref{eq:total_pam} reduces to</p>
+
+\[\begin{equation}
+{\cal L}_\alpha^\mathrm{ph} =  
+  \sum_{\mathbf{q},\nu}
+    \frac{1}{2}
+    l_{\mathbf{q}\nu}^\alpha
+    \label{eq:total_zero_pam}
+\end{equation}\]
+
+    <p>This means that each phonon mode has a <em>zero-point angular momentum</em>
+$\frac{1}{2}l_{\mathbf{q}\nu}$ in addition to a zero-point energy of
+$\frac{1}{2}\hbar\omega_{\mathbf{q}\nu}$.</p>
+  </li>
+  <li>
+    <p>As the temperature increases, the total phonon angular momentum diminishes and
+approaches zero in the classical limit. <sup id="fnref:niuq_prl_2014:3" role="doc-noteref"><a href="#fn:niuq_prl_2014" class="footnote">3</a></sup></p>
+
+\[\begin{equation}
+{\cal L}_\alpha^\mathrm{ph}(T \to \infty)
+= 
+\sum_{\mathbf{q}\nu}
+  \frac{
+    \hbar\omega_{\mathbf{q}\nu}
+  }{12k_B T}
+  \,l_{\mathbf{q}\nu}^\alpha
+  \to 0
+\end{equation}\]
+  </li>
+</ul>
+
+<h3 id="python-code-implementation">Python Code Implementation</h3>
+
+<p>Suppose that <code class="language-plaintext highlighter-rouge">freq</code> is an array of dimension <code class="language-plaintext highlighter-rouge">(nqpts, nbnds)</code> that contains the
+phonon frequencies and <code class="language-plaintext highlighter-rouge">polar_vec</code> is na array of shape <code class="language-plaintext highlighter-rouge">(nqpts, nbnds, natoms,
+3)</code> that contains the phonon polarization vector, then the following python
+codes can be used to calculate the mode decomposed phonon angular momentum
+according to Eq.\eqref{eq:mode_pam}.</p>
 
 <div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
 2
@@ -764,240 +926,507 @@ in Ref <sup id="fnref:exp_guide:2" role="doc-noteref"><a href="#fn:exp_guide" cl
 28
 29
 30
-31
-32
-33
-34
-35
-36
-37
-38
-39
-40
-41
-42
-43
-44
-45
-46
-47
-48
-49
-50
-51
-52
-53
-54
-55
-56
-57
-58
-59
-60
-61
-62
-63
-64
-65
-66
-67
-68
-69
-70
-71
-72
-73
-74
-75
-76
-77
-78
-79
-80
-81
-82
-83
-84
-85
-86
-87
-88
-89
-90
-91
-92
-93
-94
-95
-96
-97
-98
-99
-100
-101
-102
-103
-104
-105
-106
-107
-108
-109
-110
-111
-112
-113
-114
-115
-116
-117
-118
-119
-120
-121
-122
-123
-124
-125
-126
-127
-128
-</pre></td><td class="rouge-code"><pre><span class="c1">#!/usr/bin/env python
-</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="n">mpl</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="n">plt</span>
-<span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="n">AutoMinorLocator</span>
-
-<span class="n">plt</span><span class="p">.</span><span class="n">style</span><span class="p">.</span><span class="n">use</span><span class="p">(</span><span class="s">'dark_background'</span><span class="p">)</span>
-<span class="n">mpl</span><span class="p">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s">'axes.unicode_minus'</span><span class="p">]</span> <span class="o">=</span> <span class="bp">False</span>
-
-<span class="k">def</span> <span class="nf">photoem_mat_elem</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">N</span><span class="o">=</span><span class="mi">3</span><span class="p">):</span>
+</pre></td><td class="rouge-code"><pre><span class="k">def</span> <span class="nf">phonon_angular_momentum</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">polar_vec</span><span class="p">,</span> <span class="n">temp</span><span class="p">:</span> <span class="nb">float</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
     <span class="s">'''
+    Calculate the phonon angular momentum according to the following paper:
+    
+        "Angular momentum of phonons and the Einstein-de Haas effect",
+        PRL, 112, 085503 (2014)
+
     '''</span>
+    <span class="n">kB</span> <span class="o">=</span> <span class="mf">8.617330337217213E-05</span>
+    <span class="n">THzToEv</span> <span class="o">=</span> <span class="mf">0.00413566733</span>
 
-    <span class="n">k0</span>    <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span>
-    <span class="n">nkpts</span> <span class="o">=</span> <span class="n">k0</span><span class="p">.</span><span class="n">size</span>
-    <span class="c1"># photoemission matrix elements
-</span>    <span class="n">pk</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
-        <span class="n">np</span><span class="p">.</span><span class="n">sin</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">j</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span> <span class="o">/</span> <span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="mf">1j</span><span class="o">*</span><span class="n">k0</span><span class="o">*</span><span class="n">j</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="p">]).</span><span class="n">reshape</span><span class="p">((</span><span class="n">N</span><span class="p">,</span> <span class="n">N</span><span class="p">,</span> <span class="n">nkpts</span><span class="p">)).</span><span class="nb">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">ixyz</span>  <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">],</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span>
+    <span class="n">nqpts</span><span class="p">,</span> <span class="n">nbnds</span><span class="p">,</span> <span class="n">natoms</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">polar_vec</span><span class="p">.</span><span class="n">shape</span>
 
-    <span class="n">ek</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span>
-        <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">m</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="o">/</span><span class="p">(</span><span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">))</span>
-        <span class="k">for</span> <span class="n">m</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">N</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-    <span class="p">])</span>
+    <span class="c1"># The Bose distribution, phonon energy given in THz
+</span>    <span class="k">if</span> <span class="n">np</span><span class="p">.</span><span class="n">isclose</span><span class="p">(</span><span class="n">temp</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">):</span>
+        <span class="n">nbose</span> <span class="o">=</span> <span class="mf">0.5</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">nbose</span> <span class="o">=</span> <span class="mf">0.5</span> <span class="o">+</span> <span class="mf">1.</span> <span class="o">/</span> <span class="p">(</span><span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="n">freq</span> <span class="o">*</span> <span class="n">THzToEv</span> <span class="o">/</span> <span class="p">(</span><span class="n">kB</span> <span class="o">*</span> <span class="n">temp</span><span class="p">))</span> <span class="o">-</span> <span class="mf">1.0</span><span class="p">)</span>
 
-    <span class="k">return</span> <span class="n">ek</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="nb">abs</span><span class="p">(</span><span class="n">pk</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span>
+    <span class="c1"># phonon angular momentum in x/y/z direction in unit of hbar
+</span>    <span class="n">J0</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">zeros</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="n">nqpts</span><span class="p">,</span> <span class="n">nbnds</span><span class="p">))</span>
+    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">e</span> <span class="o">=</span> <span class="n">polar_vec</span><span class="p">[...,</span><span class="n">ixyz</span><span class="p">[</span><span class="n">ii</span><span class="p">]]</span>
+        <span class="n">J0</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="o">=</span> <span class="mf">2.0</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span>
+            <span class="n">e</span><span class="p">[:,:,:,</span><span class="mi">0</span><span class="p">].</span><span class="n">conj</span><span class="p">()</span> <span class="o">*</span> <span class="n">e</span><span class="p">[:,:,:,</span><span class="mi">1</span><span class="p">],</span>
+            <span class="n">axis</span><span class="o">=</span><span class="mi">2</span>
+        <span class="p">).</span><span class="n">imag</span>
 
-<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
-    <span class="n">nkpts</span> <span class="o">=</span> <span class="mi">400</span>      <span class="c1"># No. of k-points
-</span>    <span class="n">nedos</span> <span class="o">=</span> <span class="mi">500</span>      <span class="c1"># No. of points for DOS
-</span>    <span class="n">sigma</span> <span class="o">=</span> <span class="mf">0.05</span>     <span class="c1"># energy broadening
-</span>
-    <span class="c1"># k-space grid
-</span>    <span class="n">k0</span>     <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">,</span> <span class="n">nkpts</span><span class="p">)</span>
-    <span class="c1"># energy grid
-</span>    <span class="n">e0</span>     <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="n">sigma</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="mi">2</span><span class="o">+</span><span class="n">sigma</span><span class="o">*</span><span class="mi">5</span><span class="p">,</span> <span class="n">nedos</span><span class="p">)</span>
-    <span class="n">x0</span><span class="p">,</span> <span class="n">y0</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">e0</span><span class="p">,</span> <span class="n">indexing</span><span class="o">=</span><span class="s">'ij'</span><span class="p">)</span>
-
-    <span class="c1">############################################################
-</span>    <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="p">.</span><span class="n">figure</span><span class="p">(</span>
-        <span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mf">7.2</span><span class="p">,</span> <span class="mf">4.8</span><span class="p">),</span>
-        <span class="n">dpi</span><span class="o">=</span><span class="mi">480</span><span class="p">,</span>
-        <span class="n">constrained_layout</span><span class="o">=</span><span class="bp">True</span>
-    <span class="p">)</span>
-
-    <span class="c1"># 3x3 subplots
-</span>    <span class="n">axes_array</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">9</span><span class="p">,</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">).</span><span class="n">reshape</span><span class="p">((</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
-
-    <span class="n">axes</span> <span class="o">=</span> <span class="n">fig</span><span class="p">.</span><span class="n">subplot_mosaic</span><span class="p">(</span>
-        <span class="n">axes_array</span><span class="p">,</span>
-        <span class="n">empty_sentinel</span><span class="o">=-</span><span class="mi">1</span><span class="p">,</span>
-        <span class="n">gridspec_kw</span><span class="o">=</span><span class="nb">dict</span><span class="p">(</span>
-            <span class="c1"># height_ratios= [1, 0.5, 0.5],
-</span>            <span class="c1"># width_ratios=[2, 2],
-</span>            <span class="c1"># hspace=0.05,
-</span>            <span class="c1"># wspace=0.06,
-</span>        <span class="p">)</span>
-    <span class="p">)</span>
-    <span class="n">axes</span> <span class="o">=</span> <span class="p">[</span><span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span> <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">axes_array</span><span class="p">.</span><span class="nb">max</span><span class="p">()</span><span class="o">+</span><span class="mi">1</span><span class="p">)]</span>
-    <span class="c1">############################################################
-</span>
-    <span class="c1"># chain_lengths = np.arange(9) + 1
-</span>    <span class="c1"># -1 for infinite chain length
-</span>    <span class="n">chain_lengths</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">([</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">20</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">])</span>
-
-    <span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">chain_lengths</span><span class="p">.</span><span class="n">size</span><span class="p">):</span>
-        <span class="n">N</span>  <span class="o">=</span> <span class="n">chain_lengths</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
-        <span class="n">ax</span> <span class="o">=</span> <span class="n">axes</span><span class="p">[</span><span class="n">ii</span><span class="p">]</span>
-
-        <span class="c1"># finite chain length
-</span>        <span class="k">if</span> <span class="n">N</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">ek</span><span class="p">,</span> <span class="n">pk</span> <span class="o">=</span> <span class="n">photoem_mat_elem</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="n">N</span><span class="p">)</span>
-            <span class="c1"># smearing
-</span>            <span class="n">ss</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">dot</span><span class="p">(</span>
-                <span class="n">pk</span><span class="p">.</span><span class="n">T</span><span class="p">,</span>
-                <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">e0</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">ek</span><span class="p">[:,</span> <span class="bp">None</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-            <span class="p">)</span>
-        <span class="c1"># infinite chain length
-</span>        <span class="k">else</span><span class="p">:</span>
-            <span class="n">ek</span> <span class="o">=</span> <span class="o">-</span><span class="mi">2</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k0</span><span class="p">)</span>
-            <span class="c1"># smearing
-</span>            <span class="n">ss</span> <span class="o">=</span> <span class="p">(</span><span class="mi">1</span> <span class="o">/</span> <span class="n">np</span><span class="p">.</span><span class="n">sqrt</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">)</span> <span class="o">/</span> <span class="n">sigma</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">e0</span><span class="p">[</span><span class="bp">None</span><span class="p">,</span> <span class="p">:]</span> <span class="o">-</span> <span class="n">ek</span><span class="p">[:,</span> <span class="bp">None</span><span class="p">])</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="mi">2</span> <span class="o">/</span> <span class="n">sigma</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
-
-        <span class="n">ax</span><span class="p">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">x0</span><span class="p">,</span> <span class="n">y0</span><span class="p">,</span> <span class="n">ss</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s">'magma'</span><span class="p">)</span>
-        <span class="n">ax</span><span class="p">.</span><span class="n">plot</span><span class="p">(</span><span class="n">k0</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="p">.</span><span class="n">cos</span><span class="p">(</span><span class="n">k0</span><span class="p">),</span> <span class="n">ls</span><span class="o">=</span><span class="s">'--'</span><span class="p">,</span> <span class="n">lw</span><span class="o">=</span><span class="mf">0.4</span><span class="p">)</span>
-
-        <span class="n">ax</span><span class="p">.</span><span class="n">yaxis</span><span class="p">.</span><span class="n">set_minor_locator</span><span class="p">(</span><span class="n">AutoMinorLocator</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="mi">2</span><span class="p">))</span>
-
-        <span class="n">ax</span><span class="p">.</span><span class="n">set_xticks</span><span class="p">([</span><span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">,</span> <span class="o">-</span><span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">np</span><span class="p">.</span><span class="n">pi</span><span class="p">])</span>
-        <span class="n">ax</span><span class="p">.</span><span class="n">set_xticklabels</span><span class="p">([</span>
-            <span class="sa">r</span><span class="s">'-$\,\frac{\pi}{a}$'</span><span class="p">,</span>
-            <span class="sa">r</span><span class="s">'-$\,\frac{\pi}{2a}$'</span><span class="p">,</span>
-            <span class="s">'0'</span><span class="p">,</span>
-            <span class="sa">r</span><span class="s">'$\frac{\pi}{2a}$'</span><span class="p">,</span>
-            <span class="sa">r</span><span class="s">'$\frac{\pi}{a}$'</span>
-        <span class="p">])</span>
-
-        <span class="k">if</span> <span class="n">ii</span> <span class="o">&gt;</span> <span class="mi">5</span><span class="p">:</span>
-            <span class="n">ax</span><span class="p">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s">'$k$'</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">ii</span> <span class="o">%</span> <span class="mi">3</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">ax</span><span class="p">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s">'Energy ($t$)'</span><span class="p">,</span> <span class="n">labelpad</span><span class="o">=</span><span class="mi">5</span><span class="p">)</span>
-
-        <span class="k">if</span> <span class="n">N</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">ax</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span>
-            <span class="c1"># ax.text(0.50, 0.95,
-</span>                <span class="sa">r</span><span class="s">'$N={}$'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">N</span><span class="p">),</span>
-                <span class="c1"># ha='center', va='top',
-</span>                <span class="n">ha</span><span class="o">=</span><span class="s">'left'</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s">'bottom'</span><span class="p">,</span>
-                <span class="n">fontsize</span><span class="o">=</span><span class="s">'small'</span><span class="p">,</span>
-                <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="p">.</span><span class="n">transAxes</span>
-            <span class="p">)</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="n">ax</span><span class="p">.</span><span class="n">text</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">,</span>
-            <span class="c1"># ax.text(0.50, 0.95,
-</span>                <span class="sa">r</span><span class="s">'$N=\infty$'</span><span class="p">,</span>
-                <span class="c1"># ha='center', va='top',
-</span>                <span class="n">ha</span><span class="o">=</span><span class="s">'left'</span><span class="p">,</span> <span class="n">va</span><span class="o">=</span><span class="s">'bottom'</span><span class="p">,</span>
-                <span class="n">fontsize</span><span class="o">=</span><span class="s">'small'</span><span class="p">,</span>
-                <span class="n">transform</span><span class="o">=</span><span class="n">ax</span><span class="p">.</span><span class="n">transAxes</span>
-            <span class="p">)</span>
-
-    <span class="n">plt</span><span class="p">.</span><span class="n">savefig</span><span class="p">(</span><span class="s">'arpes_1d_tb.png'</span><span class="p">)</span>
-    <span class="kn">from</span> <span class="nn">subprocess</span> <span class="kn">import</span> <span class="n">call</span>
-    <span class="n">call</span><span class="p">(</span><span class="s">'feh -xdF arpes_1d_tb.png'</span><span class="p">.</span><span class="n">split</span><span class="p">())</span>
+    <span class="k">return</span> <span class="n">J0</span> <span class="o">*</span> <span class="n">nbose</span>
 </pre></td></tr></tbody></table></code></div></div>
 
-<h2 id="references">References</h2>
+<h3 id="pam-for-zno">PAM for ZnO</h3>
+
+<ul>
+  <li>
+    <p>Band-decomposed PAM</p>
+
+    <figure>
+  <div align="center">
+    <a href="/assets/posts/phonon_angular_momentum/ZnO/zno_pam_h.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/phonon_angular_momentum/ZnO/zno_pam_h.png" width="100%" />
+    </a>
+  </div>
+  
+  <figcaption style="text-align: justify; padding: 10px">
+      
+    <b> Figure 2. </b>
+    The phonon dispersion for ZnO superimposed with phonon angular momentum
+    generated using the 
+    <a href="https://github.com/QijingZheng/phonon_angular_momentum" target="_blank">
+    pham_band.py
+    </a>
+    script, where the phonon data was retrieved from the
+    <a href="https://github.com/phonopy/phonopy/tree/develop/example/ZnO" target="_blank">
+    phonopy repository.
+    </a>
+  </figcaption>
+</figure>
+  </li>
+  <li>
+    <p>Convergence test of total PAM with respect to different <em>q</em>-grid sizes</p>
+
+    <ul>
+      <li>
+        <p>First, generate phonon mesh data with different mesh sizes.</p>
+
+        <div class="language-text highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+</pre></td><td class="rouge-code"><pre>ATOM_NAME     = Zn O
+DIM           = 2 2 2
+MESH          = 29 29 29   # Change the mesh size here
+GAMMA_CENTER  = .TRUE.
+EIGENVECTORS  = .TRUE.
+MESH_SYMMETRY = .FALSE.    # Turn-off symmetry!
+MESH_FORMAT   = HDF5       # use hdf5 format to reduce file size
+</pre></td></tr></tbody></table></code></div>        </div>
+      </li>
+      <li>
+        <p>Second, calculate the grid-dependent total PAM</p>
+
+        <div class="language-python highlighter-rouge"><div class="highlight"><code><table class="rouge-table"><tbody><tr><td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="rouge-code"><pre><span class="kn">import</span> <span class="nn">h5py</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="n">np</span>
+
+<span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="mi">30</span><span class="p">,</span> <span class="mi">2</span><span class="p">):</span>
+    <span class="n">ph_mesh</span> <span class="o">=</span> <span class="n">h5py</span><span class="p">.</span><span class="n">File</span><span class="p">(</span><span class="s">'mesh_{}.hdf5'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">ii</span><span class="p">),</span> <span class="s">'r'</span><span class="p">)</span>
+    <span class="n">freq</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">ph_mesh</span><span class="p">[</span><span class="s">'frequency'</span><span class="p">])</span>
+    <span class="n">nqpts</span><span class="p">,</span> <span class="n">nbnds</span> <span class="o">=</span> <span class="n">freq</span><span class="p">.</span><span class="n">shape</span>
+    <span class="n">pvec</span> <span class="o">=</span> <span class="n">np</span><span class="p">.</span><span class="n">array</span><span class="p">(</span><span class="n">ph_mesh</span><span class="p">[</span><span class="s">'eigenvector'</span><span class="p">]).</span><span class="n">reshape</span><span class="p">((</span><span class="n">nqpts</span><span class="p">,</span> <span class="n">nbnds</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">))</span>
+    <span class="n">natoms</span> <span class="o">=</span> <span class="n">pvec</span><span class="p">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span>
+    <span class="n">pham</span> <span class="o">=</span> <span class="n">phonon_angular_momentum</span><span class="p">(</span><span class="n">freq</span><span class="p">,</span> <span class="n">pvec</span><span class="p">)</span>
+
+    <span class="n">total_pham</span> <span class="o">=</span> <span class="p">(</span><span class="mf">1.</span> <span class="o">/</span> <span class="n">nqpts</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="p">.</span><span class="nb">sum</span><span class="p">(</span><span class="n">pham</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">))</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">'</span><span class="si">{</span><span class="n">ii</span><span class="p">:</span><span class="mi">2</span><span class="n">d</span><span class="si">}</span><span class="s">'</span><span class="p">,</span> <span class="n">total_pham</span><span class="p">[</span><span class="mi">0</span><span class="p">],</span> <span class="n">total_pham</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">total_pham</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span>
+</pre></td></tr></tbody></table></code></div>        </div>
+      </li>
+    </ul>
+
+    <figure>
+  <div align="center">
+    <a href="/assets/posts/phonon_angular_momentum/ZnO/total_pam_size.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/phonon_angular_momentum/ZnO/total_pam_size.png" width="90%" />
+    </a>
+  </div>
+  <figcaption style="text-align: justify; padding: 10px">
+      
+    <b> Figure 3. </b>
+    Total PAM at 0 K calculated with different q-grid sizes.
+  </figcaption>
+</figure>
+
+    <p>As can be clearly seen, the total PAM for ZnO, when converged, is <em>INDEED ZERO</em>.</p>
+  </li>
+</ul>
+
+<h3 id="change-of-angular-momentum-in-polaron-formation">Change of Angular Momentum in Polaron Formation</h3>
+
+<p>A polaron is a <em>quasiparticle</em> in which the extra charged carrier is surrounded
+by cloud of phonons. <sup id="fnref:polaron_wiki" role="doc-noteref"><a href="#fn:polaron_wiki" class="footnote">7</a></sup> Wio et al. showed that the electronic
+component of the polaron can be expressed as a coherent superposition of the
+unperturbed Kohn-Sham wavefunction and the lattice distortion can be expanded by
+a linear combination of phonon eigenmodes. <sup id="fnref:sio_prl_2019" role="doc-noteref"><a href="#fn:sio_prl_2019" class="footnote">8</a></sup></p>
+
+\[\begin{align}
+\psi^\mathrm{pl}(\mathbf{r}) &amp;= \sqrt{\frac{1}{N_P}}
+  \sum_{n\mathbf{k}}
+  A_{n\mathbf{k}}
+  \,
+  \psi_{n\mathbf{k}}(\mathbf{r})
+  \label{eq:polaron_el_part}
+  \\[6pt]
+\Delta\boldsymbol\tau_\kappa^P &amp;= \frac{2}{\sqrt{N_P}}
+  \sum_{\nu}
+  \sqrt{\frac{\hbar}{2M_{\kappa}\omega_{\mathbf{q}\nu}}}
+  \,
+  \boldsymbol\epsilon_{\mathbf{q}\nu}^\kappa
+  \sum_{\mathbf{q}}
+  B_{\mathbf{q}\nu}^* 
+  \,
+  e^{i\mathbf{q}\cdot\mathbf{R}_P}
+  \label{eq:polaron_ph_part}
+\end{align}\]
+
+<p>where $P$ is the index of the unit cell, $\kappa$ is the index of the atom
+within the unit cell and $N_P$ is the number of unit cells.</p>
+
+<figure>
+  <div align="center">
+    <a href="/assets/posts/phonon_angular_momentum/polaron/LiF_Polaron.png" data-lightbox="roadtrip">
+      <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-src="/assets/posts/phonon_angular_momentum/polaron/LiF_Polaron.png" width="85%" />
+    </a>
+  </div>
+
+  <figcaption style="text-align: justify; padding: 10px">
+    
+    <b> Figure 4. </b>
+    Large electron polaron in LiF. 
+    Figure from 
+    <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.246403" target="_blank">
+    <i>Phys. Rev. Lett</i>, <b>122</b>, 246403 (2019)
+    </a>
+    (Copyright 2019 American Physical Society)
+  </figcaption>
+</figure>
+
+<p>$|B_{\mathbf{q}\nu}|^2$ can be interpreted as the <em>number of phonons</em> taking
+part in the polaron formation. In other words, the polaron formation brings the
+phonon system off-equilibrium, <em>on top of the thermal Bose distribution</em>, and
+therefore the change of the phonon angular momentum during the polaron formation
+can be written as</p>
+
+\[\begin{equation}
+\Delta{\cal L}^\mathrm{ph}_\alpha = \sum_{\mathbf{q}\nu}
+|B_{\mathbf{q}\nu}|^2
+\,
+l_{\mathbf{q}\nu}^\alpha
+\label{eq:pam_change_in_polaron_formation}
+\end{equation}\]
+
+<p>In order to get $B_{\mathbf{q}\nu}$, one can perform the <em>inverse Fourier
+transform</em> on Eq.\eqref{eq:polaron_ph_part}, by multiplying the left-hand side
+with $ \boldsymbol\epsilon^{\kappa}_{\mathbf{q}’\nu’} \, e^{-i\mathbf{q}’ \cdot
+\mathbf{R}_P} $, and then summing over $P$ and $\kappa$.  Additionally, one
+must take into account of the following relations: <sup id="fnref:giustino_rmp_2016" role="doc-noteref"><a href="#fn:giustino_rmp_2016" class="footnote">9</a></sup></p>
+
+\[\begin{align}
+\frac{1}{N_P} \sum_P e^{i(\mathbf{q}' - \mathbf{q})\cdot \mathbf{R}_P}
+&amp;= 
+\delta_{\mathbf{q}\mathbf{q}'}
+\\[6pt]
+\sum_\kappa 
+  \boldsymbol\epsilon_{\mathbf{q}\nu'}^{\kappa*}
+  \cdot
+  \boldsymbol\epsilon_{\mathbf{q}\nu}^{\kappa}
+  &amp;= 
+  \delta_{\nu\nu'}
+\end{align}\]
+
+<p>Consequently, one gets the following expression for $B_{\mathbf{q}\nu}^*$.</p>
+
+\[\begin{equation}
+  B_{\mathbf{q}\nu}^*  = \frac{1}{2\sqrt{N_P}}
+  \sum_{\kappa}
+  \sqrt{\frac{2M_{\kappa}\omega_{\mathbf{q}\nu}}{\hbar}}
+  \,
+  \boldsymbol\epsilon_{\mathbf{q}\nu}^{\kappa*}
+  \cdot
+  \sum_{P}
+  \Delta\boldsymbol\tau_{\kappa}^P 
+  \,
+  e^{-i\mathbf{q}\cdot\mathbf{R}_P}
+  \label{eq:Bqv}
+\end{equation}\]
+
+<p>That is, one first performs <em>Fourier transform</em> on $\Delta \boldsymbol
+\tau_\kappa^P$, then projects the results onto the polarization vectors.</p>
+
+<p>Recall that the phonon frequencies and polarization vectors follow these
+relations: <sup id="fnref:giustino_rmp_2016:1" role="doc-noteref"><a href="#fn:giustino_rmp_2016" class="footnote">9</a></sup></p>
+
+\[\begin{equation}
+\omega^2_{-\mathbf{q}\nu} = \omega^2_{\mathbf{q}\nu}
+;\qquad
+\boldsymbol\epsilon_{-\mathbf{q}\nu}^* = \boldsymbol\epsilon_{\mathbf{q}\nu} 
+\label{eq:ph_freq_vec_sym}
+\end{equation}\]
+
+<p>Substituting Eq.\eqref{eq:ph_freq_vec_sym} into Eq.\eqref{eq:Bqv}, one has
+<sup id="fnref:sio_prb_2019" role="doc-noteref"><a href="#fn:sio_prb_2019" class="footnote">10</a></sup></p>
+
+\[\begin{equation}
+B_{-\mathbf{q}\nu}^*
+= 
+B_{\mathbf{q}\nu}
+\label{eq:Bqv_sym}
+\end{equation}\]
+
+<p>One can then conclude, combining Eq.\eqref{eq:Bqv_sym},
+Eq.\eqref{eq:pam_change_in_polaron_formation} and Eq.\eqref{eq:zero_pam_sym},
+<strong><em>that the total phonon angular momentum change during the polaron formation is
+ZERO.</em></strong></p>
+
+<h2 id="orbital-angular-momentum">Orbital Angular Momentum</h2>
+
+<p>The orbital angular momentum (OAM) for a finite <em>non-interacting system</em> is
+defined as</p>
+
+\[\begin{equation}
+{\cal L}^\mathrm{orb}
+=
+\sum_{\mathrm{occ}}
+\langle \psi_n | \mathbf{L} | \psi_n \rangle
+;\qquad
+\mathbf{L} = \mathbf{r} \times \mathbf{p}
+\end{equation}\]
+
+<p>For an infinite periodic crystal, the wavefunctions $\psi_n$ are replaced by the
+Bloch states $\psi_{n\mathbf{k}}$, i.e.</p>
+
+\[\begin{equation}
+{\cal L}^\mathrm{orb}
+=
+\sum_{n\mathbf{k}}
+f_{n\mathbf{k}}(\varepsilon_{n\mathbf{k}})
+\,
+\langle \psi_{n\mathbf{k}} | \mathbf{r} \times \mathbf{p} | \psi_{n\mathbf{k}} \rangle
+\end{equation}\]
+
+<p>Apparently, the position operator $\mathbf{r}$ is well-defined for finite
+system, and therefore the OAM for finite system is computable no matter how
+large the system is. However, the problem arises when we are considering the OAM
+of crystal, in which case the position measured from some origin increases
+linearly with distance while the system repeat itself from unit cell to unit
+cell, and as a result the position operator is ill-defined.  The problem is
+similar to the case of calculating the <em>electric polarization</em> in crystal, where
+the position operator is also ill-defined and was solved by reformulating the
+problem in the Wannier representation. <sup id="fnref:polmod" role="doc-noteref"><a href="#fn:polmod" class="footnote">11</a></sup></p>
+
+<p>Modern theory of orbital magnetization (the orbital magnetization is related to
+the orbital angular momentum) that allows for a rigorous calculation of the
+magnetic of periodic cyrstals has also been developed in the last decade.
+<sup id="fnref:orbmag" role="doc-noteref"><a href="#fn:orbmag" class="footnote">12</a></sup></p>
+
+\[\begin{equation}
+{\cal L}^\mathrm{orb} = \frac{m}{\hbar}
+\operatorname{Im}
+\sum_n \int \frac{\mathrm{d}\mathbf{k}}{(2\pi)^2}
+\,
+f_{n\mathbf{k}}(\varepsilon_{n\mathbf{k}})
+\langle \partial_\mathbf{k}u_{n\mathbf{k}} |
+\times [H_\mathbf{k} + \varepsilon_{n\mathbf{k}} - 2\varepsilon_F]
+| \partial_\mathbf{k}u_{n\mathbf{k}} \rangle
+\label{eq:mod_theo_oam}
+\end{equation}\]
+
+<p>There are <em>two contributions</em> to the OAM: one from the local atomic OAM and the
+other emerging from the itinerant motion of the electrons on the surface of the
+material. Surprisingly, the latter contribution is expressible entirely in terms
+of bulk quantities. <sup id="fnref:karlsson_jpcs" role="doc-noteref"><a href="#fn:karlsson_jpcs" class="footnote">13</a></sup></p>
+
+<h3 id="atomic-center-approximation">Atomic-center Approximation</h3>
+
+<p>Traditionally, the common approach to avoid the difficulty with the position
+operator is to use the physically motivated assumption that <em>the OAM is an
+atomic property</em>, i.e. the OAM mainly originates from the regions near the atom
+cores. The approach neglects the contribution from the itinerant motion of the
+electrons and is often referred to as the <em>atomic-center approximation</em> or the
+<em>muffin-tin approximation</em>.</p>
+
+<p><em>Within the PAW sphere</em>, the Bloch states can be expressed as</p>
+
+\[\begin{equation}
+| \psi_{n\mathbf{k}} \rangle
+=
+\sum_j
+\langle \tilde p_j | \tilde\psi_{n\mathbf{k}} \rangle
+\,
+| \phi_j \rangle
+\label{eq:bloch_core}
+\end{equation}\]
+
+<p>where $\tilde p_j$ and $\phi_j$ are the projector function and the AE partial
+waves, respectively. <sup id="fnref:paw_aewfc" role="doc-noteref"><a href="#fn:paw_aewfc" class="footnote">14</a></sup>  Consequently, the OAM under the <em>atomic-center</em>
+approximation reads</p>
+
+\[\begin{equation}
+{\cal L}^\mathrm{orb}_{n\mathbf{k}}
+=
+\langle \psi_{n\mathbf{k}}| \mathbf{L} | \psi_{n\mathbf{k}} \rangle
+=
+\sum_{ij}
+\langle \tilde\psi_{n\mathbf{k}} | \tilde p_i \rangle
+\langle \phi_i | \mathbf{L} | \phi_j \rangle
+\langle \tilde p_j | \tilde\psi_{n\mathbf{k}} \rangle
+\end{equation}\]
+
+<p>For the evaluation of inner product of the projector function and PSWFC, please
+refer the previous post. <sup id="fnref:paw_aewfc:1" role="doc-noteref"><a href="#fn:paw_aewfc" class="footnote">14</a></sup> Let us now focus on the matrix element of
+the angular momentum operator between the all-electron partial waves. As has
+been said, <sup id="fnref:paw_aewfc:2" role="doc-noteref"><a href="#fn:paw_aewfc" class="footnote">14</a></sup> the AE partial waves can be written as mutiplication of
+radial and angular parts, i.e.</p>
+
+\[\begin{equation}
+\phi_j(|\mathbf{r} - \boldsymbol\tau_j|)
+= 
+R_j(\mathbf{r} - \boldsymbol\tau_j)
+\,
+Z_{lm}(\widehat{\mathbf{r} - \boldsymbol\tau_j})
+\label{eq:ae_pwfc}
+\end{equation}\]
+
+<p>Therefore, the matrix elements of the angular momentum operator between the Ae
+partial waves are given by</p>
+
+\[\begin{equation}
+\langle \phi_i | \mathbf{L} | \phi_j \rangle
+=
+\int\limits_{r \lt r_c}
+  R_i(r) R_j(r) r^2
+\,\mathrm{d}r
+\cdot
+\langle Z_{l'm'} | \mathbf{L} | Z_{lm} \rangle
+\end{equation}\]
+
+<p>Note that <em>real spherical harmonics</em> $Z_{lm}$ are used in Eq.\eqref{eq:ae_pwfc},
+which are themselves not eigenfunctions of the momentum operator $\hat{L}_z$ and
+$\mathbf{L}^2$.  Instead, the eigenfunctions of $\hat{L}_z$ and $\mathbf{L}^2$
+are the <em>complex spherical harmonics</em> $Y_{lm}$, i.e.</p>
+
+\[\begin{align}
+\mathbf{L}^2 \,Y_{lm} &amp;= l(l+1)\hbar^2 \,Y_{lm} \\
+\hat{L}_z \,Y_{lm} &amp;= m\hbar \,Y_{lm} \\
+\end{align}\]
+
+<p>The <em>x</em>/<em>y</em> components of the angular momentum operator
+$\hat{L}_x$/$\hat{L}_y$ are related to the ladder operator $\hat{L}_\pm$ by</p>
+
+\[\begin{align}
+\hat{L}_x &amp;= \phantom{-}\frac{1}{2}[\hat{L}_+ + \hat{L}_-] \\
+\hat{L}_y &amp;= -\frac{i}{2}[\hat{L}_+ - \hat{L}_-]
+\label{eq:l_ladder_op}
+\end{align}\]
+
+<p>And the application of the ladder operators on the spherical harmonics give</p>
+
+\[\begin{align}
+\hat{L}_+ \,Y_{lm} &amp;= \hbar\sqrt{(l-m)(l+m+1)} \,Y_{l,m+1} \\
+\hat{L}_- \,Y_{lm} &amp;= \hbar\sqrt{(l+m)(l-m+1)} \,Y_{l,m-1}
+\end{align}\]
+
+<p>As a result, the matrix elements of the angular momentum operators between the
+<em>complex spherical harmonics</em> can be given</p>
+
+\[\begin{align}
+\langle Y_{l'm'} | \hat{L}_x | Y_{lm} \rangle 
+&amp;= \phantom{-i}\frac{\hbar}{2} \left[
+ \sqrt{(l-m)(l+m+1)} \,\delta_{ll'} \delta_{m',m+1}
+ +
+ \sqrt{(l+m)(l-m+1)} \,\delta_{ll'} \delta_{m',m-1}
+\right]
+\\[6pt]
+\langle Y_{l'm'} | \hat{L}_y | Y_{lm} \rangle 
+&amp;= -i\frac{\hbar}{2} \left[
+ \sqrt{(l-m)(l+m+1)} \,\delta_{ll'} \delta_{m',m+1}
+ -                                            
+ \sqrt{(l+m)(l-m+1)} \,\delta_{ll'} \delta_{m',m-1}
+\right]
+\\[6pt]
+\langle Y_{l'm'} | \hat{L}_z | Y_{lm} \rangle 
+&amp;= m\hbar \,\delta_{ll'}\delta_{mm'} 
+\end{align}\]
+
+<p>To get the matrix elements of $\mathbf{L}$ between <em>real spherical harmonics</em>,
+reamember that $Z_{lm}$ and $Y_{lm}$ can be inter-transformed by a <em>unitary</em>
+matrix $U^l$,<sup id="fnref:sph_unitary" role="doc-noteref"><a href="#fn:sph_unitary" class="footnote">15</a></sup> i.e.</p>
+
+\[\begin{equation}
+Z_{lm} = \sum_{n=-l}^l \langle Y_{ln} | Z_{lm} \rangle \,Y_{ln}
+= \sum_{n=-l}^l U^l_{mn} \,Y_{ln}
+\end{equation}\]
+
+<p>As a result, one gets</p>
+
+\[\begin{equation}
+\langle Z_{l'm'} | \mathbf{L} | Z_{lm} \rangle 
+=
+\delta_{ll'}
+\sum_{nn'} 
+U^l_{n'm'}
+\,
+\langle Y_{l'm'} | \mathbf{L} | Y_{lm} \rangle 
+\,
+U^l_{mn}
+\end{equation}\]
+
+<h2 id="reference">Reference</h2>
 
 <div class="footnotes" role="doc-endnotes">
   <ol>
-    <li id="fn:exp_guide" role="doc-endnote">
-      <p><a href="https://www.sciencedirect.com/science/article/pii/S0368204816301724" target="_blank">An experimentalist’s guide to the matrix element in angle resolved photoemission.</a> <a href="#fnref:exp_guide" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:exp_guide:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:exp_guide:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a></p>
+    <li id="fn:einstein_dehaas_effect_handwiki" role="doc-endnote">
+      <p><a href="https://handwiki.org/wiki/Physics:Einstein%E2%80%93de_Haas_effect" target="_blank">Einstein–de Haas effect</a> <a href="#fnref:einstein_dehaas_effect_handwiki" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:BarnettEffect" role="doc-endnote">
+      <p><a href="https://handwiki.org/wiki/Physics:Barnett_effect" target="_blank">Barnett Effect</a> <a href="#fnref:BarnettEffect" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:niuq_prl_2014" role="doc-endnote">
+      <p><a href="https://journals.aps.org/prl/pdf/10.1103/PhysRevLett.112.085503" target="_blank">Angular Momentum of Phonons and the Einstein–de Haas Effect</a>, <i>Phys. Rev. Lett.</i>, <b>112</b>, 085503 (2014) <a href="#fnref:niuq_prl_2014" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:niuq_prl_2014:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:niuq_prl_2014:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a> <a href="#fnref:niuq_prl_2014:3" class="reversefootnote" role="doc-backlink">&#8617;<sup>4</sup></a></p>
+    </li>
+    <li id="fn:masato_prl_2018" role="doc-endnote">
+      <p><a href="https://link.aps.org/doi/10.1103/PhysRevLett.121.175301" target="_blank">Phonon Angular Momentum Induced by the Temperature Gradient</a>, <i>Phys. Rev. Lett.</i>, <b>121</b>, 175301 (2018) <a href="#fnref:masato_prl_2018" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:masato_prl_2018:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:LeviCivita" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Levi-Civita_symbol" target="_blank">Levi-Civita Symbol</a> <a href="#fnref:LeviCivita" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:nanolett_2020" role="doc-endnote">
+      <p><a href="https://pubs.acs.org/action/showCitFormats?doi=10.1021/acs.nanolett.0c03220&amp;ref=pdf" target="_blank">Phonon Angular Momentum Hall Effect</a>, <i>Nano Lett.</i>, <b>20</b>, 7694 (2020) <a href="#fnref:nanolett_2020" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:polaron_wiki" role="doc-endnote">
+      <p><a href="https://en.wikipedia.org/wiki/Polaron" target="_blank">Polaron</a> <a href="#fnref:polaron_wiki" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:sio_prl_2019" role="doc-endnote">
+      <p><a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.122.246403" target="_blank">Polarons from First Principles, without Supercells</a>, <i>Phys. Rev. Lett.</i>, <b>122</b>, 246403 (2019) <a href="#fnref:sio_prl_2019" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:giustino_rmp_2016" role="doc-endnote">
+      <p><a href="https://link.aps.org/doi/10.1103/RevModPhys.89.015003" target="_blank">Electron-phonon interactions from first principles</a>, <i>Rev. Mod. Phys.</i>, <b>89</b>, 015003 (2016) <a href="#fnref:giustino_rmp_2016" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:giustino_rmp_2016:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+    <li id="fn:sio_prb_2019" role="doc-endnote">
+      <p><a href="https://link.aps.org/doi/10.1103/PhysRevB.99.235139" target="_blank">Ab initio theory of polarons: Formalism and applications</a>, <i>Phys. Rev. B</i>, <b>99</b>, 235139 (2019) <a href="#fnref:sio_prb_2019" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:polmod" role="doc-endnote">
+      <p><a href="http://www.physics.rutgers.edu/~dhv/pubs/local_copy/dv_fchap.pdf" target="_blank">Theory of Polarization: A Modern Approach</a> <a href="#fnref:polmod" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:orbmag" role="doc-endnote">
+      <p><a href="https://www.worldscientific.com/doi/abs/10.1142/S0217979211058912" target="_blank">Theory of orbital magnetization in solids</a>, <i>Int. J. Mod. Phys. B</i>, <b>25</b>,1429 (2011) <a href="#fnref:orbmag" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:karlsson_jpcs" role="doc-endnote">
+      <p><a href="https://doi.org/10.1016/j.jpcs.2017.12.004" target="_blank">Modern theory of orbital magnetic moment in solids</a> <a href="#fnref:karlsson_jpcs" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
+    </li>
+    <li id="fn:paw_aewfc" role="doc-endnote">
+      <p><a href="../VASP-All-Electron-WFC/" target="_blank">PAW All-Electron Wavefunction in VASP</a> <a href="#fnref:paw_aewfc" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:paw_aewfc:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a> <a href="#fnref:paw_aewfc:2" class="reversefootnote" role="doc-backlink">&#8617;<sup>3</sup></a></p>
+    </li>
+    <li id="fn:sph_unitary" role="doc-endnote">
+      <p><a href="../Plotly-Spherical-Harmonics/" target="_blank">Plotly: Spherical Harmonics</a> <a href="#fnref:sph_unitary" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
     </li>
   </ol>
 </div>
@@ -1022,17 +1451,17 @@ in Ref <sup id="fnref:exp_guide:2" role="doc-noteref"><a href="#fn:exp_guide" cl
         <div class="post-tags">
           <i class="fa fa-tags fa-fw mr-1"></i>
           
+          <a href="/tags/phonopy/"
+            class="post-tag no-text-decoration" >Phonopy</a>
+          
+          <a href="/tags/phonon/"
+            class="post-tag no-text-decoration" >Phonon</a>
+          
           <a href="/tags/python/"
             class="post-tag no-text-decoration" >Python</a>
           
-          <a href="/tags/matplotlib/"
-            class="post-tag no-text-decoration" >Matplotlib</a>
-          
-          <a href="/tags/arpes/"
-            class="post-tag no-text-decoration" >ARPES</a>
-          
-          <a href="/tags/tight-binding/"
-            class="post-tag no-text-decoration" >Tight-binding</a>
+          <a href="/tags/angularmomentum/"
+            class="post-tag no-text-decoration" >AngularMomentum</a>
           
           </div>
         
@@ -1059,19 +1488,19 @@ in Ref <sup id="fnref:exp_guide:2" role="doc-noteref"><a href="#fn:exp_guide" cl
 
     
       
-        <a href="https://twitter.com/intent/tweet?text=Matplotlib: 1D Chain ARPES Signal - Qijing Zheng&url=https://qijingzheng.github.io/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/" data-toggle="tooltip" data-placement="top"
+        <a href="https://twitter.com/intent/tweet?text=Angular Momentum in Solids - Qijing Zheng&url=https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/" data-toggle="tooltip" data-placement="top"
           title="Twitter" target="_blank" rel="noopener" aria-label="Twitter">
           <i class="fa-fw fab fa-twitter"></i>
         </a>
     
       
-        <a href="https://www.facebook.com/sharer/sharer.php?title=Matplotlib: 1D Chain ARPES Signal - Qijing Zheng&u=https://qijingzheng.github.io/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/" data-toggle="tooltip" data-placement="top"
+        <a href="https://www.facebook.com/sharer/sharer.php?title=Angular Momentum in Solids - Qijing Zheng&u=https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/" data-toggle="tooltip" data-placement="top"
           title="Facebook" target="_blank" rel="noopener" aria-label="Facebook">
           <i class="fa-fw fab fa-facebook-square"></i>
         </a>
     
       
-        <a href="https://telegram.me/share?text=Matplotlib: 1D Chain ARPES Signal - Qijing Zheng&url=https://qijingzheng.github.io/posts/ARPES-Signal-of-1D-Tight-Binding-Chain/" data-toggle="tooltip" data-placement="top"
+        <a href="https://telegram.me/share?text=Angular Momentum in Solids - Qijing Zheng&url=https://qijingzheng.github.io/posts/Angular-Momentum-in-Solids/" data-toggle="tooltip" data-placement="top"
           title="Telegram" target="_blank" rel="noopener" aria-label="Telegram">
           <i class="fa-fw fab fa-telegram"></i>
         </a>
@@ -2682,137 +3111,137 @@ in Ref <sup id="fnref:exp_guide:2" role="doc-noteref"><a href="#fn:exp_guide" cl
   
 
   
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
-
-  
-
-  
-
-  
-
-  
-
-
-  
-
-  
     
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
   
 
   
@@ -3105,7 +3534,7 @@ Below is a list of used packages and computation...
       
       
       <div class="card">
-        <a href="/posts/NAC-Calculation-for-1D-Model-Hamiltonian/">
+        <a href="/posts/Transforming-between-supercell-and-primitive-cell/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -3122,14 +3551,14 @@ Below is a list of used packages and computation...
   
 
   
-    Sep 13
+    Apr  2, 2021
   
 
-  <i class="unloaded">2022-09-13T21:13:00+08:00</i>
+  <i class="unloaded">2021-04-02T09:00:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>NAC Calculation for 1D Model Hamiltonian</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Transforming Between Supercell and Primitive Cell</h3>
             <div class="text-muted small">
               <p>
                 
@@ -3138,17 +3567,17 @@ Below is a list of used packages and computation...
 
 
 
-                {% assign figCounter = 0 %}
+                Primitive Cell to Supercell
 
-Introduction
+Suppose the transformation matrix between the primitive cell ($\mathbf{A}$) and
+the supercell ($\mathbf{a}$) is $M$, i.e.
 
-Let’s start with a parametric 1D Hamiltonian $H(r)$
+\[
+\mathbf{A} = M\cdot \mathbf{a}
+\]
 
-\[\begin{equation}
-H(r) =
-\begin{pmatrix}
-\varepsilon_1^d(r) &amp; \lambda(r) \\[6pt]
-\lambda(r) &amp...
+
+  For ...
               </p>
             </div>
           </div>
@@ -3158,7 +3587,7 @@ H(r) =
       
       
       <div class="card">
-        <a href="/posts/howto-plot-brillouin-zone/">
+        <a href="/posts/Plotly-1D-Diatomic-Chain-Dispersion/">
           <div class="card-body">
             <!--
   Date format snippet
@@ -3175,14 +3604,14 @@ H(r) =
   
 
   
-    Mar 10, 2021
+    Apr 11, 2021
   
 
-  <i class="unloaded">2021-03-10T21:02:26+08:00</i>
+  <i class="unloaded">2021-04-11T22:20:00+08:00</i>
 
 </span>
 
-            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>How to Plot the First Brillouin Zone</h3>
+            <h3 class="pt-0 mt-1 mb-3" data-toc-skip>Plotly: 1D Diatomic Chain Dispersion</h3>
             <div class="text-muted small">
               <p>
                 
@@ -3191,19 +3620,21 @@ H(r) =
 
 
 
-                Introduction
+                1D Diatomic Chain Dispersion
 
-The first Brillouin Zone (BZ) is
-the Wigner-Seitz cell
-of the reciprocal lattice, which can be constructed by applying Voronoi
-decomposition to a lattice.
+Consider a 1D chain with two atoms in the unit cell
 
 
     
+        
+            
+        
     
 
     
-        Th...
+        1D diatomic chain.
+        two sublattices.
+        Genera...
               </p>
             </div>
           </div>
@@ -3221,17 +3652,17 @@ decomposition to a lattice.
 
 <div class="post-navigation d-flex justify-content-between">
   
-  <a href="/posts/Peierls-Transition/" class="btn btn-outline-primary"
+  <a href="/posts/Light-Matter-Interaction-and-Dipole-Transition-Matrix/" class="btn btn-outline-primary"
     prompt="Older">
-    <p>Peierls Transition</p>
+    <p>Light-Matter Interaction and Dipole Transition Matrix</p>
   </a>
   
 
   
-  <a href="/posts/Phonopy-Rutile-TiO2/" class="btn btn-outline-primary"
+  <span class="btn btn-outline-primary disabled"
     prompt="Newer">
-    <p>Phonopy: Rutile TiO<sub>2</sub></p>
-  </a>
+    <p>-</p>
+  </span>
   
 
 </div>
